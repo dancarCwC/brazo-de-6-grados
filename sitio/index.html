@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brazo Robótico 6 GDL · UMSA</title>
+<meta name="description" content="Documentación del brazo robótico XK-JS5B de 6 grados de libertad — Laboratorio integrado ETN-902 / ETN-1034 / ETN-1000, UMSA.">
+<link rel="icon" href="img/umsa.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css">
+<script>try{var t=localStorage.getItem('tema');if(t)document.documentElement.dataset.tema=t}catch(e){}</script>
+</head>
+<body data-pagina="inicio">
+<main>
+<section class="portada">
+  <div>
+    <span class="portada__sobre">Laboratorio integrado · UMSA · Gestión II/2026</span>
+    <h2>Brazo robótico XK-JS5B de 6 grados de libertad</h2>
+    <p>Planos ISA e IEC, pinaje del PIC16F1946, manuales, guías, informes y todo lo que dejaron los semestres anteriores. Encuentra cualquier archivo en segundos y míralo sin descargarlo.</p>
+    <button class="portada__buscar" id="portadaBuscar"><svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><span>¿Qué archivo buscas? Ej.: pinaje, P&amp;ID, DM542…</span><kbd>Ctrl K</kbd></button>
+  </div>
+  <figure class="portada__foto" style="margin:0"><img src="img/brazo.jpg" alt="Ilustración del brazo robótico de 6 GDL junto a su tablero de mando" width="1000" height="772"></figure>
+</section>
+<div class="cifras" id="cifras"></div>
+
+<div class="titulo-seccion"><div><h2>¿A dónde quieres ir?</h2><p>Cada sección tiene su propia página.</p></div></div>
+<div class="atajos" id="atajos"></div>
+
+<div class="dos-col" style="margin-top:34px">
+  <div>
+    <div class="titulo-seccion" style="margin-top:0"><div><h2>Documentos más usados</h2></div><a href="documentos.html">Ver todos →</a></div>
+    <div class="tarjeta lista-tarjeta" id="recientes" data-grupo><p class="cargando-txt">Cargando…</p></div>
+  </div>
+  <div>
+    <div class="titulo-seccion" style="margin-top:0"><div><h2>Laboratorio actual</h2></div></div>
+    <div class="tarjeta proximo" id="proximo"><p class="cargando-txt">Cargando…</p></div>
+  </div>
+</div>
+</main>
+<script src="js/datos.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/visor.js"></script>
+<script src="js/paginas/inicio.js"></script>
+</body>
+</html>
