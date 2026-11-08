@@ -145,10 +145,10 @@ tipo(alcance): resumen breve en presente
 
 | Integrante | Materia |
 |---|---|
-| Cristhian Daniel Cari Uluri ([@dancarCwC](https://github.com/dancarCwC)) | ETN-902 |
+| Cristhian Daniel Cari Uluri ([@dancarCwC](https://github.com/dancarCwC)) | ETN-902 ETN-1000|
 | Diego Josue Nina Fernandez | ETN-902 |
 | Daniela Jhanin Callata Bautista | ETN-1034 |
-| Giovanni Alexander Villca Yarari | ETN-1034 |
+| Giovanni Alexander Villca Yarari | ETN-902 ETN-1034 |
 | Christian Yamil Gutierrez Ponce | ETN-1000 |
 | Natalia Katerina Morales Corico | ETN-1000 |
 
