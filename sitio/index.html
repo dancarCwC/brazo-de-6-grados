@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brazo Robótico 6 GDL · UMSA</title>
+  <meta name="description" content="Documentación técnica del Brazo Robótico de 6 GDL XK-JS5B del laboratorio de Control y Sistemas de Ingeniería Electrónica, UMSA.">
+  <link rel="icon" href="img/umsa.png">
+  <link rel="stylesheet" href="estilos.css">
+  <script>
+    // Aplica el tema guardado antes de pintar para evitar parpadeo
+    try { const t = localStorage.getItem('tema'); if (t) document.documentElement.dataset.tema = t; } catch (e) {}
+  </script>
+</head>
+<body>
+
+<!-- ===================== NAVEGACIÓN ===================== -->
+<header class="nav">
+  <div class="nav__in">
+    <a class="marca" href="#inicio">
+      <img src="img/umsa.png" alt="" width="30" height="30">
+      <span>Brazo 6 GDL</span>
+    </a>
+    <nav class="nav__enlaces" id="menu">
+      <a href="#planta">La planta</a>
+      <a href="#documentos">Documentos</a>
+      <a href="#avance">Avance</a>
+      <a href="#archivos">Archivos</a>
+      <a href="#historico">Histórico</a>
+      <a href="#equipo">Equipo</a>
+    </nav>
+    <div class="nav__acciones">
+      <button class="icono" id="btnTema" aria-label="Cambiar tema claro u oscuro" title="Tema claro/oscuro">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36A5.5 5.5 0 0 1 13.36 3.1C12.92 3.04 12.46 3 12 3z"/></svg>
+      </button>
+      <a class="boton boton--oscuro" id="lnkGithub" href="https://github.com/dancarCwC/brazo-de-6-grados" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16" width="16" height="16"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+        <span>GitHub</span>
+      </a>
+      <button class="icono nav__hamb" id="btnMenu" aria-label="Abrir menú">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ===================== PORTADA ===================== -->
+<section class="hero" id="inicio">
+  <div class="contenedor hero__in">
+    <div class="hero__texto">
+      <p class="etiqueta">Laboratorio de Control y Sistemas · UMSA · Gestión II/2026</p>
+      <h1>Brazo Robótico de <span class="resalta">6 grados de libertad</span></h1>
+      <p class="hero__lead">Toda la documentación técnica de la planta <strong>XK-JS5B</strong> en un solo lugar:
+        planos ISA e IEC, pinaje del PIC16F1946, manuales, guías, informes y el material heredado de semestres anteriores.</p>
+      <div class="hero__botones">
+        <a class="boton boton--primario" href="#archivos">Explorar archivos</a>
+        <a class="boton boton--borde" href="#planta">Conocer la planta</a>
+      </div>
+      <dl class="cifras">
+        <div><dt>6</dt><dd>articulaciones</dd></div>
+        <div><dt>64</dt><dd>pines documentados</dd></div>
+        <div><dt id="cifraArchivos">—</dt><dd>archivos</dd></div>
+        <div><dt id="cifraSemestres">—</dt><dd>semestres de historia</dd></div>
+      </dl>
+    </div>
+    <figure class="hero__img">
+      <img src="img/brazo.jpg" alt="Ilustración del brazo robótico de 6 GDL junto a su tablero de mando" width="1000" height="772">
+    </figure>
+  </div>
+</section>
+
+<!-- ===================== ACCESOS RÁPIDOS ===================== -->
+<section class="seccion seccion--suave">
+  <div class="contenedor">
+    <h2 class="titulo">¿Qué estás buscando?</h2>
+    <p class="subtitulo">Cada tarjeta abre el explorador ya filtrado en esa carpeta.</p>
+    <div class="tarjetas" id="tarjetasSecciones"></div>
+  </div>
+</section>
+
+<!-- ===================== LA PLANTA ===================== -->
+<section class="seccion" id="planta">
+  <div class="contenedor">
+    <h2 class="titulo">La planta</h2>
+    <p class="subtitulo">Elige una articulación para ver su lazo de control, su motor, su sensor y el pin del PIC al que llega.</p>
+
+    <div class="aviso">
+      <strong>Estado actual: lazo abierto.</strong>
+      Los sensores Hall y los finales de carrera sólo protegen los límites y hacen el <em>homing</em>.
+      El encoder de la base existe, pero no está cableado al PIC, así que la posición se <em>estima</em> contando pulsos.
+    </div>
+
+    <div class="ejes">
+      <div class="ejes__botones" role="tablist" id="ejesBotones"></div>
+      <article class="ejes__panel" id="ejePanel" role="tabpanel" aria-live="polite"></article>
+    </div>
+
+    <h3 class="titulo3">Cómo fluyen las señales</h3>
+    <div class="arquitectura" role="img" aria-label="Diagrama: el tablero envía órdenes al PIC; el PIC envía pulsos a los drivers que mueven los motores; los sensores informan al PIC; el PIC envía telemetría a la PC.">
+      <div class="bloque b-tablero"><b>Tablero</b><span>pulsadores, selectores y paro de emergencia</span></div>
+      <div class="flecha">→</div>
+      <div class="bloque b-pic"><b>PIC16F1946</b><span>UC-100 · tarjeta XK-JS5B</span></div>
+      <div class="flecha">→<small>PUL · DIR · ENA</small></div>
+      <div class="bloque b-driver"><b>6 drivers</b><span>DM542 · 2MA320 · ZY-101…106</span></div>
+      <div class="flecha">→</div>
+      <div class="bloque b-motor"><b>6 motores PaP</b><span>NEMA 23 · 17 · 16</span></div>
+      <div class="retorno">
+        <span>↺ Sensores Hall y finales de carrera (ZSH/ZSL) regresan al PIC como protección</span>
+        <span>⇢ USB/serie hacia la PC: telemetría a MySQL</span>
+      </div>
+    </div>
+
+    <h3 class="titulo3">Hardware principal</h3>
+    <div class="tabla-envoltura">
+      <table class="tabla">
+        <thead><tr><th>Componente</th><th>Modelo</th><th>Función</th></tr></thead>
+        <tbody>
+          <tr><td>Microcontrolador</td><td><b>PIC16F1946</b> · 64 pines · ADC 10 bits · 2 EUSART</td><td>Lógica de control de los seis ejes</td></tr>
+          <tr><td>Drivers</td><td><b>DM542 / 2M542</b> y <b>2MA320</b></td><td>Convierten pulsos en corriente de fase</td></tr>
+          <tr><td>Motores</td><td>NEMA 23 (57J1854-828) · NEMA 17 (42J1848-604) · NEMA 16</td><td>Accionan las articulaciones</td></tr>
+          <tr><td>Sensores de límite</td><td><b>NJK-5002C</b> (Hall) · <b>M102-011</b> (microinterruptor)</td><td>Protección y <em>homing</em></td></tr>
+          <tr><td>Encoder</td><td><b>MBL3806-AB-600-24C</b> · 600 PPR</td><td>Previsto para cerrar el lazo de la base</td></tr>
+          <tr><td>Alimentación</td><td>Fuente conmutada 24 VDC</td><td>Drivers, tarjeta y sensores</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <figure class="foto-tarjeta">
+      <img src="img/tarjeta.jpg" alt="Fotografía de la tarjeta de control XK-JS5B con el PIC16F1946 al centro y doce relés en la parte superior" loading="lazy" width="1200" height="675">
+      <figcaption>Tarjeta de control XK-JS5B: el PIC16F1946 al centro, doce relés arriba y las borneras de sensores a la izquierda.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===================== DOCUMENTOS DESTACADOS ===================== -->
+<section class="seccion seccion--suave" id="documentos">
+  <div class="contenedor">
+    <h2 class="titulo">Documentos clave</h2>
+    <p class="subtitulo">Lo primero que conviene leer. <b>Ver</b> abre el archivo en GitHub; <b>Descargar</b> lo baja directo.</p>
+    <div class="destacados" id="destacados"></div>
+  </div>
+</section>
+
+<!-- ===================== AVANCE ===================== -->
+<section class="seccion" id="avance">
+  <div class="contenedor">
+    <h2 class="titulo">Avance del semestre</h2>
+    <p class="subtitulo">Ocho laboratorios en tres fases. Un laboratorio aparece como entregado cuando su informe está en la carpeta <code>INFORMES</code>.</p>
+    <ol class="linea" id="lineaTiempo"></ol>
+  </div>
+</section>
+
+<!-- ===================== EXPLORADOR ===================== -->
+<section class="seccion seccion--suave" id="archivos">
+  <div class="contenedor">
+    <h2 class="titulo">Explorador de archivos</h2>
+    <p class="subtitulo">Busca por nombre o carpeta. Se actualiza solo cada vez que se sube algo a GitHub.</p>
+
+    <div class="filtros">
+      <label class="buscador">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 1 0 4.9 14.3l5.4 5.4 1.4-1.4-5.4-5.4A8 8 0 0 0 10 2zm0 2a6 6 0 1 1 0 12 6 6 0 0 1 0-12z"/></svg>
+        <input type="search" id="busqueda" placeholder="Ej.: pinaje, DM542, informe, P&ID…" autocomplete="off">
+      </label>
+      <select id="filtroTipo" aria-label="Filtrar por tipo">
+        <option value="">Todos los tipos</option>
+        <option value="doc">Documentos (PDF, Word, PPT, Excel)</option>
+        <option value="cad">Planos CAD y KiCad</option>
+        <option value="img">Imágenes</option>
+        <option value="codigo">Código</option>
+        <option value="video">Video</option>
+        <option value="otro">Otros</option>
+      </select>
+      <label class="interruptor">
+        <input type="checkbox" id="verCompilacion">
+        <span>Mostrar archivos de compilación</span>
+      </label>
+    </div>
+    <div class="chips" id="chipsSecciones"></div>
+
+    <p class="resumen" id="resumenResultados" aria-live="polite"></p>
+    <ul class="lista" id="listaArchivos"></ul>
+    <div class="centro"><button class="boton boton--borde" id="btnMas" hidden>Ver más</button></div>
+  </div>
+</section>
+
+<!-- ===================== HISTÓRICO ===================== -->
+<section class="seccion" id="historico">
+  <div class="contenedor">
+    <h2 class="titulo">Documentación de semestres anteriores</h2>
+    <p class="subtitulo">Lo que dejaron las escuadras que trabajaron antes con esta planta: informes, programas del PIC, planos y presentaciones.</p>
+    <div class="tarjetas" id="tarjetasHistorico"></div>
+  </div>
+</section>
+
+<!-- ===================== EQUIPO ===================== -->
+<section class="seccion seccion--suave" id="equipo">
+  <div class="contenedor">
+    <h2 class="titulo">Escuadra II/2026</h2>
+    <div class="equipo">
+      <div class="persona"><span class="avatar">CC</span><div><b>Cristhian Daniel Cari Uluri</b><small>ETN-902 · líder de repositorio</small></div></div>
+      <div class="persona"><span class="avatar">DN</span><div><b>Diego Josue Nina Fernandez</b><small>ETN-902</small></div></div>
+      <div class="persona"><span class="avatar">DC</span><div><b>Daniela Jhanin Callata Bautista</b><small>ETN-1034</small></div></div>
+      <div class="persona"><span class="avatar">GV</span><div><b>Giovanni Alexander Villca Yarari</b><small>ETN-1034</small></div></div>
+      <div class="persona"><span class="avatar">CG</span><div><b>Christian Yamil Gutierrez Ponce</b><small>ETN-1000</small></div></div>
+      <div class="persona"><span class="avatar">NM</span><div><b>Natalia Katerina Morales Corico</b><small>ETN-1000</small></div></div>
+    </div>
+    <p class="docentes"><b>Docente:</b> Ing. Jorge Antonio Nava Amador &nbsp;·&nbsp;
+      <b>Auxiliares:</b> Univ. Fabián Manuel Plata Vargas, Univ. Limber Ajnota Cahuaya, Univ. Franz Choque</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="pie">
+  <div class="contenedor pie__in">
+    <img src="img/umsa.png" alt="Escudo de la UMSA" width="44" height="44">
+    <div>
+      <b>Carrera de Ingeniería Electrónica · Facultad de Ingeniería · UMSA</b><br>
+      <span>ETN-902 Sistemas de Control II · ETN-1034 Aplicación de Técnicas de Control · ETN-1000 Bases de Datos</span><br>
+      <small id="fechaIndice"></small>
+    </div>
+  </div>
+</footer>
+
+<button class="arriba" id="btnArriba" aria-label="Volver arriba" hidden>↑</button>
+
+<script src="app.js"></script>
+</body>
+</html>

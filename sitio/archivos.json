@@ -1,0 +1,4006 @@
+{
+"generado": "2026-11-08T21:44:43+00:00",
+"total": 500,
+"archivos": [
+{
+"ruta": "README.md",
+"nombre": "README.md",
+"seccion": "(raíz)",
+"subcarpeta": "",
+"ext": "md",
+"bytes": 45
+},
+{
+"ruta": "DATASHEET/2DM542 Digital Stepper Drive Manual.pdf",
+"nombre": "2DM542 Digital Stepper Drive Manual.pdf",
+"seccion": "DATASHEET",
+"subcarpeta": "",
+"ext": "pdf",
+"bytes": 1491586
+},
+{
+"ruta": "DATASHEET/2M542.pdf",
+"nombre": "2M542.pdf",
+"seccion": "DATASHEET",
+"subcarpeta": "",
+"ext": "pdf",
+"bytes": 181505
+},
+{
+"ruta": "DATASHEET/41016412.pdf",
+"nombre": "41016412.pdf",
+"seccion": "DATASHEET",
+"subcarpeta": "",
+"ext": "pdf",
+"bytes": 1455244
+},
+{
+"ruta": "DIAGRAMAS ELECTRICOS/MOTORES-Modelo.pdf",
+"nombre": "MOTORES-Modelo.pdf",
+"seccion": "DIAGRAMAS ELECTRICOS",
+"subcarpeta": "",
+"ext": "pdf",
+"bytes": 1399486
+},
+{
+"ruta": "DIAGRAMAS ELECTRICOS/MOTORES.dwg",
+"nombre": "MOTORES.dwg",
+"seccion": "DIAGRAMAS ELECTRICOS",
+"subcarpeta": "",
+"ext": "dwg",
+"bytes": 1928255
+},
+{
+"ruta": "DIAGRAMAS ELECTRICOS/PLACA-Modelo.pdf",
+"nombre": "PLACA-Modelo.pdf",
+"seccion": "DIAGRAMAS ELECTRICOS",
+"subcarpeta": "",
+"ext": "pdf",
+"bytes": 1265731
+},
+{
+"ruta": "DIAGRAMAS ELECTRICOS/PLACA.dwg",
+"nombre": "PLACA.dwg",
+"seccion": "DIAGRAMAS ELECTRICOS",
+"subcarpeta": "",
+"ext": "dwg",
+"bytes": 2063111
+},
+{
+"ruta": "DIAGRAMAS ELECTRICOS/PULSADORES-Modelo.pdf",
+"nombre": "PULSADORES-Modelo.pdf",
+"seccion": "DIAGRAMAS ELECTRICOS",
+"subcarpeta": "",
+"ext": "pdf",
+"bytes": 176343
+},
+{
+"ruta": "DIAGRAMAS ELECTRICOS/PULSADORES.dwg",
+"nombre": "PULSADORES.dwg",
+"seccion": "DIAGRAMAS ELECTRICOS",
+"subcarpeta": "",
+"ext": "dwg",
+"bytes": 139855
+},
+{
+"ruta": "DIAGRAMAS P&ID/DIAGRAMA P&ID B6G-Modelo.pdf",
+"nombre": "DIAGRAMA P&ID B6G-Modelo.pdf",
+"seccion": "DIAGRAMAS P&ID",
+"subcarpeta": "",
+"ext": "pdf",
+"bytes": 121100
+},
+{
+"ruta": "DIAGRAMAS P&ID/DIAGRAMA P&ID B6G.dwg",
+"nombre": "DIAGRAMA P&ID B6G.dwg",
+"seccion": "DIAGRAMAS P&ID",
+"subcarpeta": "",
+"ext": "dwg",
+"bytes": 66982
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/DOCUMENTACION GENERADA/Copia de ETAPA 0 DIAGNOSTICO 6GL.docx",
+"nombre": "Copia de ETAPA 0 DIAGNOSTICO 6GL.docx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/DOCUMENTACION GENERADA",
+"ext": "docx",
+"bytes": 5076224
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/DOCUMENTACION GENERADA/ETAPA 1 B6GL.docx",
+"nombre": "ETAPA 1 B6GL.docx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/DOCUMENTACION GENERADA",
+"ext": "docx",
+"bytes": 18975171
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PRESENTACIONES/Caracterización B6GL.pptx",
+"nombre": "Caracterización B6GL.pptx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PRESENTACIONES",
+"ext": "pptx",
+"bytes": 10904317
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PRESENTACIONES/Programación Modo manual (1).pptx",
+"nombre": "Programación Modo manual (1).pptx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PRESENTACIONES",
+"ext": "pptx",
+"bytes": 2640478
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PRESENTACIONES/SERIAL B6GL.pptx",
+"nombre": "SERIAL B6GL.pptx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PRESENTACIONES",
+"ext": "pptx",
+"bytes": 1395078
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/COMUNICACION SERIAL/USART.h",
+"nombre": "USART.h",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/COMUNICACION SERIAL",
+"ext": "h",
+"bytes": 866
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/COMUNICACION SERIAL/balanza2.0.rar",
+"nombre": "balanza2.0.rar",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/COMUNICACION SERIAL",
+"ext": "rar",
+"bytes": 424621
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/COMUNICACION SERIAL/pic16f1946v4.pdsprj",
+"nombre": "pic16f1946v4.pdsprj",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/COMUNICACION SERIAL",
+"ext": "pdsprj",
+"bytes": 26571
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/COMUNICACION SERIAL/pic16f1946v4.pdsprj.LAPTOP-08BD2KJD.DANI.workspace",
+"nombre": "pic16f1946v4.pdsprj.LAPTOP-08BD2KJD.DANI.workspace",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/COMUNICACION SERIAL",
+"ext": "workspace",
+"bytes": 1380
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/COMUNICACION SERIAL/pruebav4.c",
+"nombre": "pruebav4.c",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/COMUNICACION SERIAL",
+"ext": "c",
+"bytes": 5455
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/COMUNICACION SERIAL/pruebav4.hex",
+"nombre": "pruebav4.hex",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/COMUNICACION SERIAL",
+"ext": "hex",
+"bytes": 4784
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Diagrama rutina demostrativa/Control de PWM.xlsx",
+"nombre": "Control de PWM.xlsx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Diagrama rutina demostrativa",
+"ext": "xlsx",
+"bytes": 10333
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Diagrama rutina demostrativa/Subrutina Hand.vsd",
+"nombre": "Subrutina Hand.vsd",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Diagrama rutina demostrativa",
+"ext": "vsd",
+"bytes": 527360
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Diagrama rutina demostrativa/Variables.xlsx",
+"nombre": "Variables.xlsx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Diagrama rutina demostrativa",
+"ext": "xlsx",
+"bytes": 11457
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Informacion/Subrutina Hand.vsd",
+"nombre": "Subrutina Hand.vsd",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Informacion",
+"ext": "vsd",
+"bytes": 526336
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Informacion/Variables.xlsx",
+"nombre": "Variables.xlsx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Informacion",
+"ext": "xlsx",
+"bytes": 11457
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.as",
+"nombre": "Hand.as",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "as",
+"bytes": 23328
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.cof",
+"nombre": "Hand.cof",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "cof",
+"bytes": 28999
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.dep",
+"nombre": "Hand.dep",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "dep",
+"bytes": 317
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.hex",
+"nombre": "Hand.hex",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "hex",
+"bytes": 4760
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.hxl",
+"nombre": "Hand.hxl",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "hxl",
+"bytes": 2659
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.lst",
+"nombre": "Hand.lst",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "lst",
+"bytes": 162710
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.map",
+"nombre": "Hand.map",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "map",
+"bytes": 28120
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.mcp",
+"nombre": "Hand.mcp",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "mcp",
+"bytes": 1469
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.mcs",
+"nombre": "Hand.mcs",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "mcs",
+"bytes": 25372
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.mcw",
+"nombre": "Hand.mcw",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "mcw",
+"bytes": 2819584
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.obj",
+"nombre": "Hand.obj",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "obj",
+"bytes": 26184
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.p1",
+"nombre": "Hand.p1",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "p1",
+"bytes": 341808
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.pre",
+"nombre": "Hand.pre",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "pre",
+"bytes": 93650
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.rlf",
+"nombre": "Hand.rlf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "rlf",
+"bytes": 227477
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.sdb",
+"nombre": "Hand.sdb",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "sdb",
+"bytes": 95184
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.sym",
+"nombre": "Hand.sym",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "sym",
+"bytes": 10696
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/Machine hand.c",
+"nombre": "Machine hand.c",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "c",
+"bytes": 6054
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/Machine hand.dep",
+"nombre": "Machine hand.dep",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "dep",
+"bytes": 347
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/Machine hand.p1",
+"nombre": "Machine hand.p1",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "p1",
+"bytes": 361103
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/Machine hand.pre",
+"nombre": "Machine hand.pre",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "pre",
+"bytes": 94915
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/cs1.dep",
+"nombre": "cs1.dep",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "dep",
+"bytes": 317
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/cs1.p1",
+"nombre": "cs1.p1",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "p1",
+"bytes": 333069
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/cs1.pre",
+"nombre": "cs1.pre",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "pre",
+"bytes": 92251
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/funclist",
+"nombre": "funclist",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "",
+"bytes": 254
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/simulaicon.sbs",
+"nombre": "simulaicon.sbs",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "sbs",
+"bytes": 822
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/startup.as",
+"nombre": "startup.as",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "as",
+"bytes": 3902
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/PROGRAMAS/Programas/Rutina demostrativa/startup.obj",
+"nombre": "startup.obj",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "obj",
+"bytes": 3949
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2023/VIDEOS/IMG_20230622_163450_889.jpg",
+"nombre": "IMG_20230622_163450_889.jpg",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2023/VIDEOS",
+"ext": "jpg",
+"bytes": 2987560
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_1/GUIA DE LABORATORIO/Laboratorio1.pdf",
+"nombre": "Laboratorio1.pdf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_1/GUIA DE LABORATORIO",
+"ext": "pdf",
+"bytes": 184237
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_1/INFORME/LABORATORIO 1.pdf",
+"nombre": "LABORATORIO 1.pdf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_1/INFORME",
+"ext": "pdf",
+"bytes": 8820324
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_2/DIAGRAMAS/BRAZO ROBOTICO/Diagrama Electrico BRAZO 6GDL.dwg",
+"nombre": "Diagrama Electrico BRAZO 6GDL.dwg",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_2/DIAGRAMAS/BRAZO ROBOTICO",
+"ext": "dwg",
+"bytes": 152893
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_2/DIAGRAMAS/BRAZO ROBOTICO/P&ID BRAZO 6GDL.dwg",
+"nombre": "P&ID BRAZO 6GDL.dwg",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_2/DIAGRAMAS/BRAZO ROBOTICO",
+"ext": "dwg",
+"bytes": 149205
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_2/DIAGRAMAS/MEZCLADORA/Diagrama Electrico MESCLADOR.dwg",
+"nombre": "Diagrama Electrico MESCLADOR.dwg",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_2/DIAGRAMAS/MEZCLADORA",
+"ext": "dwg",
+"bytes": 113256
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_2/DIAGRAMAS/MEZCLADORA/MESCLADOR  P&ID.dwg",
+"nombre": "MESCLADOR  P&ID.dwg",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_2/DIAGRAMAS/MEZCLADORA",
+"ext": "dwg",
+"bytes": 269352
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_2/GUIA DE LABORATORIO/Laboratorio 2.pdf",
+"nombre": "Laboratorio 2.pdf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_2/GUIA DE LABORATORIO",
+"ext": "pdf",
+"bytes": 160320
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_2/INFORME/LABORATORIO 2.pdf",
+"nombre": "LABORATORIO 2.pdf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_2/INFORME",
+"ext": "pdf",
+"bytes": 6541142
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/GUIA DE LABORATORIO/Laboratorio 3.pdf",
+"nombre": "Laboratorio 3.pdf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/GUIA DE LABORATORIO",
+"ext": "pdf",
+"bytes": 162646
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/INFORME/LABORATORIO 3 .pdf",
+"nombre": "LABORATORIO 3 .pdf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/INFORME",
+"ext": "pdf",
+"bytes": 45236565
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/DS0001.BMP",
+"nombre": "DS0001.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2",
+"ext": "bmp",
+"bytes": 15603
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/DS0003.BMP",
+"nombre": "DS0003.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2",
+"ext": "bmp",
+"bytes": 15849
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/DS0005.BMP",
+"nombre": "DS0005.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2",
+"ext": "bmp",
+"bytes": 14605
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/DS0007.BMP",
+"nombre": "DS0007.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2",
+"ext": "bmp",
+"bytes": 15517
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/DS0009.BMP",
+"nombre": "DS0009.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2",
+"ext": "bmp",
+"bytes": 15549
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/DS0011.BMP",
+"nombre": "DS0011.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2",
+"ext": "bmp",
+"bytes": 15945
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/DS0013.BMP",
+"nombre": "DS0013.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2",
+"ext": "bmp",
+"bytes": 16199
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/DS0015.BMP",
+"nombre": "DS0015.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2",
+"ext": "bmp",
+"bytes": 15139
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/DS0017.BMP",
+"nombre": "DS0017.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2",
+"ext": "bmp",
+"bytes": 15875
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/DS0018.BMP",
+"nombre": "DS0018.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2",
+"ext": "bmp",
+"bytes": 13893
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/DS0019.BMP",
+"nombre": "DS0019.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2",
+"ext": "bmp",
+"bytes": 20123
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/DS0022.BMP",
+"nombre": "DS0022.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2",
+"ext": "bmp",
+"bytes": 39057
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/DS0025.BMP",
+"nombre": "DS0025.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2",
+"ext": "bmp",
+"bytes": 14321
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/DS0027.BMP",
+"nombre": "DS0027.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2",
+"ext": "bmp",
+"bytes": 15225
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/DS0028.BMP",
+"nombre": "DS0028.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2",
+"ext": "bmp",
+"bytes": 14869
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/ALL0000/A0000CH1.CSV",
+"nombre": "A0000CH1.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/ALL0000",
+"ext": "csv",
+"bytes": 12297
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/ALL0000/A0000CH2.CSV",
+"nombre": "A0000CH2.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/ALL0000",
+"ext": "csv",
+"bytes": 15043
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/ALL0000/A0000DS.BMP",
+"nombre": "A0000DS.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/ALL0000",
+"ext": "bmp",
+"bytes": 12593
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/ALL0000/A0000DS.SET",
+"nombre": "A0000DS.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/ALL0000",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/ALL0000/A0000S01.SET",
+"nombre": "A0000S01.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/ALL0000",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/encoder/A0009CH1.CSV",
+"nombre": "A0009CH1.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/encoder",
+"ext": "csv",
+"bytes": 15824
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/encoder/A0009CH2.CSV",
+"nombre": "A0009CH2.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/encoder",
+"ext": "csv",
+"bytes": 16520
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/encoder/A0009DS.BMP",
+"nombre": "A0009DS.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/encoder",
+"ext": "bmp",
+"bytes": 19807
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/encoder/A0009DS.SET",
+"nombre": "A0009DS.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/encoder",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/encoder/A0009S01.SET",
+"nombre": "A0009S01.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/encoder",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/encoder 1/A0010CH1.CSV",
+"nombre": "A0010CH1.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/encoder 1",
+"ext": "csv",
+"bytes": 15824
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/encoder 1/A0010CH2.CSV",
+"nombre": "A0010CH2.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/encoder 1",
+"ext": "csv",
+"bytes": 16520
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/encoder 1/A0010DS.BMP",
+"nombre": "A0010DS.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/encoder 1",
+"ext": "bmp",
+"bytes": 19799
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/encoder 1/A0010DS.SET",
+"nombre": "A0010DS.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/encoder 1",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/encoder 1/A0010S01.SET",
+"nombre": "A0010S01.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/encoder 1",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/encoder 2/A0011CH1.CSV",
+"nombre": "A0011CH1.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/encoder 2",
+"ext": "csv",
+"bytes": 16725
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/encoder 2/A0011CH2.CSV",
+"nombre": "A0011CH2.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/encoder 2",
+"ext": "csv",
+"bytes": 18801
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/encoder 2/A0011DS.BMP",
+"nombre": "A0011DS.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/encoder 2",
+"ext": "bmp",
+"bytes": 36965
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/encoder 2/A0011DS.SET",
+"nombre": "A0011DS.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/encoder 2",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/encoder 2/A0011S01.SET",
+"nombre": "A0011S01.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/encoder 2",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/encoder 3/A0012CH1.CSV",
+"nombre": "A0012CH1.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/encoder 3",
+"ext": "csv",
+"bytes": 16725
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/encoder 3/A0012CH2.CSV",
+"nombre": "A0012CH2.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/encoder 3",
+"ext": "csv",
+"bytes": 18801
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/encoder 3/A0012DS.BMP",
+"nombre": "A0012DS.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/encoder 3",
+"ext": "bmp",
+"bytes": 36969
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/encoder 3/A0012DS.SET",
+"nombre": "A0012DS.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/encoder 3",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/encoder 3/A0012S01.SET",
+"nombre": "A0012S01.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/encoder 3",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/final de carrera 1/A0006CH1.CSV",
+"nombre": "A0006CH1.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/final de carrera 1",
+"ext": "csv",
+"bytes": 15181
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/final de carrera 1/A0006CH2.CSV",
+"nombre": "A0006CH2.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/final de carrera 1",
+"ext": "csv",
+"bytes": 16015
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/final de carrera 1/A0006DS.BMP",
+"nombre": "A0006DS.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/final de carrera 1",
+"ext": "bmp",
+"bytes": 14825
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/final de carrera 1/A0006DS.SET",
+"nombre": "A0006DS.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/final de carrera 1",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/final de carrera 1/A0006S01.SET",
+"nombre": "A0006S01.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/final de carrera 1",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/final de carrera 2/A0007CH1.CSV",
+"nombre": "A0007CH1.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/final de carrera 2",
+"ext": "csv",
+"bytes": 15701
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/final de carrera 2/A0007CH2.CSV",
+"nombre": "A0007CH2.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/final de carrera 2",
+"ext": "csv",
+"bytes": 16361
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/final de carrera 2/A0007DS.BMP",
+"nombre": "A0007DS.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/final de carrera 2",
+"ext": "bmp",
+"bytes": 15019
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/final de carrera 2/A0007DS.SET",
+"nombre": "A0007DS.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/final de carrera 2",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/final de carrera 2/A0007S01.SET",
+"nombre": "A0007S01.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/final de carrera 2",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 1/A0001CH1.CSV",
+"nombre": "A0001CH1.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 1",
+"ext": "csv",
+"bytes": 15706
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 1/A0001CH2.CSV",
+"nombre": "A0001CH2.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 1",
+"ext": "csv",
+"bytes": 16477
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 1/A0001DS.BMP",
+"nombre": "A0001DS.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 1",
+"ext": "bmp",
+"bytes": 14459
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 1/A0001DS.SET",
+"nombre": "A0001DS.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 1",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 1/A0001S01.SET",
+"nombre": "A0001S01.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 1",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 2/A0002CH1.CSV",
+"nombre": "A0002CH1.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 2",
+"ext": "csv",
+"bytes": 15717
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 2/A0002CH2.CSV",
+"nombre": "A0002CH2.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 2",
+"ext": "csv",
+"bytes": 16572
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 2/A0002DS.BMP",
+"nombre": "A0002DS.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 2",
+"ext": "bmp",
+"bytes": 14709
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 2/A0002DS.SET",
+"nombre": "A0002DS.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 2",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 2/A0002S01.SET",
+"nombre": "A0002S01.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 2",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 3/A0003CH1.CSV",
+"nombre": "A0003CH1.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 3",
+"ext": "csv",
+"bytes": 14868
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 3/A0003CH2.CSV",
+"nombre": "A0003CH2.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 3",
+"ext": "csv",
+"bytes": 17631
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 3/A0003DS.BMP",
+"nombre": "A0003DS.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 3",
+"ext": "bmp",
+"bytes": 14113
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 3/A0003DS.SET",
+"nombre": "A0003DS.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 3",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 3/A0003S01.SET",
+"nombre": "A0003S01.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 3",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 4/A0004CH1.CSV",
+"nombre": "A0004CH1.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 4",
+"ext": "csv",
+"bytes": 14035
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 4/A0004CH2.CSV",
+"nombre": "A0004CH2.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 4",
+"ext": "csv",
+"bytes": 18033
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 4/A0004DS.BMP",
+"nombre": "A0004DS.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 4",
+"ext": "bmp",
+"bytes": 14245
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 4/A0004DS.SET",
+"nombre": "A0004DS.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 4",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 4/A0004S01.SET",
+"nombre": "A0004S01.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 4",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 5/A0005CH1.CSV",
+"nombre": "A0005CH1.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 5",
+"ext": "csv",
+"bytes": 15754
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 5/A0005CH2.CSV",
+"nombre": "A0005CH2.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 5",
+"ext": "csv",
+"bytes": 16710
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 5/A0005DS.BMP",
+"nombre": "A0005DS.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 5",
+"ext": "bmp",
+"bytes": 14421
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 5/A0005DS.SET",
+"nombre": "A0005DS.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 5",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/inductor 5/A0005S01.SET",
+"nombre": "A0005S01.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/inductor 5",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/pulsador/A0013CH1.CSV",
+"nombre": "A0013CH1.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/pulsador",
+"ext": "csv",
+"bytes": 12613
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/pulsador/A0013CH2.CSV",
+"nombre": "A0013CH2.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/pulsador",
+"ext": "csv",
+"bytes": 16297
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/pulsador/A0013DS.BMP",
+"nombre": "A0013DS.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/pulsador",
+"ext": "bmp",
+"bytes": 13651
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/pulsador/A0013DS.SET",
+"nombre": "A0013DS.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/pulsador",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/pulsador/A0013S01.SET",
+"nombre": "A0013S01.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/pulsador",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/pulsador 1/A0014CH1.CSV",
+"nombre": "A0014CH1.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/pulsador 1",
+"ext": "csv",
+"bytes": 14865
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/pulsador 1/A0014CH2.CSV",
+"nombre": "A0014CH2.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/pulsador 1",
+"ext": "csv",
+"bytes": 16297
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/pulsador 1/A0014DS.BMP",
+"nombre": "A0014DS.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/pulsador 1",
+"ext": "bmp",
+"bytes": 14131
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/pulsador 1/A0014DS.SET",
+"nombre": "A0014DS.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/pulsador 1",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/pulsador 1/A0014S01.SET",
+"nombre": "A0014S01.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/pulsador 1",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/pwm/A0008CH1.CSV",
+"nombre": "A0008CH1.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/pwm",
+"ext": "csv",
+"bytes": 12890
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/pwm/A0008DS.BMP",
+"nombre": "A0008DS.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/pwm",
+"ext": "bmp",
+"bytes": 14023
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/pwm/A0008DS.SET",
+"nombre": "A0008DS.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/pwm",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/preba 2/pwm/A0008S01.SET",
+"nombre": "A0008S01.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/preba 2/pwm",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/s1/DS0001.BMP",
+"nombre": "DS0001.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/s1",
+"ext": "bmp",
+"bytes": 15605
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/s1/ALL0001/A0001CH2.CSV",
+"nombre": "A0001CH2.CSV",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/s1/ALL0001",
+"ext": "csv",
+"bytes": 16208
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/s1/ALL0001/A0001DS.BMP",
+"nombre": "A0001DS.BMP",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/s1/ALL0001",
+"ext": "bmp",
+"bytes": 14293
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/s1/ALL0001/A0001DS.SET",
+"nombre": "A0001DS.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/s1/ALL0001",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_3/medidas/s1/ALL0001/A0001S01.SET",
+"nombre": "A0001S01.SET",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_3/medidas/s1/ALL0001",
+"ext": "set",
+"bytes": 294
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_4/Dimensiones Físicas.pdf",
+"nombre": "Dimensiones Físicas.pdf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_4",
+"ext": "pdf",
+"bytes": 396273
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_4/GUIA DE LABORATORIO/Laboratorio 4.pdf",
+"nombre": "Laboratorio 4.pdf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_4/GUIA DE LABORATORIO",
+"ext": "pdf",
+"bytes": 175753
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_4/INFORME/LABORATORIO_4.pdf",
+"nombre": "LABORATORIO_4.pdf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_4/INFORME",
+"ext": "pdf",
+"bytes": 2061060
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Subrutina Hand.vsd",
+"nombre": "Subrutina Hand.vsd",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5",
+"ext": "vsd",
+"bytes": 527360
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/GUIA DE LABORATORIO/Laboratorio 5.pdf",
+"nombre": "Laboratorio 5.pdf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/GUIA DE LABORATORIO",
+"ext": "pdf",
+"bytes": 215674
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/INFORME/LABORATORIO # 5 - BRAZO 6GDL.pdf",
+"nombre": "LABORATORIO # 5 - BRAZO 6GDL.pdf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/INFORME",
+"ext": "pdf",
+"bytes": 1002977
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/Makefile",
+"nombre": "Makefile",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X",
+"ext": "",
+"bytes": 3381
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/funclist",
+"nombre": "funclist",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X",
+"ext": "",
+"bytes": 416
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/newmain.c",
+"nombre": "newmain.c",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X",
+"ext": "c",
+"bytes": 25371
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/build/default/production/newmain.dep",
+"nombre": "newmain.dep",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/build/default/production",
+"ext": "dep",
+"bytes": 347
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/build/default/production/newmain.p1",
+"nombre": "newmain.p1",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/build/default/production",
+"ext": "p1",
+"bytes": 375271
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/build/default/production/newmain.p1.d",
+"nombre": "newmain.p1.d",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/build/default/production",
+"ext": "d",
+"bytes": 39
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/build/default/production/newmain.pre",
+"nombre": "newmain.pre",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/build/default/production",
+"ext": "pre",
+"bytes": 98468
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/dist/default/production/Prueba_Brazo_Sim.X.production.cof",
+"nombre": "Prueba_Brazo_Sim.X.production.cof",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/dist/default/production",
+"ext": "cof",
+"bytes": 50993
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/dist/default/production/Prueba_Brazo_Sim.X.production.hex",
+"nombre": "Prueba_Brazo_Sim.X.production.hex",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/dist/default/production",
+"ext": "hex",
+"bytes": 10708
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/dist/default/production/Prueba_Brazo_Sim.X.production.hxl",
+"nombre": "Prueba_Brazo_Sim.X.production.hxl",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/dist/default/production",
+"ext": "hxl",
+"bytes": 5305
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/dist/default/production/Prueba_Brazo_Sim.X.production.lst",
+"nombre": "Prueba_Brazo_Sim.X.production.lst",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/dist/default/production",
+"ext": "lst",
+"bytes": 278401
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/dist/default/production/Prueba_Brazo_Sim.X.production.map",
+"nombre": "Prueba_Brazo_Sim.X.production.map",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/dist/default/production",
+"ext": "map",
+"bytes": 32589
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/dist/default/production/Prueba_Brazo_Sim.X.production.obj",
+"nombre": "Prueba_Brazo_Sim.X.production.obj",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/dist/default/production",
+"ext": "obj",
+"bytes": 47809
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/dist/default/production/Prueba_Brazo_Sim.X.production.rlf",
+"nombre": "Prueba_Brazo_Sim.X.production.rlf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/dist/default/production",
+"ext": "rlf",
+"bytes": 403397
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/dist/default/production/Prueba_Brazo_Sim.X.production.sdb",
+"nombre": "Prueba_Brazo_Sim.X.production.sdb",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/dist/default/production",
+"ext": "sdb",
+"bytes": 95855
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/dist/default/production/Prueba_Brazo_Sim.X.production.sym",
+"nombre": "Prueba_Brazo_Sim.X.production.sym",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/dist/default/production",
+"ext": "sym",
+"bytes": 14370
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/nbproject/Makefile-default.mk",
+"nombre": "Makefile-default.mk",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/nbproject",
+"ext": "mk",
+"bytes": 7584
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/nbproject/Makefile-genesis.properties",
+"nombre": "Makefile-genesis.properties",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/nbproject",
+"ext": "properties",
+"bytes": 463
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/nbproject/Makefile-impl.mk",
+"nombre": "Makefile-impl.mk",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/nbproject",
+"ext": "mk",
+"bytes": 1950
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/nbproject/Makefile-local-default.mk",
+"nombre": "Makefile-local-default.mk",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/nbproject",
+"ext": "mk",
+"bytes": 2253
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/nbproject/Makefile-variables.mk",
+"nombre": "Makefile-variables.mk",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/nbproject",
+"ext": "mk",
+"bytes": 455
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/nbproject/Package-default.bash",
+"nombre": "Package-default.bash",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/nbproject",
+"ext": "bash",
+"bytes": 1415
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/nbproject/configurations.xml",
+"nombre": "configurations.xml",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/nbproject",
+"ext": "xml",
+"bytes": 33499
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/nbproject/project.xml",
+"nombre": "project.xml",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/nbproject",
+"ext": "xml",
+"bytes": 1028
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/nbproject/private/configurations.xml",
+"nombre": "configurations.xml",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/nbproject/private",
+"ext": "xml",
+"bytes": 1042
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/nbproject/private/private.xml",
+"nombre": "private.xml",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/PROGRAMACION MODO AUT/Prueba_Brazo_Sim.X/nbproject/private",
+"ext": "xml",
+"bytes": 456
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/Hand.as",
+"nombre": "Hand.as",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "as",
+"bytes": 23328
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/Hand.cof",
+"nombre": "Hand.cof",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "cof",
+"bytes": 28713
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/Hand.dep",
+"nombre": "Hand.dep",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "dep",
+"bytes": 317
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/Hand.hex",
+"nombre": "Hand.hex",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "hex",
+"bytes": 4760
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/Hand.hxl",
+"nombre": "Hand.hxl",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "hxl",
+"bytes": 2659
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/Hand.lst",
+"nombre": "Hand.lst",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "lst",
+"bytes": 160781
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/Hand.map",
+"nombre": "Hand.map",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "map",
+"bytes": 28124
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/Hand.mcp",
+"nombre": "Hand.mcp",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "mcp",
+"bytes": 1472
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/Hand.mcs",
+"nombre": "Hand.mcs",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "mcs",
+"bytes": 12232
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/Hand.mcw",
+"nombre": "Hand.mcw",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "mcw",
+"bytes": 2819072
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/Hand.obj",
+"nombre": "Hand.obj",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "obj",
+"bytes": 26050
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/Hand.p1",
+"nombre": "Hand.p1",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "p1",
+"bytes": 341808
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/Hand.pre",
+"nombre": "Hand.pre",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "pre",
+"bytes": 93650
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/Hand.rlf",
+"nombre": "Hand.rlf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "rlf",
+"bytes": 225545
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/Hand.sdb",
+"nombre": "Hand.sdb",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "sdb",
+"bytes": 94758
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/Hand.sym",
+"nombre": "Hand.sym",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "sym",
+"bytes": 10562
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/Machine hand.c",
+"nombre": "Machine hand.c",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "c",
+"bytes": 6113
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/Machine hand.dep",
+"nombre": "Machine hand.dep",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "dep",
+"bytes": 317
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/Machine hand.p1",
+"nombre": "Machine hand.p1",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "p1",
+"bytes": 351667
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/Machine hand.pre",
+"nombre": "Machine hand.pre",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "pre",
+"bytes": 94763
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/cs1.dep",
+"nombre": "cs1.dep",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "dep",
+"bytes": 317
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/cs1.p1",
+"nombre": "cs1.p1",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "p1",
+"bytes": 333069
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/cs1.pre",
+"nombre": "cs1.pre",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "pre",
+"bytes": 92251
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/funclist",
+"nombre": "funclist",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "",
+"bytes": 254
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/simulaicon.sbs",
+"nombre": "simulaicon.sbs",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "sbs",
+"bytes": 822
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/startup.as",
+"nombre": "startup.as",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "as",
+"bytes": 3902
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_5/Rutina demostrativa/startup.obj",
+"nombre": "startup.obj",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_5/Rutina demostrativa",
+"ext": "obj",
+"bytes": 3949
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_6/GUIA DE LABORATORIO/Guía_6_2026_ETN902_ETN1034.pdf",
+"nombre": "Guía_6_2026_ETN902_ETN1034.pdf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_6/GUIA DE LABORATORIO",
+"ext": "pdf",
+"bytes": 148350
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_6/INFORME/LABORATORIO # 6 BRAZO 6GDL .pdf",
+"nombre": "LABORATORIO # 6 BRAZO 6GDL .pdf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_6/INFORME",
+"ext": "pdf",
+"bytes": 1395379
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_6/PROGRAMACION MOD. ASINCRONO/Brazo_Comunicacion.tar",
+"nombre": "Brazo_Comunicacion.tar",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_6/PROGRAMACION MOD. ASINCRONO",
+"ext": "tar",
+"bytes": 4985344
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_7/GUIA DE LABORATORIO/Laboratorio 7.pdf",
+"nombre": "Laboratorio 7.pdf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_7/GUIA DE LABORATORIO",
+"ext": "pdf",
+"bytes": 178638
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_7/LABORATORIO_7_ETN902/LABORATORIO_7_ETN1034.pdf",
+"nombre": "LABORATORIO_7_ETN1034.pdf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_7/LABORATORIO_7_ETN902",
+"ext": "pdf",
+"bytes": 1285734
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_7/LABORATORIO_7_ETN902/REALIMENTACION DE ESTADOS.mwp",
+"nombre": "REALIMENTACION DE ESTADOS.mwp",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_7/LABORATORIO_7_ETN902",
+"ext": "mwp",
+"bytes": 5394
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_7/LABORATORIO_7_ETN902/MATLAB/S1.m",
+"nombre": "S1.m",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_7/LABORATORIO_7_ETN902/MATLAB",
+"ext": "m",
+"bytes": 5223
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_7/LABORATORIO_7_ETN902/MATLAB/S2.m",
+"nombre": "S2.m",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_7/LABORATORIO_7_ETN902/MATLAB",
+"ext": "m",
+"bytes": 954
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_7/LABORATORIO_7_ETN902/MATLAB/S3.m",
+"nombre": "S3.m",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_7/LABORATORIO_7_ETN902/MATLAB",
+"ext": "m",
+"bytes": 3159
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_7/LABORATORIO_7_ETN902/MATLAB/S4.m",
+"nombre": "S4.m",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_7/LABORATORIO_7_ETN902/MATLAB",
+"ext": "m",
+"bytes": 1750
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_7/LABORATORIO_7_ETN902/MATLAB/S5.m",
+"nombre": "S5.m",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_7/LABORATORIO_7_ETN902/MATLAB",
+"ext": "m",
+"bytes": 3371
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/LABORATORIO_7/LABORATORIO_7_ETN902/MATLAB/S6.m",
+"nombre": "S6.m",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/LABORATORIO_7/LABORATORIO_7_ETN902/MATLAB",
+"ext": "m",
+"bytes": 567
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/MANTENIMIENTO/Mantenimiento Correctivo Brazo 6GDL.pdf",
+"nombre": "Mantenimiento Correctivo Brazo 6GDL.pdf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/MANTENIMIENTO",
+"ext": "pdf",
+"bytes": 874006
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/PRESENTACIONES/Caracterización B6GL.pptx",
+"nombre": "Caracterización B6GL.pptx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/PRESENTACIONES",
+"ext": "pptx",
+"bytes": 10904317
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/PRESENTACIONES/Programación Modo manual (1).pptx",
+"nombre": "Programación Modo manual (1).pptx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/PRESENTACIONES",
+"ext": "pptx",
+"bytes": 2640478
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/PRESENTACIONES/SERIAL B6GL.pptx",
+"nombre": "SERIAL B6GL.pptx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/PRESENTACIONES",
+"ext": "pptx",
+"bytes": 1395078
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/I 2026/SIMULADOR BRAZO 6GDL/MANUAL DE USO SIMULADOR.pdf",
+"nombre": "MANUAL DE USO SIMULADOR.pdf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "I 2026/SIMULADOR BRAZO 6GDL",
+"ext": "pdf",
+"bytes": 573485
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Bitacoras/Características mecánicas y Dimensiones.docx",
+"nombre": "Características mecánicas y Dimensiones.docx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Bitacoras",
+"ext": "docx",
+"bytes": 8528623
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Bitacoras/ETN 1034 - ETN 902- secuencia - control.docx",
+"nombre": "ETN 1034 - ETN 902- secuencia - control.docx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Bitacoras",
+"ext": "docx",
+"bytes": 5007800
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Bitacoras/ETN1034 - ETN 902 Laboratorio.docx",
+"nombre": "ETN1034 - ETN 902 Laboratorio.docx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Bitacoras",
+"ext": "docx",
+"bytes": 17089851
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Diagnostico/ETN 1034 - ETN 902-DIAGNOSTICO BRAZO ROBOTICO.docx",
+"nombre": "ETN 1034 - ETN 902-DIAGNOSTICO BRAZO ROBOTICO.docx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Diagnostico",
+"ext": "docx",
+"bytes": 33580
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Diagramas/Circuito Proteus/brazo robotico 6 G.pdsprj",
+"nombre": "brazo robotico 6 G.pdsprj",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Diagramas/Circuito Proteus",
+"ext": "pdsprj",
+"bytes": 32615
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Diagramas/Diagrama P_ID Autocad/brazo.dwg",
+"nombre": "brazo.dwg",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Diagramas/Diagrama P_ID Autocad",
+"ext": "dwg",
+"bytes": 69897
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Informacion/Subrutina Hand.vsd",
+"nombre": "Subrutina Hand.vsd",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Informacion",
+"ext": "vsd",
+"bytes": 526336
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Informacion/Variables.xlsx",
+"nombre": "Variables.xlsx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Informacion",
+"ext": "xlsx",
+"bytes": 11457
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/Hand.as",
+"nombre": "Hand.as",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "as",
+"bytes": 23328
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/Hand.cof",
+"nombre": "Hand.cof",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "cof",
+"bytes": 28713
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/Hand.dep",
+"nombre": "Hand.dep",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "dep",
+"bytes": 317
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/Hand.hex",
+"nombre": "Hand.hex",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "hex",
+"bytes": 4760
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/Hand.hxl",
+"nombre": "Hand.hxl",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "hxl",
+"bytes": 2659
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/Hand.lst",
+"nombre": "Hand.lst",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "lst",
+"bytes": 160781
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/Hand.map",
+"nombre": "Hand.map",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "map",
+"bytes": 28124
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/Hand.mcp",
+"nombre": "Hand.mcp",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "mcp",
+"bytes": 1472
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/Hand.mcs",
+"nombre": "Hand.mcs",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "mcs",
+"bytes": 12232
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/Hand.mcw",
+"nombre": "Hand.mcw",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "mcw",
+"bytes": 2819072
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/Hand.obj",
+"nombre": "Hand.obj",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "obj",
+"bytes": 26050
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/Hand.p1",
+"nombre": "Hand.p1",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "p1",
+"bytes": 341808
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/Hand.pre",
+"nombre": "Hand.pre",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "pre",
+"bytes": 93650
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/Hand.rlf",
+"nombre": "Hand.rlf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "rlf",
+"bytes": 225545
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/Hand.sdb",
+"nombre": "Hand.sdb",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "sdb",
+"bytes": 94758
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/Hand.sym",
+"nombre": "Hand.sym",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "sym",
+"bytes": 10562
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/Machine hand.c",
+"nombre": "Machine hand.c",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "c",
+"bytes": 6054
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/Machine hand.dep",
+"nombre": "Machine hand.dep",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "dep",
+"bytes": 317
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/Machine hand.p1",
+"nombre": "Machine hand.p1",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "p1",
+"bytes": 351667
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/Machine hand.pre",
+"nombre": "Machine hand.pre",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "pre",
+"bytes": 94763
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/cs1.dep",
+"nombre": "cs1.dep",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "dep",
+"bytes": 317
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/cs1.p1",
+"nombre": "cs1.p1",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "p1",
+"bytes": 333069
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/cs1.pre",
+"nombre": "cs1.pre",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "pre",
+"bytes": 92251
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/funclist",
+"nombre": "funclist",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "",
+"bytes": 254
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/simulaicon.sbs",
+"nombre": "simulaicon.sbs",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "sbs",
+"bytes": 822
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/startup.as",
+"nombre": "startup.as",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "as",
+"bytes": 3902
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa/startup.obj",
+"nombre": "startup.obj",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Manuales_Programas_CD/Programas/Rutina demostrativa",
+"ext": "obj",
+"bytes": 3949
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/BRAZO2.asm",
+"nombre": "BRAZO2.asm",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X",
+"ext": "asm",
+"bytes": 9007
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/Makefile",
+"nombre": "Makefile",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X",
+"ext": "",
+"bytes": 3381
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/build/default/production/BRAZO2.err",
+"nombre": "BRAZO2.err",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/build/default/production",
+"ext": "err",
+"bytes": 48887
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/build/default/production/BRAZO2.lst",
+"nombre": "BRAZO2.lst",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/build/default/production",
+"ext": "lst",
+"bytes": 70386
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/build/default/production/BRAZO22.err",
+"nombre": "BRAZO22.err",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/build/default/production",
+"ext": "err",
+"bytes": 0
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/build/default/production/BRAZO22.lst",
+"nombre": "BRAZO22.lst",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/build/default/production",
+"ext": "lst",
+"bytes": 1263
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/build/default/production/BRAZO22.o",
+"nombre": "BRAZO22.o",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/build/default/production",
+"ext": "o",
+"bytes": 469
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/build/default/production/BRAZO22.o.d",
+"nombre": "BRAZO22.o.d",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/build/default/production",
+"ext": "d",
+"bytes": 97
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/build/default/production/debug/default/newpic_8b_general.err",
+"nombre": "newpic_8b_general.err",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/build/default/production/debug/default",
+"ext": "err",
+"bytes": 32353
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/build/default/production/debug/default/newpic_8b_general.lst",
+"nombre": "newpic_8b_general.lst",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/build/default/production/debug/default",
+"ext": "lst",
+"bytes": 63110
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/build/default/production/debug/default/newpic_8b_general.o",
+"nombre": "newpic_8b_general.o",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/build/default/production/debug/default",
+"ext": "o",
+"bytes": 8578
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/build/default/production/debug/default/newpic_8b_general.o.d",
+"nombre": "newpic_8b_general.o.d",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/build/default/production/debug/default",
+"ext": "d",
+"bytes": 145
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/debug/default/newpic_8b_general.asm",
+"nombre": "newpic_8b_general.asm",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/debug/default",
+"ext": "asm",
+"bytes": 8175
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/dist/default/production/BRAZO2.X.production.cof",
+"nombre": "BRAZO2.X.production.cof",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/dist/default/production",
+"ext": "cof",
+"bytes": 7506
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/dist/default/production/BRAZO2.X.production.hex",
+"nombre": "BRAZO2.X.production.hex",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/dist/default/production",
+"ext": "hex",
+"bytes": 1852
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/dist/default/production/BRAZO2.X.production.map",
+"nombre": "BRAZO2.X.production.map",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/dist/default/production",
+"ext": "map",
+"bytes": 11000
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/nbproject/Makefile-default.mk",
+"nombre": "Makefile-default.mk",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/nbproject",
+"ext": "mk",
+"bytes": 5779
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/nbproject/Makefile-genesis.properties",
+"nombre": "Makefile-genesis.properties",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/nbproject",
+"ext": "properties",
+"bytes": 579
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/nbproject/Makefile-impl.mk",
+"nombre": "Makefile-impl.mk",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/nbproject",
+"ext": "mk",
+"bytes": 1940
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/nbproject/Makefile-local-default.mk",
+"nombre": "Makefile-local-default.mk",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/nbproject",
+"ext": "mk",
+"bytes": 2258
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/nbproject/Makefile-variables.mk",
+"nombre": "Makefile-variables.mk",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/nbproject",
+"ext": "mk",
+"bytes": 419
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/nbproject/Package-default.bash",
+"nombre": "Package-default.bash",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/nbproject",
+"ext": "bash",
+"bytes": 1363
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/nbproject/configurations.xml",
+"nombre": "configurations.xml",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/nbproject",
+"ext": "xml",
+"bytes": 29257
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/nbproject/project.xml",
+"nombre": "project.xml",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/nbproject",
+"ext": "xml",
+"bytes": 1003
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/nbproject/private/configurations.xml",
+"nombre": "configurations.xml",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/nbproject/private",
+"ext": "xml",
+"bytes": 872
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/nbproject/private/private.xml",
+"nombre": "private.xml",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2022/Programa- secuencia- PIC (MPLAB X IDE)/BRAZO2.X/nbproject/private",
+"ext": "xml",
+"bytes": 460
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/INFORMFINAL.docx",
+"nombre": "INFORMFINAL.docx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023",
+"ext": "docx",
+"bytes": 235457
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/DOCUMENTACION/Copia de ETAPA 0 DIAGNOSTICO 6GL.docx",
+"nombre": "Copia de ETAPA 0 DIAGNOSTICO 6GL.docx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/DOCUMENTACION",
+"ext": "docx",
+"bytes": 5075645
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/DOCUMENTACION/ETAPA 1 B6GL.docx",
+"nombre": "ETAPA 1 B6GL.docx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/DOCUMENTACION",
+"ext": "docx",
+"bytes": 18950137
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/DOCUMENTACION/ETN 1034 - ETN 902- secuencia - control.docx",
+"nombre": "ETN 1034 - ETN 902- secuencia - control.docx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/DOCUMENTACION",
+"ext": "docx",
+"bytes": 5007800
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/DOCUMENTACION/ETN1034 - ETN 902 Laboratorio.docx",
+"nombre": "ETN1034 - ETN 902 Laboratorio.docx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/DOCUMENTACION",
+"ext": "docx",
+"bytes": 17089851
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/DOCUMENTACION/asincrono y hc06.docx",
+"nombre": "asincrono y hc06.docx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/DOCUMENTACION",
+"ext": "docx",
+"bytes": 85595
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/Diagrama P_ID Autocad/brazo.dwg",
+"nombre": "brazo.dwg",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/Diagrama P_ID Autocad",
+"ext": "dwg",
+"bytes": 60898
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PLANOS/BRAZO ROB12_recover-Presentación2.pdf",
+"nombre": "BRAZO ROB12_recover-Presentación2.pdf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PLANOS",
+"ext": "pdf",
+"bytes": 163905
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PLANOS/Brazo Rob.pdf",
+"nombre": "Brazo Rob.pdf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PLANOS",
+"ext": "pdf",
+"bytes": 598285
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PRESENTACIONES/Caracterización B6GL.pptx",
+"nombre": "Caracterización B6GL.pptx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PRESENTACIONES",
+"ext": "pptx",
+"bytes": 20493076
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PRESENTACIONES/Programación Modo manual (1).pptx",
+"nombre": "Programación Modo manual (1).pptx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PRESENTACIONES",
+"ext": "pptx",
+"bytes": 2750193
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PRESENTACIONES/SERIAL B6GL.pptx",
+"nombre": "SERIAL B6GL.pptx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PRESENTACIONES",
+"ext": "pptx",
+"bytes": 1395078
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/BRAZO2.X/BRAZO2.asm",
+"nombre": "BRAZO2.asm",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/BRAZO2.X",
+"ext": "asm",
+"bytes": 9007
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/BRAZO2.X/build/default/debug/debug/default/newpic_8b_general.d",
+"nombre": "newpic_8b_general.d",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/BRAZO2.X/build/default/debug/debug/default",
+"ext": "d",
+"bytes": 95
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/BRAZO2.X/build/default/debug/debug/default/newpic_8b_general.i",
+"nombre": "newpic_8b_general.i",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/BRAZO2.X/build/default/debug/debug/default",
+"ext": "i",
+"bytes": 7151
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/BRAZO2.X/build/default/production/BRAZO2.err",
+"nombre": "BRAZO2.err",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/BRAZO2.X/build/default/production",
+"ext": "err",
+"bytes": 48887
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/BRAZO2.X/build/default/production/BRAZO2.lst",
+"nombre": "BRAZO2.lst",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/BRAZO2.X/build/default/production",
+"ext": "lst",
+"bytes": 70386
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/BRAZO2.X/build/default/production/BRAZO22.err",
+"nombre": "BRAZO22.err",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/BRAZO2.X/build/default/production",
+"ext": "err",
+"bytes": 0
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/BRAZO2.X/build/default/production/BRAZO22.lst",
+"nombre": "BRAZO22.lst",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/BRAZO2.X/build/default/production",
+"ext": "lst",
+"bytes": 1263
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/BRAZO2.X/build/default/production/BRAZO22.o",
+"nombre": "BRAZO22.o",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/BRAZO2.X/build/default/production",
+"ext": "o",
+"bytes": 469
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/BRAZO2.X/build/default/production/BRAZO22.o.d",
+"nombre": "BRAZO22.o.d",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/BRAZO2.X/build/default/production",
+"ext": "d",
+"bytes": 97
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/BRAZO2.X/build/default/production/debug/default/newpic_8b_general.err",
+"nombre": "newpic_8b_general.err",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/BRAZO2.X/build/default/production/debug/default",
+"ext": "err",
+"bytes": 32353
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/BRAZO2.X/build/default/production/debug/default/newpic_8b_general.lst",
+"nombre": "newpic_8b_general.lst",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/BRAZO2.X/build/default/production/debug/default",
+"ext": "lst",
+"bytes": 63110
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/BRAZO2.X/build/default/production/debug/default/newpic_8b_general.o",
+"nombre": "newpic_8b_general.o",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/BRAZO2.X/build/default/production/debug/default",
+"ext": "o",
+"bytes": 8578
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/BRAZO2.X/build/default/production/debug/default/newpic_8b_general.o.d",
+"nombre": "newpic_8b_general.o.d",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/BRAZO2.X/build/default/production/debug/default",
+"ext": "d",
+"bytes": 145
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/BRAZO2.X/debug/default/newpic_8b_general.asm",
+"nombre": "newpic_8b_general.asm",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/BRAZO2.X/debug/default",
+"ext": "asm",
+"bytes": 8175
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/BRAZO2.X/dist/default/production/BRAZO2.X.production.cof",
+"nombre": "BRAZO2.X.production.cof",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/BRAZO2.X/dist/default/production",
+"ext": "cof",
+"bytes": 7506
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/BRAZO2.X/dist/default/production/BRAZO2.X.production.hex",
+"nombre": "BRAZO2.X.production.hex",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/BRAZO2.X/dist/default/production",
+"ext": "hex",
+"bytes": 1852
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/BRAZO2.X/dist/default/production/BRAZO2.X.production.map",
+"nombre": "BRAZO2.X.production.map",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/BRAZO2.X/dist/default/production",
+"ext": "map",
+"bytes": 11000
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Informacion/Subrutina Hand.vsd",
+"nombre": "Subrutina Hand.vsd",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Informacion",
+"ext": "vsd",
+"bytes": 526336
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Informacion/Variables.xlsx",
+"nombre": "Variables.xlsx",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Informacion",
+"ext": "xlsx",
+"bytes": 11457
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.as",
+"nombre": "Hand.as",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "as",
+"bytes": 23328
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.cof",
+"nombre": "Hand.cof",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "cof",
+"bytes": 28999
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.dep",
+"nombre": "Hand.dep",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "dep",
+"bytes": 317
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.hex",
+"nombre": "Hand.hex",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "hex",
+"bytes": 4760
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.hxl",
+"nombre": "Hand.hxl",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "hxl",
+"bytes": 2659
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.lst",
+"nombre": "Hand.lst",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "lst",
+"bytes": 162710
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.map",
+"nombre": "Hand.map",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "map",
+"bytes": 28120
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.mcp",
+"nombre": "Hand.mcp",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "mcp",
+"bytes": 1469
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.mcs",
+"nombre": "Hand.mcs",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "mcs",
+"bytes": 25372
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.mcw",
+"nombre": "Hand.mcw",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "mcw",
+"bytes": 2819584
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.obj",
+"nombre": "Hand.obj",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "obj",
+"bytes": 26184
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.p1",
+"nombre": "Hand.p1",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "p1",
+"bytes": 341808
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.pre",
+"nombre": "Hand.pre",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "pre",
+"bytes": 93650
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.rlf",
+"nombre": "Hand.rlf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "rlf",
+"bytes": 227477
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.sdb",
+"nombre": "Hand.sdb",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "sdb",
+"bytes": 95184
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/Hand.sym",
+"nombre": "Hand.sym",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "sym",
+"bytes": 10696
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/Machine hand.c",
+"nombre": "Machine hand.c",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "c",
+"bytes": 6054
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/Machine hand.dep",
+"nombre": "Machine hand.dep",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "dep",
+"bytes": 347
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/Machine hand.p1",
+"nombre": "Machine hand.p1",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "p1",
+"bytes": 361103
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/Machine hand.pre",
+"nombre": "Machine hand.pre",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "pre",
+"bytes": 94915
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/cs1.dep",
+"nombre": "cs1.dep",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "dep",
+"bytes": 317
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/cs1.p1",
+"nombre": "cs1.p1",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "p1",
+"bytes": 333069
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/cs1.pre",
+"nombre": "cs1.pre",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "pre",
+"bytes": 92251
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/funclist",
+"nombre": "funclist",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "",
+"bytes": 254
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/simulaicon.sbs",
+"nombre": "simulaicon.sbs",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "sbs",
+"bytes": 822
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/startup.as",
+"nombre": "startup.as",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "as",
+"bytes": 3902
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/Programas/Rutina demostrativa/startup.obj",
+"nombre": "startup.obj",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/Programas/Rutina demostrativa",
+"ext": "obj",
+"bytes": 3949
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/COMUARDUINO/COMUARDUINO.ino",
+"nombre": "COMUARDUINO.ino",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/COMUARDUINO",
+"ext": "ino",
+"bytes": 5930
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/COMUARDUINO/build/arduino.avr.uno/COMUARDUINO.ino.eep",
+"nombre": "COMUARDUINO.ino.eep",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/COMUARDUINO/build/arduino.avr.uno",
+"ext": "eep",
+"bytes": 12
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/COMUARDUINO/build/arduino.avr.uno/COMUARDUINO.ino.elf",
+"nombre": "COMUARDUINO.ino.elf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/COMUARDUINO/build/arduino.avr.uno",
+"ext": "elf",
+"bytes": 40860
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/COMUARDUINO/build/arduino.avr.uno/COMUARDUINO.ino.hex",
+"nombre": "COMUARDUINO.ino.hex",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/COMUARDUINO/build/arduino.avr.uno",
+"ext": "hex",
+"bytes": 13616
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/COMUARDUINO/build/arduino.avr.uno/COMUARDUINO.ino.with_bootloader.bin",
+"nombre": "COMUARDUINO.ino.with_bootloader.bin",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/COMUARDUINO/build/arduino.avr.uno",
+"ext": "bin",
+"bytes": 32768
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/COMUARDUINO/build/arduino.avr.uno/COMUARDUINO.ino.with_bootloader.hex",
+"nombre": "COMUARDUINO.ino.with_bootloader.hex",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/COMUARDUINO/build/arduino.avr.uno",
+"ext": "hex",
+"bytes": 15020
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/COMUNICACION SERIALproteusarduino/USART.h",
+"nombre": "USART.h",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/COMUNICACION SERIALproteusarduino",
+"ext": "h",
+"bytes": 866
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/COMUNICACION SERIALproteusarduino/balanza2.0.rar",
+"nombre": "balanza2.0.rar",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/COMUNICACION SERIALproteusarduino",
+"ext": "rar",
+"bytes": 424621
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/COMUNICACION SERIALproteusarduino/pic16f1946v4.pdsprj",
+"nombre": "pic16f1946v4.pdsprj",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/COMUNICACION SERIALproteusarduino",
+"ext": "pdsprj",
+"bytes": 31071
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/COMUNICACION SERIALproteusarduino/pruebav4.c",
+"nombre": "pruebav4.c",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/COMUNICACION SERIALproteusarduino",
+"ext": "c",
+"bytes": 5455
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/COMUNICACION SERIALproteusarduino/pruebav4.hex",
+"nombre": "pruebav4.hex",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/COMUNICACION SERIALproteusarduino",
+"ext": "hex",
+"bytes": 4784
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/COMUNICACION SERIALproteusarduino/Project Backups/pic16f1946v4 [20231216, 08-18-03].pdsprj",
+"nombre": "pic16f1946v4 [20231216, 08-18-03].pdsprj",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/COMUNICACION SERIALproteusarduino/Project Backups",
+"ext": "pdsprj",
+"bytes": 26571
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/COMUNICACION SERIALproteusarduino/Project Backups/pic16f1946v4 [Autosaved].pdsprj",
+"nombre": "pic16f1946v4 [Autosaved].pdsprj",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/COMUNICACION SERIALproteusarduino/Project Backups",
+"ext": "pdsprj",
+"bytes": 31196
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/Libreria - Simulano/BLOGEMBARCADO.LIB",
+"nombre": "BLOGEMBARCADO.LIB",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/Libreria - Simulano",
+"ext": "lib",
+"bytes": 140601
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/Libreria - Simulano/UltraSonicSensor.HEX",
+"nombre": "UltraSonicSensor.HEX",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/Libreria - Simulano",
+"ext": "hex",
+"bytes": 1036
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/Makefile",
+"nombre": "Makefile",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X",
+"ext": "",
+"bytes": 3381
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/brazo1.c",
+"nombre": "brazo1.c",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X",
+"ext": "c",
+"bytes": 9347
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/build/default/production/brazo1.i",
+"nombre": "brazo1.i",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/build/default/production",
+"ext": "i",
+"bytes": 200856
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/build/default/production/brazo1.p1",
+"nombre": "brazo1.p1",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/build/default/production",
+"ext": "p1",
+"bytes": 83064
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/build/default/production/brazo1.p1.d",
+"nombre": "brazo1.p1.d",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/build/default/production",
+"ext": "d",
+"bytes": 49
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production/__eeprom.d",
+"nombre": "__eeprom.d",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production",
+"ext": "d",
+"bytes": 110
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production/__eeprom.i",
+"nombre": "__eeprom.i",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production",
+"ext": "i",
+"bytes": 194596
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production/__eeprom.p1",
+"nombre": "__eeprom.p1",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production",
+"ext": "p1",
+"bytes": 61483
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production/brazo1.X.production.cmf",
+"nombre": "brazo1.X.production.cmf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production",
+"ext": "cmf",
+"bytes": 52181
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production/brazo1.X.production.elf",
+"nombre": "brazo1.X.production.elf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production",
+"ext": "elf",
+"bytes": 14839
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production/brazo1.X.production.hex",
+"nombre": "brazo1.X.production.hex",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production",
+"ext": "hex",
+"bytes": 7424
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production/brazo1.X.production.hxl",
+"nombre": "brazo1.X.production.hxl",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production",
+"ext": "hxl",
+"bytes": 3956
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production/brazo1.X.production.lst",
+"nombre": "brazo1.X.production.lst",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production",
+"ext": "lst",
+"bytes": 182997
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production/brazo1.X.production.map",
+"nombre": "brazo1.X.production.map",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production",
+"ext": "map",
+"bytes": 41808
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production/brazo1.X.production.mum",
+"nombre": "brazo1.X.production.mum",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production",
+"ext": "mum",
+"bytes": 383
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production/brazo1.X.production.o",
+"nombre": "brazo1.X.production.o",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production",
+"ext": "o",
+"bytes": 28781
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production/brazo1.X.production.rlf",
+"nombre": "brazo1.X.production.rlf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production",
+"ext": "rlf",
+"bytes": 261156
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production/brazo1.X.production.sdb",
+"nombre": "brazo1.X.production.sdb",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production",
+"ext": "sdb",
+"bytes": 5911
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production/brazo1.X.production.sym",
+"nombre": "brazo1.X.production.sym",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production",
+"ext": "sym",
+"bytes": 13226
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production/compiler_support.d",
+"nombre": "compiler_support.d",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production",
+"ext": "d",
+"bytes": 126
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production/compiler_support.i",
+"nombre": "compiler_support.i",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production",
+"ext": "i",
+"bytes": 1649
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production/compiler_support.p1",
+"nombre": "compiler_support.p1",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production",
+"ext": "p1",
+"bytes": 5225
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production/memoryfile.xml",
+"nombre": "memoryfile.xml",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/dist/default/production",
+"ext": "xml",
+"bytes": 429
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/nbproject/Makefile-default.mk",
+"nombre": "Makefile-default.mk",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/nbproject",
+"ext": "mk",
+"bytes": 6692
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/nbproject/Makefile-genesis.properties",
+"nombre": "Makefile-genesis.properties",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/nbproject",
+"ext": "properties",
+"bytes": 811
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/nbproject/Makefile-impl.mk",
+"nombre": "Makefile-impl.mk",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/nbproject",
+"ext": "mk",
+"bytes": 1940
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/nbproject/Makefile-local-default.mk",
+"nombre": "Makefile-local-default.mk",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/nbproject",
+"ext": "mk",
+"bytes": 2248
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/nbproject/Makefile-variables.mk",
+"nombre": "Makefile-variables.mk",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/nbproject",
+"ext": "mk",
+"bytes": 257
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/nbproject/configurations.xml",
+"nombre": "configurations.xml",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/nbproject",
+"ext": "xml",
+"bytes": 8707
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/nbproject/project.xml",
+"nombre": "project.xml",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/nbproject",
+"ext": "xml",
+"bytes": 1217
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/nbproject/private/SuppressibleMessageMemo.properties",
+"nombre": "SuppressibleMessageMemo.properties",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/nbproject/private",
+"ext": "properties",
+"bytes": 66
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/brazo1.X/nbproject/private/configurations.xml",
+"nombre": "configurations.xml",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/brazo1.X/nbproject/private",
+"ext": "xml",
+"bytes": 1029
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/Makefile",
+"nombre": "Makefile",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X",
+"ext": "",
+"bytes": 3381
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/comuseri18.c",
+"nombre": "comuseri18.c",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X",
+"ext": "c",
+"bytes": 18678
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/build/default/production/comuseri18.i",
+"nombre": "comuseri18.i",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/build/default/production",
+"ext": "i",
+"bytes": 217776
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/build/default/production/comuseri18.p1",
+"nombre": "comuseri18.p1",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/build/default/production",
+"ext": "p1",
+"bytes": 104210
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/build/default/production/comuseri18.p1.d",
+"nombre": "comuseri18.p1.d",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/build/default/production",
+"ext": "d",
+"bytes": 57
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production/com18fbrazo.X.production.cmf",
+"nombre": "com18fbrazo.X.production.cmf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production",
+"ext": "cmf",
+"bytes": 75559
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production/com18fbrazo.X.production.elf",
+"nombre": "com18fbrazo.X.production.elf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production",
+"ext": "elf",
+"bytes": 24268
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production/com18fbrazo.X.production.hex",
+"nombre": "com18fbrazo.X.production.hex",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production",
+"ext": "hex",
+"bytes": 10860
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production/com18fbrazo.X.production.hxl",
+"nombre": "com18fbrazo.X.production.hxl",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production",
+"ext": "hxl",
+"bytes": 5403
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production/com18fbrazo.X.production.lst",
+"nombre": "com18fbrazo.X.production.lst",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production",
+"ext": "lst",
+"bytes": 242052
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production/com18fbrazo.X.production.map",
+"nombre": "com18fbrazo.X.production.map",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production",
+"ext": "map",
+"bytes": 45650
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production/com18fbrazo.X.production.mum",
+"nombre": "com18fbrazo.X.production.mum",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production",
+"ext": "mum",
+"bytes": 383
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production/com18fbrazo.X.production.o",
+"nombre": "com18fbrazo.X.production.o",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production",
+"ext": "o",
+"bytes": 48492
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production/com18fbrazo.X.production.rlf",
+"nombre": "com18fbrazo.X.production.rlf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production",
+"ext": "rlf",
+"bytes": 348508
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production/com18fbrazo.X.production.sdb",
+"nombre": "com18fbrazo.X.production.sdb",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production",
+"ext": "sdb",
+"bytes": 12792
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production/com18fbrazo.X.production.sym",
+"nombre": "com18fbrazo.X.production.sym",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production",
+"ext": "sym",
+"bytes": 16111
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production/doprnt.d",
+"nombre": "doprnt.d",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production",
+"ext": "d",
+"bytes": 109
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production/doprnt.i",
+"nombre": "doprnt.i",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production",
+"ext": "i",
+"bytes": 20324
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production/doprnt.p1",
+"nombre": "doprnt.p1",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production",
+"ext": "p1",
+"bytes": 9684
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production/memoryfile.xml",
+"nombre": "memoryfile.xml",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/dist/default/production",
+"ext": "xml",
+"bytes": 439
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/nbproject/Makefile-default.mk",
+"nombre": "Makefile-default.mk",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/nbproject",
+"ext": "mk",
+"bytes": 6665
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/nbproject/Makefile-impl.mk",
+"nombre": "Makefile-impl.mk",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/nbproject",
+"ext": "mk",
+"bytes": 1945
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/nbproject/Makefile-local-default.mk",
+"nombre": "Makefile-local-default.mk",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/nbproject",
+"ext": "mk",
+"bytes": 2244
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/nbproject/Makefile-variables.mk",
+"nombre": "Makefile-variables.mk",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/nbproject",
+"ext": "mk",
+"bytes": 267
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/nbproject/configurations.xml",
+"nombre": "configurations.xml",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/nbproject",
+"ext": "xml",
+"bytes": 8281
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/nbproject/project.xml",
+"nombre": "project.xml",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/nbproject",
+"ext": "xml",
+"bytes": 1023
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/nbproject/private/configurations.xml",
+"nombre": "configurations.xml",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/com18fbrazo.X/nbproject/private",
+"ext": "xml",
+"bytes": 872
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/Makefile",
+"nombre": "Makefile",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X",
+"ext": "",
+"bytes": 3381
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/comunicacion.c",
+"nombre": "comunicacion.c",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X",
+"ext": "c",
+"bytes": 16354
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/build/default/production/comunicacion.i",
+"nombre": "comunicacion.i",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/build/default/production",
+"ext": "i",
+"bytes": 62764
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/build/default/production/comunicacion.p1",
+"nombre": "comunicacion.p1",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/build/default/production",
+"ext": "p1",
+"bytes": 72662
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/build/default/production/comunicacion.p1.d",
+"nombre": "comunicacion.p1.d",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/build/default/production",
+"ext": "d",
+"bytes": 61
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production/__eeprom.d",
+"nombre": "__eeprom.d",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production",
+"ext": "d",
+"bytes": 110
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production/__eeprom.i",
+"nombre": "__eeprom.i",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production",
+"ext": "i",
+"bytes": 47522
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production/__eeprom.p1",
+"nombre": "__eeprom.p1",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production",
+"ext": "p1",
+"bytes": 29839
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production/comu_usart.X.production.cmf",
+"nombre": "comu_usart.X.production.cmf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production",
+"ext": "cmf",
+"bytes": 63238
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production/comu_usart.X.production.elf",
+"nombre": "comu_usart.X.production.elf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production",
+"ext": "elf",
+"bytes": 17586
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production/comu_usart.X.production.hex",
+"nombre": "comu_usart.X.production.hex",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production",
+"ext": "hex",
+"bytes": 12488
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production/comu_usart.X.production.hxl",
+"nombre": "comu_usart.X.production.hxl",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production",
+"ext": "hxl",
+"bytes": 6056
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production/comu_usart.X.production.lst",
+"nombre": "comu_usart.X.production.lst",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production",
+"ext": "lst",
+"bytes": 231448
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production/comu_usart.X.production.map",
+"nombre": "comu_usart.X.production.map",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production",
+"ext": "map",
+"bytes": 31673
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production/comu_usart.X.production.mum",
+"nombre": "comu_usart.X.production.mum",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production",
+"ext": "mum",
+"bytes": 383
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production/comu_usart.X.production.o",
+"nombre": "comu_usart.X.production.o",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production",
+"ext": "o",
+"bytes": 49307
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production/comu_usart.X.production.rar",
+"nombre": "comu_usart.X.production.rar",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production",
+"ext": "rar",
+"bytes": 723
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production/comu_usart.X.production.rlf",
+"nombre": "comu_usart.X.production.rlf",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production",
+"ext": "rlf",
+"bytes": 349867
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production/comu_usart.X.production.sdb",
+"nombre": "comu_usart.X.production.sdb",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production",
+"ext": "sdb",
+"bytes": 7670
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production/comu_usart.X.production.sym",
+"nombre": "comu_usart.X.production.sym",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production",
+"ext": "sym",
+"bytes": 12305
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production/doprnt.d",
+"nombre": "doprnt.d",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production",
+"ext": "d",
+"bytes": 109
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production/doprnt.i",
+"nombre": "doprnt.i",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production",
+"ext": "i",
+"bytes": 10332
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production/doprnt.p1",
+"nombre": "doprnt.p1",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production",
+"ext": "p1",
+"bytes": 3555
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production/memoryfile.xml",
+"nombre": "memoryfile.xml",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/dist/default/production",
+"ext": "xml",
+"bytes": 433
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/nbproject/Makefile-default.mk",
+"nombre": "Makefile-default.mk",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/nbproject",
+"ext": "mk",
+"bytes": 6969
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/nbproject/Makefile-genesis.properties",
+"nombre": "Makefile-genesis.properties",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/nbproject",
+"ext": "properties",
+"bytes": 811
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/nbproject/Makefile-impl.mk",
+"nombre": "Makefile-impl.mk",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/nbproject",
+"ext": "mk",
+"bytes": 1944
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/nbproject/Makefile-local-default.mk",
+"nombre": "Makefile-local-default.mk",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/nbproject",
+"ext": "mk",
+"bytes": 2244
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/nbproject/Makefile-variables.mk",
+"nombre": "Makefile-variables.mk",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/nbproject",
+"ext": "mk",
+"bytes": 265
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/nbproject/configurations.xml",
+"nombre": "configurations.xml",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/nbproject",
+"ext": "xml",
+"bytes": 13983
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/nbproject/project.xml",
+"nombre": "project.xml",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/nbproject",
+"ext": "xml",
+"bytes": 1022
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/comu_usart.X/nbproject/private/configurations.xml",
+"nombre": "configurations.xml",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/comu_usart.X/nbproject/private",
+"ext": "xml",
+"bytes": 1029
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/proteus/pic16f877a.pdsprj",
+"nombre": "pic16f877a.pdsprj",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/proteus",
+"ext": "pdsprj",
+"bytes": 27475
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/proteus/pic16f877a.pdsprj.DESKTOP-8T6DENK.marc0.workspace.xml",
+"nombre": "pic16f877a.pdsprj.DESKTOP-8T6DENK.marc0.workspace.xml",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/proteus",
+"ext": "xml",
+"bytes": 6061
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/proteus/pic16f877a.pdsprj.LAPTOP-6AI7HMUR.DANI.workspace",
+"nombre": "pic16f877a.pdsprj.LAPTOP-6AI7HMUR.DANI.workspace",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/proteus",
+"ext": "workspace",
+"bytes": 1384
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/proteus/picconlcd16f877.txt",
+"nombre": "picconlcd16f877.txt",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/proteus",
+"ext": "txt",
+"bytes": 14808
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/proteus/Project Backups/pic16f877a [20231207, 14-30-16].pdsprj",
+"nombre": "pic16f877a [20231207, 14-30-16].pdsprj",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/proteus/Project Backups",
+"ext": "pdsprj",
+"bytes": 10786
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/proteus/Project Backups/pic16f877a [20231216, 08-17-55].pdsprj",
+"nombre": "pic16f877a [20231216, 08-17-55].pdsprj",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/proteus/Project Backups",
+"ext": "pdsprj",
+"bytes": 17653
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/proteus/Project Backups/pic16f877a [20231218, 12-10-13].pdsprj",
+"nombre": "pic16f877a [20231218, 12-10-13].pdsprj",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/proteus/Project Backups",
+"ext": "pdsprj",
+"bytes": 17660
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/proteus/Project Backups/pic16f877a [20231218, 12-10-15].pdsprj",
+"nombre": "pic16f877a [20231218, 12-10-15].pdsprj",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/proteus/Project Backups",
+"ext": "pdsprj",
+"bytes": 19634
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/proteus/Project Backups/pic16f877a [20231218, 12-10-17].pdsprj",
+"nombre": "pic16f877a [20231218, 12-10-17].pdsprj",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/proteus/Project Backups",
+"ext": "pdsprj",
+"bytes": 19633
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/proteus/Project Backups/pic16f877a [20231219, 10-05-14].pdsprj",
+"nombre": "pic16f877a [20231219, 10-05-14].pdsprj",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/proteus/Project Backups",
+"ext": "pdsprj",
+"bytes": 19635
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/proteus/Project Backups/pic16f877a [20231219, 10-05-16].pdsprj",
+"nombre": "pic16f877a [20231219, 10-05-16].pdsprj",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/proteus/Project Backups",
+"ext": "pdsprj",
+"bytes": 27476
+},
+{
+"ruta": "DOCUMENTACION ANTERIOR/II 2023/PROGRAMAS/pic16f877a/proteus/Project Backups/pic16f877a [Autosaved].pdsprj",
+"nombre": "pic16f877a [Autosaved].pdsprj",
+"seccion": "DOCUMENTACION ANTERIOR",
+"subcarpeta": "II 2023/PROGRAMAS/pic16f877a/proteus/Project Backups",
+"ext": "pdsprj",
+"bytes": 29668
+},
+{
+"ruta": "FOTOS/ChatGPT Image 7 sept 2026, 21_02_16.png",
+"nombre": "ChatGPT Image 7 sept 2026, 21_02_16.png",
+"seccion": "FOTOS",
+"subcarpeta": "",
+"ext": "png",
+"bytes": 758580
+},
+{
+"ruta": "FOTOS/ChatGPT Image 7 sept 2026, 21_02_20.png",
+"nombre": "ChatGPT Image 7 sept 2026, 21_02_20.png",
+"seccion": "FOTOS",
+"subcarpeta": "",
+"ext": "png",
+"bytes": 1466590
+},
+{
+"ruta": "FOTOS/ChatGPT Image 7 sept 2026, 21_02_25.png",
+"nombre": "ChatGPT Image 7 sept 2026, 21_02_25.png",
+"seccion": "FOTOS",
+"subcarpeta": "",
+"ext": "png",
+"bytes": 1443229
+},
+{
+"ruta": "FOTOS/ChatGPT Image 7 sept 2026, 21_23_40.png",
+"nombre": "ChatGPT Image 7 sept 2026, 21_23_40.png",
+"seccion": "FOTOS",
+"subcarpeta": "",
+"ext": "png",
+"bytes": 1766667
+},
+{
+"ruta": "FOTOS/ChatGPT Image 7 sept 2026, 21_51_53.png",
+"nombre": "ChatGPT Image 7 sept 2026, 21_51_53.png",
+"seccion": "FOTOS",
+"subcarpeta": "",
+"ext": "png",
+"bytes": 1366067
+},
+{
+"ruta": "FOTOS/PIC.jpeg",
+"nombre": "PIC.jpeg",
+"seccion": "FOTOS",
+"subcarpeta": "",
+"ext": "jpeg",
+"bytes": 198015
+},
+{
+"ruta": "FOTOS/brazo.png",
+"nombre": "brazo.png",
+"seccion": "FOTOS",
+"subcarpeta": "",
+"ext": "png",
+"bytes": 1573372
+},
+{
+"ruta": "FOTOS/conector_50pines.png",
+"nombre": "conector_50pines.png",
+"seccion": "FOTOS",
+"subcarpeta": "",
+"ext": "png",
+"bytes": 961528
+},
+{
+"ruta": "GUIAS DE LABORATORIO/Guia Laboratorio 1.pdf",
+"nombre": "Guia Laboratorio 1.pdf",
+"seccion": "GUIAS DE LABORATORIO",
+"subcarpeta": "",
+"ext": "pdf",
+"bytes": 794545
+},
+{
+"ruta": "GUIAS DE LABORATORIO/Guia Laboratorio 2.pdf",
+"nombre": "Guia Laboratorio 2.pdf",
+"seccion": "GUIAS DE LABORATORIO",
+"subcarpeta": "",
+"ext": "pdf",
+"bytes": 539074
+},
+{
+"ruta": "GUIAS DE LABORATORIO/Guia Laboratorio 3.pdf",
+"nombre": "Guia Laboratorio 3.pdf",
+"seccion": "GUIAS DE LABORATORIO",
+"subcarpeta": "",
+"ext": "pdf",
+"bytes": 415834
+},
+{
+"ruta": "GUIAS DE LABORATORIO/Guia Laboratorio 4.pdf",
+"nombre": "Guia Laboratorio 4.pdf",
+"seccion": "GUIAS DE LABORATORIO",
+"subcarpeta": "",
+"ext": "pdf",
+"bytes": 135794
+},
+{
+"ruta": "GUIAS DE LABORATORIO/Guia_Laboratorio 5.pdf",
+"nombre": "Guia_Laboratorio 5.pdf",
+"seccion": "GUIAS DE LABORATORIO",
+"subcarpeta": "",
+"ext": "pdf",
+"bytes": 165705
+},
+{
+"ruta": "GUIAS DE LABORATORIO/Guia_Laboratorio 6.pdf",
+"nombre": "Guia_Laboratorio 6.pdf",
+"seccion": "GUIAS DE LABORATORIO",
+"subcarpeta": "",
+"ext": "pdf",
+"bytes": 119200
+},
+{
+"ruta": "GUIAS DE LABORATORIO/Guia_Laboratorio 7.pdf",
+"nombre": "Guia_Laboratorio 7.pdf",
+"seccion": "GUIAS DE LABORATORIO",
+"subcarpeta": "",
+"ext": "pdf",
+"bytes": 112179
+},
+{
+"ruta": "GUIAS DE LABORATORIO/Guia_Laboratorio 8.pdf",
+"nombre": "Guia_Laboratorio 8.pdf",
+"seccion": "GUIAS DE LABORATORIO",
+"subcarpeta": "",
+"ext": "pdf",
+"bytes": 106249
+},
+{
+"ruta": "INFORMES/INFORME_1/INFORME_1.pdf",
+"nombre": "INFORME_1.pdf",
+"seccion": "INFORMES",
+"subcarpeta": "INFORME_1",
+"ext": "pdf",
+"bytes": 2674289
+},
+{
+"ruta": "INFORMES/INFORME_2/INFORME_2.pdf",
+"nombre": "INFORME_2.pdf",
+"seccion": "INFORMES",
+"subcarpeta": "INFORME_2",
+"ext": "pdf",
+"bytes": 4920449
+},
+{
+"ruta": "MANUALES/MPLAB_User_Guide_51519c.pdf",
+"nombre": "MPLAB_User_Guide_51519c.pdf",
+"seccion": "MANUALES",
+"subcarpeta": "",
+"ext": "pdf",
+"bytes": 4335009
+},
+{
+"ruta": "MANUALES/Pickit 3 manual.pdf",
+"nombre": "Pickit 3 manual.pdf",
+"seccion": "MANUALES",
+"subcarpeta": "",
+"ext": "pdf",
+"bytes": 1364553
+},
+{
+"ruta": "MANUALES/USB interface work.pdf",
+"nombre": "USB interface work.pdf",
+"seccion": "MANUALES",
+"subcarpeta": "",
+"ext": "pdf",
+"bytes": 65992
+},
+{
+"ruta": "MANUALES/XK-JS5B English Manual.pdf",
+"nombre": "XK-JS5B English Manual.pdf",
+"seccion": "MANUALES",
+"subcarpeta": "",
+"ext": "pdf",
+"bytes": 680091
+},
+{
+"ruta": "PINAJE PIC16F1946/Pic_personal.kicad_sym",
+"nombre": "Pic_personal.kicad_sym",
+"seccion": "PINAJE PIC16F1946",
+"subcarpeta": "",
+"ext": "kicad_sym",
+"bytes": 19567
+},
+{
+"ruta": "PINAJE PIC16F1946/PIC16F1946/PIC16F1946.kicad_pcb",
+"nombre": "PIC16F1946.kicad_pcb",
+"seccion": "PINAJE PIC16F1946",
+"subcarpeta": "PIC16F1946",
+"ext": "kicad_pcb",
+"bytes": 79
+},
+{
+"ruta": "PINAJE PIC16F1946/PIC16F1946/PIC16F1946.kicad_pro",
+"nombre": "PIC16F1946.kicad_pro",
+"seccion": "PINAJE PIC16F1946",
+"subcarpeta": "PIC16F1946",
+"ext": "kicad_pro",
+"bytes": 16828
+},
+{
+"ruta": "PINAJE PIC16F1946/PIC16F1946/PIC16F1946.kicad_sch",
+"nombre": "PIC16F1946.kicad_sch",
+"seccion": "PINAJE PIC16F1946",
+"subcarpeta": "PIC16F1946",
+"ext": "kicad_sch",
+"bytes": 94924
+},
+{
+"ruta": "PINAJE PIC16F1946/PIC16F1946/PINAJE PIC16F1946.pdf",
+"nombre": "PINAJE PIC16F1946.pdf",
+"seccion": "PINAJE PIC16F1946",
+"subcarpeta": "PIC16F1946",
+"ext": "pdf",
+"bytes": 142335
+}
+]
+}
