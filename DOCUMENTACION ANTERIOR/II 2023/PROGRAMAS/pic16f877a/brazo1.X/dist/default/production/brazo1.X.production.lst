@@ -1,0 +1,3703 @@
+
+
+Microchip MPLAB XC8 Assembler V2.30 build 20200825195618 
+                                                                                               Fri Dec 22 09:35:24 2023
+
+Microchip MPLAB XC8 C Compiler v2.30 (Free license) build 20200825195618 Og1 
+     1                           	processor	16F1946
+     2                           	pagewidth 120
+     3                           	opt	flic
+     4                           	psect	nvBANK0,global,class=BANK0,space=1,delta=1,noexec
+     5                           	psect	stringtext1,global,class=STRCODE,delta=2,noexec
+     6                           	psect	stringtext2,global,class=STRCODE,delta=2,noexec
+     7                           	psect	stringtext3,global,class=STRCODE,delta=2,noexec
+     8                           	psect	stringtext4,global,class=STRCODE,delta=2,noexec
+     9                           	psect	stringtext5,global,class=STRCODE,delta=2,noexec
+    10                           	psect	stringtext6,global,class=STRCODE,delta=2,noexec
+    11                           	psect	stringtext7,global,class=STRCODE,delta=2,noexec
+    12                           	psect	stringtext8,global,class=STRCODE,delta=2,noexec
+    13                           	psect	stringtext9,global,class=STRCODE,delta=2,noexec
+    14                           	psect	stringtext10,global,class=STRCODE,delta=2,noexec
+    15                           	psect	stringtext11,global,class=STRCODE,delta=2,noexec
+    16                           	psect	stringtext12,global,class=STRCODE,delta=2,noexec
+    17                           	psect	stringtext13,global,class=STRCODE,delta=2,noexec
+    18                           	psect	stringtext14,global,class=STRCODE,delta=2,noexec
+    19                           	psect	cinit,global,class=CODE,merge=1,delta=2
+    20                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1,noexec
+    21                           	psect	maintext,global,class=CODE,merge=1,split=1,delta=2
+    22                           	psect	text1,local,class=CODE,merge=1,delta=2
+    23                           	psect	text2,local,class=CODE,merge=1,delta=2,group=1
+    24                           	psect	text3,local,class=CODE,merge=1,delta=2
+    25                           	psect	text4,local,class=CODE,merge=1,delta=2
+    26                           	psect	text5,local,class=CODE,merge=1,delta=2
+    27                           	psect	text6,local,class=CODE,merge=1,delta=2
+    28                           	psect	text7,local,class=CODE,merge=1,delta=2
+    29                           	psect	text8,local,class=CODE,merge=1,delta=2
+    30                           	psect	idloc,global,abs,ovrld,class=IDLOC,space=5,delta=2,noexec
+    31                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=2,noexec
+    32                           	dabs	1,0x7E,2
+    33  0000                     
+    34                           ; Version 2.40
+    35                           ; Generated 17/11/2021 GMT
+    36                           ; 
+    37                           ; Copyright © 2021, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    38                           ; All rights reserved.
+    39                           ; 
+    40                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    41                           ; 
+    42                           ; Redistribution and use in source and binary forms, with or without modification, are
+    43                           ; permitted provided that the following conditions are met:
+    44                           ; 
+    45                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    46                           ;        conditions and the following disclaimer.
+    47                           ; 
+    48                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    49                           ;        of conditions and the following disclaimer in the documentation and/or other
+    50                           ;        materials provided with the distribution. Publication is not required when
+    51                           ;        this file is used in an embedded application.
+    52                           ; 
+    53                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    54                           ;        software without specific prior written permission.
+    55                           ; 
+    56                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    57                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    58                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    59                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    60                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    61                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    62                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    63                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    64                           ; 
+    65                           ; 
+    66                           ; Code-generator required, PIC16F1946 Definitions
+    67                           ; 
+    68                           ; SFR Addresses
+    69  0000                     	;# 
+    70  0001                     	;# 
+    71  0002                     	;# 
+    72  0003                     	;# 
+    73  0004                     	;# 
+    74  0005                     	;# 
+    75  0006                     	;# 
+    76  0007                     	;# 
+    77  0008                     	;# 
+    78  0009                     	;# 
+    79  000A                     	;# 
+    80  000B                     	;# 
+    81  000C                     	;# 
+    82  000D                     	;# 
+    83  000E                     	;# 
+    84  000F                     	;# 
+    85  0010                     	;# 
+    86  0011                     	;# 
+    87  0012                     	;# 
+    88  0013                     	;# 
+    89  0014                     	;# 
+    90  0015                     	;# 
+    91  0016                     	;# 
+    92  0016                     	;# 
+    93  0017                     	;# 
+    94  0018                     	;# 
+    95  0019                     	;# 
+    96  001A                     	;# 
+    97  001B                     	;# 
+    98  001C                     	;# 
+    99  001E                     	;# 
+   100  001F                     	;# 
+   101  008C                     	;# 
+   102  008D                     	;# 
+   103  008E                     	;# 
+   104  008F                     	;# 
+   105  0090                     	;# 
+   106  0091                     	;# 
+   107  0092                     	;# 
+   108  0093                     	;# 
+   109  0094                     	;# 
+   110  0095                     	;# 
+   111  0096                     	;# 
+   112  0097                     	;# 
+   113  0098                     	;# 
+   114  0099                     	;# 
+   115  009A                     	;# 
+   116  009B                     	;# 
+   117  009B                     	;# 
+   118  009C                     	;# 
+   119  009D                     	;# 
+   120  009E                     	;# 
+   121  010C                     	;# 
+   122  010D                     	;# 
+   123  010E                     	;# 
+   124  010F                     	;# 
+   125  0110                     	;# 
+   126  0111                     	;# 
+   127  0112                     	;# 
+   128  0113                     	;# 
+   129  0114                     	;# 
+   130  0115                     	;# 
+   131  0116                     	;# 
+   132  0117                     	;# 
+   133  0118                     	;# 
+   134  0119                     	;# 
+   135  011A                     	;# 
+   136  011B                     	;# 
+   137  011D                     	;# 
+   138  011E                     	;# 
+   139  011F                     	;# 
+   140  018C                     	;# 
+   141  0190                     	;# 
+   142  0191                     	;# 
+   143  0191                     	;# 
+   144  0192                     	;# 
+   145  0193                     	;# 
+   146  0193                     	;# 
+   147  0193                     	;# 
+   148  0194                     	;# 
+   149  0195                     	;# 
+   150  0196                     	;# 
+   151  0199                     	;# 
+   152  0199                     	;# 
+   153  019A                     	;# 
+   154  019A                     	;# 
+   155  019B                     	;# 
+   156  019B                     	;# 
+   157  019B                     	;# 
+   158  019B                     	;# 
+   159  019C                     	;# 
+   160  019C                     	;# 
+   161  019D                     	;# 
+   162  019D                     	;# 
+   163  019E                     	;# 
+   164  019E                     	;# 
+   165  019F                     	;# 
+   166  020D                     	;# 
+   167  0211                     	;# 
+   168  0211                     	;# 
+   169  0212                     	;# 
+   170  0212                     	;# 
+   171  0213                     	;# 
+   172  0213                     	;# 
+   173  0214                     	;# 
+   174  0214                     	;# 
+   175  0215                     	;# 
+   176  0215                     	;# 
+   177  0215                     	;# 
+   178  0216                     	;# 
+   179  0216                     	;# 
+   180  0217                     	;# 
+   181  0217                     	;# 
+   182  0219                     	;# 
+   183  021A                     	;# 
+   184  021B                     	;# 
+   185  021C                     	;# 
+   186  021D                     	;# 
+   187  021E                     	;# 
+   188  021F                     	;# 
+   189  028C                     	;# 
+   190  028D                     	;# 
+   191  0291                     	;# 
+   192  0291                     	;# 
+   193  0292                     	;# 
+   194  0293                     	;# 
+   195  0294                     	;# 
+   196  0295                     	;# 
+   197  0295                     	;# 
+   198  0296                     	;# 
+   199  0298                     	;# 
+   200  0298                     	;# 
+   201  0299                     	;# 
+   202  029A                     	;# 
+   203  029B                     	;# 
+   204  029C                     	;# 
+   205  029C                     	;# 
+   206  029D                     	;# 
+   207  029E                     	;# 
+   208  029F                     	;# 
+   209  030C                     	;# 
+   210  030D                     	;# 
+   211  0311                     	;# 
+   212  0311                     	;# 
+   213  0312                     	;# 
+   214  0313                     	;# 
+   215  0314                     	;# 
+   216  0315                     	;# 
+   217  0315                     	;# 
+   218  0316                     	;# 
+   219  0318                     	;# 
+   220  0318                     	;# 
+   221  0319                     	;# 
+   222  031A                     	;# 
+   223  031C                     	;# 
+   224  031C                     	;# 
+   225  031D                     	;# 
+   226  031E                     	;# 
+   227  038C                     	;# 
+   228  038D                     	;# 
+   229  0394                     	;# 
+   230  0395                     	;# 
+   231  0396                     	;# 
+   232  040C                     	;# 
+   233  040D                     	;# 
+   234  0415                     	;# 
+   235  0416                     	;# 
+   236  0417                     	;# 
+   237  041C                     	;# 
+   238  041D                     	;# 
+   239  041E                     	;# 
+   240  048D                     	;# 
+   241  0491                     	;# 
+   242  0492                     	;# 
+   243  0493                     	;# 
+   244  0493                     	;# 
+   245  0494                     	;# 
+   246  0495                     	;# 
+   247  0496                     	;# 
+   248  0497                     	;# 
+   249  0791                     	;# 
+   250  0792                     	;# 
+   251  0793                     	;# 
+   252  0794                     	;# 
+   253  0795                     	;# 
+   254  0798                     	;# 
+   255  0799                     	;# 
+   256  079A                     	;# 
+   257  079B                     	;# 
+   258  079C                     	;# 
+   259  079D                     	;# 
+   260  07A0                     	;# 
+   261  07A1                     	;# 
+   262  07A2                     	;# 
+   263  07A3                     	;# 
+   264  07A4                     	;# 
+   265  07A5                     	;# 
+   266  07A6                     	;# 
+   267  07A7                     	;# 
+   268  07A8                     	;# 
+   269  07A9                     	;# 
+   270  07AA                     	;# 
+   271  07AB                     	;# 
+   272  07AC                     	;# 
+   273  07AD                     	;# 
+   274  07AE                     	;# 
+   275  07AF                     	;# 
+   276  07B0                     	;# 
+   277  07B1                     	;# 
+   278  07B2                     	;# 
+   279  07B3                     	;# 
+   280  07B4                     	;# 
+   281  07B5                     	;# 
+   282  07B6                     	;# 
+   283  07B7                     	;# 
+   284  0FE4                     	;# 
+   285  0FE5                     	;# 
+   286  0FE6                     	;# 
+   287  0FE7                     	;# 
+   288  0FE8                     	;# 
+   289  0FE9                     	;# 
+   290  0FEA                     	;# 
+   291  0FEB                     	;# 
+   292  0FED                     	;# 
+   293  0FEE                     	;# 
+   294  0FEF                     	;# 
+   295  0000                     nosup@@$_$_CONFIG	set	0	;# 
+   296  0000                     	;# 
+   297  0001                     	;# 
+   298  0002                     	;# 
+   299  0003                     	;# 
+   300  0004                     	;# 
+   301  0005                     	;# 
+   302  0006                     	;# 
+   303  0007                     	;# 
+   304  0008                     	;# 
+   305  0009                     	;# 
+   306  000A                     	;# 
+   307  000B                     	;# 
+   308  000C                     	;# 
+   309  000D                     	;# 
+   310  000E                     	;# 
+   311  000F                     	;# 
+   312  0010                     	;# 
+   313  0011                     	;# 
+   314  0012                     	;# 
+   315  0013                     	;# 
+   316  0014                     	;# 
+   317  0015                     	;# 
+   318  0016                     	;# 
+   319  0016                     	;# 
+   320  0017                     	;# 
+   321  0018                     	;# 
+   322  0019                     	;# 
+   323  001A                     	;# 
+   324  001B                     	;# 
+   325  001C                     	;# 
+   326  001E                     	;# 
+   327  001F                     	;# 
+   328  008C                     	;# 
+   329  008D                     	;# 
+   330  008E                     	;# 
+   331  008F                     	;# 
+   332  0090                     	;# 
+   333  0091                     	;# 
+   334  0092                     	;# 
+   335  0093                     	;# 
+   336  0094                     	;# 
+   337  0095                     	;# 
+   338  0096                     	;# 
+   339  0097                     	;# 
+   340  0098                     	;# 
+   341  0099                     	;# 
+   342  009A                     	;# 
+   343  009B                     	;# 
+   344  009B                     	;# 
+   345  009C                     	;# 
+   346  009D                     	;# 
+   347  009E                     	;# 
+   348  010C                     	;# 
+   349  010D                     	;# 
+   350  010E                     	;# 
+   351  010F                     	;# 
+   352  0110                     	;# 
+   353  0111                     	;# 
+   354  0112                     	;# 
+   355  0113                     	;# 
+   356  0114                     	;# 
+   357  0115                     	;# 
+   358  0116                     	;# 
+   359  0117                     	;# 
+   360  0118                     	;# 
+   361  0119                     	;# 
+   362  011A                     	;# 
+   363  011B                     	;# 
+   364  011D                     	;# 
+   365  011E                     	;# 
+   366  011F                     	;# 
+   367  018C                     	;# 
+   368  0190                     	;# 
+   369  0191                     	;# 
+   370  0191                     	;# 
+   371  0192                     	;# 
+   372  0193                     	;# 
+   373  0193                     	;# 
+   374  0193                     	;# 
+   375  0194                     	;# 
+   376  0195                     	;# 
+   377  0196                     	;# 
+   378  0199                     	;# 
+   379  0199                     	;# 
+   380  019A                     	;# 
+   381  019A                     	;# 
+   382  019B                     	;# 
+   383  019B                     	;# 
+   384  019B                     	;# 
+   385  019B                     	;# 
+   386  019C                     	;# 
+   387  019C                     	;# 
+   388  019D                     	;# 
+   389  019D                     	;# 
+   390  019E                     	;# 
+   391  019E                     	;# 
+   392  019F                     	;# 
+   393  020D                     	;# 
+   394  0211                     	;# 
+   395  0211                     	;# 
+   396  0212                     	;# 
+   397  0212                     	;# 
+   398  0213                     	;# 
+   399  0213                     	;# 
+   400  0214                     	;# 
+   401  0214                     	;# 
+   402  0215                     	;# 
+   403  0215                     	;# 
+   404  0215                     	;# 
+   405  0216                     	;# 
+   406  0216                     	;# 
+   407  0217                     	;# 
+   408  0217                     	;# 
+   409  0219                     	;# 
+   410  021A                     	;# 
+   411  021B                     	;# 
+   412  021C                     	;# 
+   413  021D                     	;# 
+   414  021E                     	;# 
+   415  021F                     	;# 
+   416  028C                     	;# 
+   417  028D                     	;# 
+   418  0291                     	;# 
+   419  0291                     	;# 
+   420  0292                     	;# 
+   421  0293                     	;# 
+   422  0294                     	;# 
+   423  0295                     	;# 
+   424  0295                     	;# 
+   425  0296                     	;# 
+   426  0298                     	;# 
+   427  0298                     	;# 
+   428  0299                     	;# 
+   429  029A                     	;# 
+   430  029B                     	;# 
+   431  029C                     	;# 
+   432  029C                     	;# 
+   433  029D                     	;# 
+   434  029E                     	;# 
+   435  029F                     	;# 
+   436  030C                     	;# 
+   437  030D                     	;# 
+   438  0311                     	;# 
+   439  0311                     	;# 
+   440  0312                     	;# 
+   441  0313                     	;# 
+   442  0314                     	;# 
+   443  0315                     	;# 
+   444  0315                     	;# 
+   445  0316                     	;# 
+   446  0318                     	;# 
+   447  0318                     	;# 
+   448  0319                     	;# 
+   449  031A                     	;# 
+   450  031C                     	;# 
+   451  031C                     	;# 
+   452  031D                     	;# 
+   453  031E                     	;# 
+   454  038C                     	;# 
+   455  038D                     	;# 
+   456  0394                     	;# 
+   457  0395                     	;# 
+   458  0396                     	;# 
+   459  040C                     	;# 
+   460  040D                     	;# 
+   461  0415                     	;# 
+   462  0416                     	;# 
+   463  0417                     	;# 
+   464  041C                     	;# 
+   465  041D                     	;# 
+   466  041E                     	;# 
+   467  048D                     	;# 
+   468  0491                     	;# 
+   469  0492                     	;# 
+   470  0493                     	;# 
+   471  0493                     	;# 
+   472  0494                     	;# 
+   473  0495                     	;# 
+   474  0496                     	;# 
+   475  0497                     	;# 
+   476  0791                     	;# 
+   477  0792                     	;# 
+   478  0793                     	;# 
+   479  0794                     	;# 
+   480  0795                     	;# 
+   481  0798                     	;# 
+   482  0799                     	;# 
+   483  079A                     	;# 
+   484  079B                     	;# 
+   485  079C                     	;# 
+   486  079D                     	;# 
+   487  07A0                     	;# 
+   488  07A1                     	;# 
+   489  07A2                     	;# 
+   490  07A3                     	;# 
+   491  07A4                     	;# 
+   492  07A5                     	;# 
+   493  07A6                     	;# 
+   494  07A7                     	;# 
+   495  07A8                     	;# 
+   496  07A9                     	;# 
+   497  07AA                     	;# 
+   498  07AB                     	;# 
+   499  07AC                     	;# 
+   500  07AD                     	;# 
+   501  07AE                     	;# 
+   502  07AF                     	;# 
+   503  07B0                     	;# 
+   504  07B1                     	;# 
+   505  07B2                     	;# 
+   506  07B3                     	;# 
+   507  07B4                     	;# 
+   508  07B5                     	;# 
+   509  07B6                     	;# 
+   510  07B7                     	;# 
+   511  0FE4                     	;# 
+   512  0FE5                     	;# 
+   513  0FE6                     	;# 
+   514  0FE7                     	;# 
+   515  0FE8                     	;# 
+   516  0FE9                     	;# 
+   517  0FEA                     	;# 
+   518  0FEB                     	;# 
+   519  0FED                     	;# 
+   520  0FEE                     	;# 
+   521  0FEF                     	;# 
+   522                           
+   523                           	psect	nvBANK0
+   524  0020                     __pnvBANK0:
+   525  0020                     _mzj:
+   526  0020                     	ds	1
+   527  0021                     _mfs:
+   528  0021                     	ds	1
+   529  0022                     _xmzyx:
+   530  0022                     	ds	1
+   531  0023                     _xmzzx:
+   532  0023                     	ds	1
+   533  0024                     _xmj3:
+   534  0024                     	ds	1
+   535  0025                     _xmss3:
+   536  0025                     	ds	1
+   537  0026                     _xmj2:
+   538  0026                     	ds	1
+   539  0027                     _xmss2:
+   540  0027                     	ds	1
+   541  0028                     _xmss1:
+   542  0028                     	ds	1
+   543  0029                     _xmj1:
+   544  0029                     	ds	1
+   545  002A                     _zmy:
+   546  002A                     	ds	1
+   547  002B                     _zmx:
+   548  002B                     	ds	1
+   549  0014                     _PIR4bits	set	20
+   550  001C                     _T2CON	set	28
+   551  001B                     _PR2	set	27
+   552  0010                     _PORTE	set	16
+   553  007E                     _RD6	set	126
+   554  007D                     _RD5	set	125
+   555  007C                     _RD4	set	124
+   556  007B                     _RD3	set	123
+   557  007A                     _RD2	set	122
+   558  0079                     _RD1	set	121
+   559  0078                     _RD0	set	120
+   560  0086                     _RE6	set	134
+   561  0085                     _RE5	set	133
+   562  0084                     _RE4	set	132
+   563  0083                     _RE3	set	131
+   564  0082                     _RE2	set	130
+   565  0081                     _RE1	set	129
+   566  0080                     _RE0	set	128
+   567  0090                     _TRISE	set	144
+   568  008F                     _TRISD	set	143
+   569  008E                     _TRISC	set	142
+   570  008D                     _TRISB	set	141
+   571  008C                     _TRISA	set	140
+   572  0487                     _TRISE7	set	1159
+   573  0472                     _TRISC2	set	1138
+   574  011D                     _APFCON	set	285
+   575  0190                     _ANSELE	set	400
+   576  018C                     _ANSELA	set	396
+   577  0298                     _CCPR2L	set	664
+   578  029A                     _CCP2CON	set	666
+   579  029E                     _CCPTMRS0	set	670
+   580  0291                     _CCPR1L	set	657
+   581  0293                     _CCP1CON	set	659
+   582  028C                     _PORTF	set	652
+   583  1464                     _RF4	set	5220
+   584  1463                     _RF3	set	5219
+   585  1462                     _RF2	set	5218
+   586  1461                     _RF1	set	5217
+   587  1460                     _RF0	set	5216
+   588  030D                     _TRISGbits	set	781
+   589  030C                     _TRISF	set	780
+   590  040D                     _ANSELG	set	1037
+   591  0417                     _T4CON	set	1047
+   592  0416                     _PR4	set	1046
+   593  040C                     _ANSELF	set	1036
+   594  0492                     _TX2REG	set	1170
+   595  0491                     _RC2REG	set	1169
+   596  0495                     _RC2STAbits	set	1173
+   597  0497                     _BAUD2CONbits	set	1175
+   598  0493                     _SP2BRGL	set	1171
+   599  0496                     _TX2STAbits	set	1174
+   600                           
+   601                           	psect	stringtext1
+   602  0800                     __pstringtext1:
+   603  0800                     STR_1:
+   604  0800  3463               	retlw	99	;'c'
+   605  0801  346F               	retlw	111	;'o'
+   606  0802  346D               	retlw	109	;'m'
+   607  0803  3475               	retlw	117	;'u'
+   608  0804  346E               	retlw	110	;'n'
+   609  0805  3469               	retlw	105	;'i'
+   610  0806  3463               	retlw	99	;'c'
+   611  0807  3461               	retlw	97	;'a'
+   612  0808  3463               	retlw	99	;'c'
+   613  0809  3469               	retlw	105	;'i'
+   614  080A  346F               	retlw	111	;'o'
+   615  080B  346E               	retlw	110	;'n'
+   616  080C  3420               	retlw	32	;' '
+   617  080D  3465               	retlw	101	;'e'
+   618  080E  3473               	retlw	115	;'s'
+   619  080F  3474               	retlw	116	;'t'
+   620  0810  3461               	retlw	97	;'a'
+   621  0811  3462               	retlw	98	;'b'
+   622  0812  346C               	retlw	108	;'l'
+   623  0813  3465               	retlw	101	;'e'
+   624  0814  3463               	retlw	99	;'c'
+   625  0815  3469               	retlw	105	;'i'
+   626  0816  3464               	retlw	100	;'d'
+   627  0817  3461               	retlw	97	;'a'
+   628  0818  340A               	retlw	10
+   629  0819  340D               	retlw	13
+   630  081A  3400               	retlw	0
+   631                           
+   632                           	psect	stringtext2
+   633  081B                     __pstringtext2:
+   634  081B                     STR_18:
+   635  081B  3473               	retlw	115	;'s'
+   636  081C  3475               	retlw	117	;'u'
+   637  081D  346A               	retlw	106	;'j'
+   638  081E  3465               	retlw	101	;'e'
+   639  081F  3474               	retlw	116	;'t'
+   640  0820  3461               	retlw	97	;'a'
+   641  0821  346E               	retlw	110	;'n'
+   642  0822  3464               	retlw	100	;'d'
+   643  0823  346F               	retlw	111	;'o'
+   644  0824  3420               	retlw	32	;' '
+   645  0825  3469               	retlw	105	;'i'
+   646  0826  347A               	retlw	122	;'z'
+   647  0827  3471               	retlw	113	;'q'
+   648  0828  3475               	retlw	117	;'u'
+   649  0829  3469               	retlw	105	;'i'
+   650  082A  3465               	retlw	101	;'e'
+   651  082B  3472               	retlw	114	;'r'
+   652  082C  3464               	retlw	100	;'d'
+   653  082D  3461               	retlw	97	;'a'
+   654  082E  3420               	retlw	32	;' '
+   655  082F  340A               	retlw	10
+   656  0830  340D               	retlw	13
+   657  0831  3400               	retlw	0
+   658                           
+   659                           	psect	stringtext3
+   660  0832                     __pstringtext3:
+   661  0832                     STR_20:
+   662  0832  3473               	retlw	115	;'s'
+   663  0833  3475               	retlw	117	;'u'
+   664  0834  346A               	retlw	106	;'j'
+   665  0835  3465               	retlw	101	;'e'
+   666  0836  3474               	retlw	116	;'t'
+   667  0837  3461               	retlw	97	;'a'
+   668  0838  346E               	retlw	110	;'n'
+   669  0839  3464               	retlw	100	;'d'
+   670  083A  346F               	retlw	111	;'o'
+   671  083B  3420               	retlw	32	;' '
+   672  083C  3464               	retlw	100	;'d'
+   673  083D  3465               	retlw	101	;'e'
+   674  083E  3472               	retlw	114	;'r'
+   675  083F  3465               	retlw	101	;'e'
+   676  0840  3463               	retlw	99	;'c'
+   677  0841  3468               	retlw	104	;'h'
+   678  0842  3461               	retlw	97	;'a'
+   679  0843  3420               	retlw	32	;' '
+   680  0844  340A               	retlw	10
+   681  0845  340D               	retlw	13
+   682  0846  3400               	retlw	0
+   683                           
+   684                           	psect	stringtext4
+   685  0847                     __pstringtext4:
+   686  0847                     STR_2:
+   687  0847  346D               	retlw	109	;'m'
+   688  0848  346F               	retlw	111	;'o'
+   689  0849  3476               	retlw	118	;'v'
+   690  084A  342E               	retlw	46	;'.'
+   691  084B  3420               	retlw	32	;' '
+   692  084C  3461               	retlw	97	;'a'
+   693  084D  3420               	retlw	32	;' '
+   694  084E  3469               	retlw	105	;'i'
+   695  084F  347A               	retlw	122	;'z'
+   696  0850  3471               	retlw	113	;'q'
+   697  0851  3475               	retlw	117	;'u'
+   698  0852  3469               	retlw	105	;'i'
+   699  0853  3465               	retlw	101	;'e'
+   700  0854  3472               	retlw	114	;'r'
+   701  0855  3464               	retlw	100	;'d'
+   702  0856  3461               	retlw	97	;'a'
+   703  0857  3420               	retlw	32	;' '
+   704  0858  340A               	retlw	10
+   705  0859  340D               	retlw	13
+   706  085A  3400               	retlw	0
+   707                           
+   708                           	psect	stringtext5
+   709  085B                     __pstringtext5:
+   710  085B                     STR_24:
+   711  085B  3470               	retlw	112	;'p'
+   712  085C  3472               	retlw	114	;'r'
+   713  085D  3465               	retlw	101	;'e'
+   714  085E  3473               	retlw	115	;'s'
+   715  085F  3474               	retlw	116	;'t'
+   716  0860  3465               	retlw	101	;'e'
+   717  0861  3420               	retlw	32	;' '
+   718  0862  3461               	retlw	97	;'a'
+   719  0863  3474               	retlw	116	;'t'
+   720  0864  3465               	retlw	101	;'e'
+   721  0865  346E               	retlw	110	;'n'
+   722  0866  3463               	retlw	99	;'c'
+   723  0867  3469               	retlw	105	;'i'
+   724  0868  346F               	retlw	111	;'o'
+   725  0869  346E               	retlw	110	;'n'
+   726  086A  3420               	retlw	32	;' '
+   727  086B  340A               	retlw	10
+   728  086C  340D               	retlw	13
+   729  086D  3400               	retlw	0
+   730                           
+   731                           	psect	stringtext6
+   732  086E                     __pstringtext6:
+   733  086E                     STR_4:
+   734  086E  346D               	retlw	109	;'m'
+   735  086F  346F               	retlw	111	;'o'
+   736  0870  3476               	retlw	118	;'v'
+   737  0871  342E               	retlw	46	;'.'
+   738  0872  3420               	retlw	32	;' '
+   739  0873  3461               	retlw	97	;'a'
+   740  0874  3420               	retlw	32	;' '
+   741  0875  3464               	retlw	100	;'d'
+   742  0876  3465               	retlw	101	;'e'
+   743  0877  3472               	retlw	114	;'r'
+   744  0878  3465               	retlw	101	;'e'
+   745  0879  3463               	retlw	99	;'c'
+   746  087A  3468               	retlw	104	;'h'
+   747  087B  3461               	retlw	97	;'a'
+   748  087C  3420               	retlw	32	;' '
+   749  087D  340A               	retlw	10
+   750  087E  340D               	retlw	13
+   751  087F  3400               	retlw	0
+   752                           
+   753                           	psect	stringtext7
+   754  0880                     __pstringtext7:
+   755  0880                     STR_8:
+   756  0880  346D               	retlw	109	;'m'
+   757  0881  346F               	retlw	111	;'o'
+   758  0882  3476               	retlw	118	;'v'
+   759  0883  342E               	retlw	46	;'.'
+   760  0884  3420               	retlw	32	;' '
+   761  0885  3461               	retlw	97	;'a'
+   762  0886  3472               	retlw	114	;'r'
+   763  0887  3472               	retlw	114	;'r'
+   764  0888  3469               	retlw	105	;'i'
+   765  0889  3462               	retlw	98	;'b'
+   766  088A  3461               	retlw	97	;'a'
+   767  088B  3431               	retlw	49	;'1'
+   768  088C  3420               	retlw	32	;' '
+   769  088D  340A               	retlw	10
+   770  088E  340D               	retlw	13
+   771  088F  3400               	retlw	0
+   772                           
+   773                           	psect	stringtext8
+   774  0890                     __pstringtext8:
+   775  0890                     STR_10:
+   776  0890  346D               	retlw	109	;'m'
+   777  0891  346F               	retlw	111	;'o'
+   778  0892  3476               	retlw	118	;'v'
+   779  0893  342E               	retlw	46	;'.'
+   780  0894  3420               	retlw	32	;' '
+   781  0895  3461               	retlw	97	;'a'
+   782  0896  3472               	retlw	114	;'r'
+   783  0897  3472               	retlw	114	;'r'
+   784  0898  3469               	retlw	105	;'i'
+   785  0899  3462               	retlw	98	;'b'
+   786  089A  3461               	retlw	97	;'a'
+   787  089B  3432               	retlw	50	;'2'
+   788  089C  3420               	retlw	32	;' '
+   789  089D  340A               	retlw	10
+   790  089E  340D               	retlw	13
+   791  089F  3400               	retlw	0
+   792                           
+   793                           	psect	stringtext9
+   794  08A0                     __pstringtext9:
+   795  08A0                     STR_14:
+   796  08A0  346D               	retlw	109	;'m'
+   797  08A1  346F               	retlw	111	;'o'
+   798  08A2  3476               	retlw	118	;'v'
+   799  08A3  342E               	retlw	46	;'.'
+   800  08A4  3420               	retlw	32	;' '
+   801  08A5  3461               	retlw	97	;'a'
+   802  08A6  3472               	retlw	114	;'r'
+   803  08A7  3472               	retlw	114	;'r'
+   804  08A8  3469               	retlw	105	;'i'
+   805  08A9  3462               	retlw	98	;'b'
+   806  08AA  3461               	retlw	97	;'a'
+   807  08AB  3433               	retlw	51	;'3'
+   808  08AC  3420               	retlw	32	;' '
+   809  08AD  340A               	retlw	10
+   810  08AE  340D               	retlw	13
+   811  08AF  3400               	retlw	0
+   812                           
+   813                           	psect	stringtext10
+   814  08B0                     __pstringtext10:
+   815  08B0                     STR_6:
+   816  08B0  346D               	retlw	109	;'m'
+   817  08B1  346F               	retlw	111	;'o'
+   818  08B2  3476               	retlw	118	;'v'
+   819  08B3  342E               	retlw	46	;'.'
+   820  08B4  3420               	retlw	32	;' '
+   821  08B5  3461               	retlw	97	;'a'
+   822  08B6  3462               	retlw	98	;'b'
+   823  08B7  3461               	retlw	97	;'a'
+   824  08B8  346A               	retlw	106	;'j'
+   825  08B9  346F               	retlw	111	;'o'
+   826  08BA  3431               	retlw	49	;'1'
+   827  08BB  3420               	retlw	32	;' '
+   828  08BC  340A               	retlw	10
+   829  08BD  340D               	retlw	13
+   830  08BE  3400               	retlw	0
+   831                           
+   832                           	psect	stringtext11
+   833  08BF                     __pstringtext11:
+   834  08BF                     STR_12:
+   835  08BF  346D               	retlw	109	;'m'
+   836  08C0  346F               	retlw	111	;'o'
+   837  08C1  3476               	retlw	118	;'v'
+   838  08C2  342E               	retlw	46	;'.'
+   839  08C3  3420               	retlw	32	;' '
+   840  08C4  3461               	retlw	97	;'a'
+   841  08C5  3462               	retlw	98	;'b'
+   842  08C6  3461               	retlw	97	;'a'
+   843  08C7  346A               	retlw	106	;'j'
+   844  08C8  346F               	retlw	111	;'o'
+   845  08C9  3432               	retlw	50	;'2'
+   846  08CA  3420               	retlw	32	;' '
+   847  08CB  340A               	retlw	10
+   848  08CC  340D               	retlw	13
+   849  08CD  3400               	retlw	0
+   850                           
+   851                           	psect	stringtext12
+   852  08CE                     __pstringtext12:
+   853  08CE                     STR_16:
+   854  08CE  346D               	retlw	109	;'m'
+   855  08CF  346F               	retlw	111	;'o'
+   856  08D0  3476               	retlw	118	;'v'
+   857  08D1  342E               	retlw	46	;'.'
+   858  08D2  3420               	retlw	32	;' '
+   859  08D3  3461               	retlw	97	;'a'
+   860  08D4  3462               	retlw	98	;'b'
+   861  08D5  3461               	retlw	97	;'a'
+   862  08D6  346A               	retlw	106	;'j'
+   863  08D7  346F               	retlw	111	;'o'
+   864  08D8  3433               	retlw	51	;'3'
+   865  08D9  3420               	retlw	32	;' '
+   866  08DA  340A               	retlw	10
+   867  08DB  340D               	retlw	13
+   868  08DC  3400               	retlw	0
+   869                           
+   870                           	psect	stringtext13
+   871  08DD                     __pstringtext13:
+   872  08DD                     STR_22:
+   873  08DD  3472               	retlw	114	;'r'
+   874  08DE  3465               	retlw	101	;'e'
+   875  08DF  346C               	retlw	108	;'l'
+   876  08E0  3461               	retlw	97	;'a'
+   877  08E1  346A               	retlw	106	;'j'
+   878  08E2  3461               	retlw	97	;'a'
+   879  08E3  3463               	retlw	99	;'c'
+   880  08E4  3469               	retlw	105	;'i'
+   881  08E5  346F               	retlw	111	;'o'
+   882  08E6  346E               	retlw	110	;'n'
+   883  08E7  3420               	retlw	32	;' '
+   884  08E8  340A               	retlw	10
+   885  08E9  340D               	retlw	13
+   886  08EA  3400               	retlw	0
+   887                           
+   888                           	psect	stringtext14
+   889  0000                     __pstringtext14:
+   890  0880                     
+   891                           	psect	cinit
+   892  07FD                     start_initialization:	
+   893                           ; #config settings
+   894                           
+   895  07FD                     __initialization:
+   896  07FD                     end_of_initialization:	
+   897                           ;End of C runtime variable initialization code
+   898                           
+   899  07FD                     __end_of__initialization:
+   900  07FD  0020               	movlb	0
+   901  07FE  3184  2C7B         	ljmp	_main	;jump to C main() function
+   902                           
+   903                           	psect	cstackCOMMON
+   904  0070                     __pcstackCOMMON:
+   905  0070                     ?_IO_init:
+   906  0070                     ??_IO_init:	
+   907                           ; 1 bytes @ 0x0
+   908                           
+   909  0070                     ?_PWM_init:	
+   910                           ; 1 bytes @ 0x0
+   911                           
+   912  0070                     ??_PWM_init:	
+   913                           ; 1 bytes @ 0x0
+   914                           
+   915  0070                     ?_UART_init:	
+   916                           ; 1 bytes @ 0x0
+   917                           
+   918  0070                     ??_UART_init:	
+   919                           ; 1 bytes @ 0x0
+   920                           
+   921  0070                     ?_UART_read:	
+   922                           ; 1 bytes @ 0x0
+   923                           
+   924  0070                     ??_UART_read:	
+   925                           ; 1 bytes @ 0x0
+   926                           
+   927  0070                     ?_UART_write:	
+   928                           ; 1 bytes @ 0x0
+   929                           
+   930  0070                     ??_UART_write:	
+   931                           ; 1 bytes @ 0x0
+   932                           
+   933  0070                     ?_main:	
+   934                           ; 1 bytes @ 0x0
+   935                           
+   936  0070                     ?___wmul:	
+   937                           ; 1 bytes @ 0x0
+   938                           
+   939  0070                     UART_write@dato:	
+   940                           ; 2 bytes @ 0x0
+   941                           
+   942  0070                     ___wmul@multiplier:	
+   943                           ; 1 bytes @ 0x0
+   944                           
+   945                           
+   946                           ; 2 bytes @ 0x0
+   947  0070                     	ds	1
+   948  0071                     ?_UART_printf:
+   949  0071                     UART_printf@cadena:	
+   950                           ; 1 bytes @ 0x1
+   951                           
+   952                           
+   953                           ; 2 bytes @ 0x1
+   954  0071                     	ds	1
+   955  0072                     ___wmul@multiplicand:
+   956                           
+   957                           ; 2 bytes @ 0x2
+   958  0072                     	ds	1
+   959  0073                     ??_UART_printf:
+   960                           
+   961                           ; 1 bytes @ 0x3
+   962  0073                     	ds	1
+   963  0074                     ??___wmul:
+   964  0074                     ___wmul@product:	
+   965                           ; 1 bytes @ 0x4
+   966                           
+   967                           
+   968                           ; 2 bytes @ 0x4
+   969  0074                     	ds	2
+   970  0076                     ?_delay:
+   971  0076                     delay@sec:	
+   972                           ; 1 bytes @ 0x6
+   973                           
+   974                           
+   975                           ; 2 bytes @ 0x6
+   976  0076                     	ds	2
+   977  0078                     ??_delay:
+   978  0078                     delay@i:	
+   979                           ; 1 bytes @ 0x8
+   980                           
+   981                           
+   982                           ; 2 bytes @ 0x8
+   983  0078                     	ds	2
+   984  007A                     delay@j:
+   985                           
+   986                           ; 2 bytes @ 0xA
+   987  007A                     	ds	2
+   988  007C                     ??_main:
+   989                           
+   990                           ; 1 bytes @ 0xC
+   991  007C                     	ds	1
+   992  007D                     main@dato_rx:
+   993                           
+   994                           ; 1 bytes @ 0xD
+   995  007D                     	ds	1
+   996                           
+   997                           	psect	maintext
+   998  047B                     __pmaintext:	
+   999 ;;
+  1000 ;;Main: autosize = 0, tempsize = 1, incstack = 0, save=0
+  1001 ;;
+  1002 ;; *************** function _main *****************
+  1003 ;; Defined at:
+  1004 ;;		line 197 in file "brazo1.c"
+  1005 ;; Parameters:    Size  Location     Type
+  1006 ;;		None
+  1007 ;; Auto vars:     Size  Location     Type
+  1008 ;;  dato_rx         1   13[COMMON] unsigned char 
+  1009 ;; Return value:  Size  Location     Type
+  1010 ;;                  1    wreg      void 
+  1011 ;; Registers used:
+  1012 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+  1013 ;; Tracked objects:
+  1014 ;;		On entry : B1F/0
+  1015 ;;		On exit  : 0/0
+  1016 ;;		Unchanged: 0/0
+  1017 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+  1018 ;;      Params:         0       0       0       0       0       0       0       0
+  1019 ;;      Locals:         1       0       0       0       0       0       0       0
+  1020 ;;      Temps:          1       0       0       0       0       0       0       0
+  1021 ;;      Totals:         2       0       0       0       0       0       0       0
+  1022 ;;Total ram usage:        2 bytes
+  1023 ;; Hardware stack levels required when called:    2
+  1024 ;; This function calls:
+  1025 ;;		_IO_init
+  1026 ;;		_PWM_init
+  1027 ;;		_UART_init
+  1028 ;;		_UART_printf
+  1029 ;;		_UART_read
+  1030 ;;		_delay
+  1031 ;; This function is called by:
+  1032 ;;		Startup code after reset
+  1033 ;; This function uses a non-reentrant model
+  1034 ;;
+  1035                           
+  1036                           
+  1037                           ;psect for function _main
+  1038  047B                     _main:
+  1039  047B                     l1412:	
+  1040                           ;incstack = 0
+  1041                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+  1042                           
+  1043                           
+  1044                           ;brazo1.c: 199:  char dato_rx;;brazo1.c: 200:  RE0 = 0;
+  1045  047B  0020               	movlb	0	; select bank0
+  1046  047C  1010               	bcf	16,0	;volatile
+  1047                           
+  1048                           ;brazo1.c: 201:  RE1 = 0;
+  1049  047D  1090               	bcf	16,1	;volatile
+  1050                           
+  1051                           ;brazo1.c: 202:  RE2 = 0;
+  1052  047E  1110               	bcf	16,2	;volatile
+  1053                           
+  1054                           ;brazo1.c: 203:  RE3 = 0;
+  1055  047F  1190               	bcf	16,3	;volatile
+  1056                           
+  1057                           ;brazo1.c: 204:  RE4 = 0;
+  1058  0480  1210               	bcf	16,4	;volatile
+  1059                           
+  1060                           ;brazo1.c: 205:  RE5 = 0;
+  1061  0481  1290               	bcf	16,5	;volatile
+  1062                           
+  1063                           ;brazo1.c: 206:  RE6 = 0;
+  1064  0482  1310               	bcf	16,6	;volatile
+  1065                           
+  1066                           ;brazo1.c: 207:  RF0 = 0;
+  1067  0483  0025               	movlb	5	; select bank5
+  1068  0484  100C               	bcf	12,0	;volatile
+  1069                           
+  1070                           ;brazo1.c: 208:  RF1 = 0;
+  1071  0485  108C               	bcf	12,1	;volatile
+  1072                           
+  1073                           ;brazo1.c: 209:  RF2 = 0;
+  1074  0486  110C               	bcf	12,2	;volatile
+  1075                           
+  1076                           ;brazo1.c: 210:  RF3 = 0;
+  1077  0487  118C               	bcf	12,3	;volatile
+  1078                           
+  1079                           ;brazo1.c: 211:  RF4 = 0;
+  1080  0488  120C               	bcf	12,4	;volatile
+  1081                           
+  1082                           ;brazo1.c: 212:  zmx = 1;
+  1083  0489  0020               	movlb	0	; select bank0
+  1084  048A  01AB               	clrf	_zmx
+  1085  048B  0AAB               	incf	_zmx,f
+  1086                           
+  1087                           ;brazo1.c: 213:  zmy = 1;
+  1088  048C  01AA               	clrf	_zmy
+  1089  048D  0AAA               	incf	_zmy,f
+  1090                           
+  1091                           ;brazo1.c: 214:  xmj1 =1;
+  1092  048E  01A9               	clrf	_xmj1
+  1093  048F  0AA9               	incf	_xmj1,f
+  1094                           
+  1095                           ;brazo1.c: 215:  xmss1=1;
+  1096  0490  01A8               	clrf	_xmss1
+  1097  0491  0AA8               	incf	_xmss1,f
+  1098                           
+  1099                           ;brazo1.c: 216:  xmss2=1;
+  1100  0492  01A7               	clrf	_xmss2
+  1101  0493  0AA7               	incf	_xmss2,f
+  1102                           
+  1103                           ;brazo1.c: 217:  xmj2=1;
+  1104  0494  01A6               	clrf	_xmj2
+  1105  0495  0AA6               	incf	_xmj2,f
+  1106                           
+  1107                           ;brazo1.c: 218:  xmss3=1;
+  1108  0496  01A5               	clrf	_xmss3
+  1109  0497  0AA5               	incf	_xmss3,f
+  1110                           
+  1111                           ;brazo1.c: 219:  xmj3=1;
+  1112  0498  01A4               	clrf	_xmj3
+  1113  0499  0AA4               	incf	_xmj3,f
+  1114                           
+  1115                           ;brazo1.c: 220:  xmzzx=1;
+  1116  049A  01A3               	clrf	_xmzzx
+  1117  049B  0AA3               	incf	_xmzzx,f
+  1118                           
+  1119                           ;brazo1.c: 221:  xmzyx=1;
+  1120  049C  01A2               	clrf	_xmzyx
+  1121  049D  0AA2               	incf	_xmzyx,f
+  1122                           
+  1123                           ;brazo1.c: 222:  mfs=1;
+  1124  049E  01A1               	clrf	_mfs
+  1125  049F  0AA1               	incf	_mfs,f
+  1126                           
+  1127                           ;brazo1.c: 223:  mzj=1;
+  1128  04A0  01A0               	clrf	_mzj
+  1129  04A1  0AA0               	incf	_mzj,f
+  1130  04A2                     l1414:
+  1131                           
+  1132                           ;brazo1.c: 225:  IO_init();
+  1133  04A2  3183  23F4  3184   	fcall	_IO_init
+  1134                           
+  1135                           ;brazo1.c: 226:  PWM_init();
+  1136  04A5  3184  242F  3184   	fcall	_PWM_init
+  1137                           
+  1138                           ;brazo1.c: 227:  UART_init();
+  1139  04A8  3183  23CD  3184   	fcall	_UART_init
+  1140  04AB                     l1416:
+  1141                           
+  1142                           ;brazo1.c: 228:  UART_printf("comunicacion establecida\n\r");
+  1143  04AB  3000               	movlw	low (STR_1| (0+32768))
+  1144  04AC  00F1               	movwf	UART_printf@cadena
+  1145  04AD  3088               	movlw	high (STR_1| (0+32768))
+  1146  04AE  00F2               	movwf	UART_printf@cadena+1
+  1147  04AF  3183  23DD  3184   	fcall	_UART_printf
+  1148  04B2                     l1418:
+  1149                           
+  1150                           ;brazo1.c: 231:  {;brazo1.c: 232:   dato_rx = UART_read();
+  1151  04B2  3183  23C3  3184   	fcall	_UART_read
+  1152  04B5  00FC               	movwf	??_main
+  1153  04B6  087C               	movf	??_main,w
+  1154  04B7  00FD               	movwf	main@dato_rx
+  1155  04B8                     l1420:
+  1156                           
+  1157                           ;brazo1.c: 234:   if(dato_rx == '0'){
+  1158  04B8  3030               	movlw	48
+  1159  04B9  067D               	xorwf	main@dato_rx,w
+  1160  04BA  1D03               	btfss	3,2
+  1161  04BB  2CBD               	goto	u731
+  1162  04BC  2CBE               	goto	u730
+  1163  04BD                     u731:
+  1164  04BD  2CC7               	goto	l1426
+  1165  04BE                     u730:
+  1166  04BE                     l1422:
+  1167                           
+  1168                           ;brazo1.c: 235:    UART_printf("mov. a izquierda \n\r");
+  1169  04BE  3047               	movlw	low (STR_2| (0+32768))
+  1170  04BF  00F1               	movwf	UART_printf@cadena
+  1171  04C0  3088               	movlw	high (STR_2| (0+32768))
+  1172  04C1  00F2               	movwf	UART_printf@cadena+1
+  1173  04C2  3183  23DD  3184   	fcall	_UART_printf
+  1174  04C5                     l1424:
+  1175                           
+  1176                           ;brazo1.c: 236:    RE0 = 0;
+  1177  04C5  0020               	movlb	0	; select bank0
+  1178  04C6  1010               	bcf	16,0	;volatile
+  1179  04C7                     l1426:
+  1180                           
+  1181                           ;brazo1.c: 238:   if((dato_rx == '1')&&(zmx)){
+  1182  04C7  3031               	movlw	49
+  1183  04C8  067D               	xorwf	main@dato_rx,w
+  1184  04C9  1D03               	btfss	3,2
+  1185  04CA  2CCC               	goto	u741
+  1186  04CB  2CCD               	goto	u740
+  1187  04CC                     u741:
+  1188  04CC  2CE3               	goto	l1440
+  1189  04CD                     u740:
+  1190  04CD                     l1428:
+  1191  04CD  0020               	movlb	0	; select bank0
+  1192  04CE  082B               	movf	_zmx,w
+  1193  04CF  1903               	btfsc	3,2
+  1194  04D0  2CD2               	goto	u751
+  1195  04D1  2CD3               	goto	u750
+  1196  04D2                     u751:
+  1197  04D2  2CE3               	goto	l1440
+  1198  04D3                     u750:
+  1199  04D3                     l1430:
+  1200                           
+  1201                           ;brazo1.c: 239:    UART_printf("mov. a izquierda \n\r");
+  1202  04D3  3047               	movlw	low (STR_2| (0+32768))
+  1203  04D4  00F1               	movwf	UART_printf@cadena
+  1204  04D5  3088               	movlw	high (STR_2| (0+32768))
+  1205  04D6  00F2               	movwf	UART_printf@cadena+1
+  1206  04D7  3183  23DD  3184   	fcall	_UART_printf
+  1207  04DA                     l1432:
+  1208                           
+  1209                           ;brazo1.c: 240:    RE0 = 1;
+  1210  04DA  0020               	movlb	0	; select bank0
+  1211  04DB  1410               	bsf	16,0	;volatile
+  1212  04DC                     l1434:
+  1213                           
+  1214                           ;brazo1.c: 241:    if(RD0) zmx= 0; zmy=1;
+  1215  04DC  1C0F               	btfss	15,0	;volatile
+  1216  04DD  2CDF               	goto	u761
+  1217  04DE  2CE0               	goto	u760
+  1218  04DF                     u761:
+  1219  04DF  2CE1               	goto	l1438
+  1220  04E0                     u760:
+  1221  04E0                     l1436:
+  1222  04E0  01AB               	clrf	_zmx
+  1223  04E1                     l1438:
+  1224  04E1  01AA               	clrf	_zmy
+  1225  04E2  0AAA               	incf	_zmy,f
+  1226  04E3                     l1440:
+  1227                           
+  1228                           ;brazo1.c: 243:   if(dato_rx == '2'){
+  1229  04E3  3032               	movlw	50
+  1230  04E4  067D               	xorwf	main@dato_rx,w
+  1231  04E5  1D03               	btfss	3,2
+  1232  04E6  2CE8               	goto	u771
+  1233  04E7  2CE9               	goto	u770
+  1234  04E8                     u771:
+  1235  04E8  2CF2               	goto	l1446
+  1236  04E9                     u770:
+  1237  04E9                     l1442:
+  1238                           
+  1239                           ;brazo1.c: 244:    UART_printf("mov. a derecha \n\r");
+  1240  04E9  306E               	movlw	low (STR_4| (0+32768))
+  1241  04EA  00F1               	movwf	UART_printf@cadena
+  1242  04EB  3088               	movlw	high (STR_4| (0+32768))
+  1243  04EC  00F2               	movwf	UART_printf@cadena+1
+  1244  04ED  3183  23DD  3184   	fcall	_UART_printf
+  1245  04F0                     l1444:
+  1246                           
+  1247                           ;brazo1.c: 245:    RE1 = 0;
+  1248  04F0  0020               	movlb	0	; select bank0
+  1249  04F1  1090               	bcf	16,1	;volatile
+  1250  04F2                     l1446:
+  1251                           
+  1252                           ;brazo1.c: 247:   if((dato_rx == '3')&&(zmy)){
+  1253  04F2  3033               	movlw	51
+  1254  04F3  067D               	xorwf	main@dato_rx,w
+  1255  04F4  1D03               	btfss	3,2
+  1256  04F5  2CF7               	goto	u781
+  1257  04F6  2CF8               	goto	u780
+  1258  04F7                     u781:
+  1259  04F7  2D0E               	goto	l1460
+  1260  04F8                     u780:
+  1261  04F8                     l1448:
+  1262  04F8  0020               	movlb	0	; select bank0
+  1263  04F9  082A               	movf	_zmy,w
+  1264  04FA  1903               	btfsc	3,2
+  1265  04FB  2CFD               	goto	u791
+  1266  04FC  2CFE               	goto	u790
+  1267  04FD                     u791:
+  1268  04FD  2D0E               	goto	l1460
+  1269  04FE                     u790:
+  1270  04FE                     l1450:
+  1271                           
+  1272                           ;brazo1.c: 248:    UART_printf("mov. a derecha \n\r");
+  1273  04FE  306E               	movlw	low (STR_4| (0+32768))
+  1274  04FF  00F1               	movwf	UART_printf@cadena
+  1275  0500  3088               	movlw	high (STR_4| (0+32768))
+  1276  0501  00F2               	movwf	UART_printf@cadena+1
+  1277  0502  3183  23DD  3184   	fcall	_UART_printf
+  1278  0505                     l1452:
+  1279                           
+  1280                           ;brazo1.c: 249:    RE1 = 1;
+  1281  0505  0020               	movlb	0	; select bank0
+  1282  0506  1490               	bsf	16,1	;volatile
+  1283  0507                     l1454:
+  1284                           
+  1285                           ;brazo1.c: 250:    if(RD0) zmy= 0; zmx=1;
+  1286  0507  1C0F               	btfss	15,0	;volatile
+  1287  0508  2D0A               	goto	u801
+  1288  0509  2D0B               	goto	u800
+  1289  050A                     u801:
+  1290  050A  2D0C               	goto	l1458
+  1291  050B                     u800:
+  1292  050B                     l1456:
+  1293  050B  01AA               	clrf	_zmy
+  1294  050C                     l1458:
+  1295  050C  01AB               	clrf	_zmx
+  1296  050D  0AAB               	incf	_zmx,f
+  1297  050E                     l1460:
+  1298                           
+  1299                           ;brazo1.c: 252:   if(dato_rx == '4'){
+  1300  050E  3034               	movlw	52
+  1301  050F  067D               	xorwf	main@dato_rx,w
+  1302  0510  1D03               	btfss	3,2
+  1303  0511  2D13               	goto	u811
+  1304  0512  2D14               	goto	u810
+  1305  0513                     u811:
+  1306  0513  2D1D               	goto	l1466
+  1307  0514                     u810:
+  1308  0514                     l1462:
+  1309                           
+  1310                           ;brazo1.c: 253:    UART_printf("mov. abajo1 \n\r");
+  1311  0514  30B0               	movlw	low (STR_6| (0+32768))
+  1312  0515  00F1               	movwf	UART_printf@cadena
+  1313  0516  3088               	movlw	high (STR_6| (0+32768))
+  1314  0517  00F2               	movwf	UART_printf@cadena+1
+  1315  0518  3183  23DD  3184   	fcall	_UART_printf
+  1316  051B                     l1464:
+  1317                           
+  1318                           ;brazo1.c: 254:    RE2 = 0;
+  1319  051B  0020               	movlb	0	; select bank0
+  1320  051C  1110               	bcf	16,2	;volatile
+  1321  051D                     l1466:
+  1322                           
+  1323                           ;brazo1.c: 256:   if((dato_rx == '5')&&xmj1){
+  1324  051D  3035               	movlw	53
+  1325  051E  067D               	xorwf	main@dato_rx,w
+  1326  051F  1D03               	btfss	3,2
+  1327  0520  2D22               	goto	u821
+  1328  0521  2D23               	goto	u820
+  1329  0522                     u821:
+  1330  0522  2D39               	goto	l1480
+  1331  0523                     u820:
+  1332  0523                     l1468:
+  1333  0523  0020               	movlb	0	; select bank0
+  1334  0524  0829               	movf	_xmj1,w
+  1335  0525  1903               	btfsc	3,2
+  1336  0526  2D28               	goto	u831
+  1337  0527  2D29               	goto	u830
+  1338  0528                     u831:
+  1339  0528  2D39               	goto	l1480
+  1340  0529                     u830:
+  1341  0529                     l1470:
+  1342                           
+  1343                           ;brazo1.c: 257:    UART_printf("mov. abajo1 \n\r");
+  1344  0529  30B0               	movlw	low (STR_6| (0+32768))
+  1345  052A  00F1               	movwf	UART_printf@cadena
+  1346  052B  3088               	movlw	high (STR_6| (0+32768))
+  1347  052C  00F2               	movwf	UART_printf@cadena+1
+  1348  052D  3183  23DD  3184   	fcall	_UART_printf
+  1349  0530                     l1472:
+  1350                           
+  1351                           ;brazo1.c: 258:    RE2 = 1;
+  1352  0530  0020               	movlb	0	; select bank0
+  1353  0531  1510               	bsf	16,2	;volatile
+  1354  0532                     l1474:
+  1355                           
+  1356                           ;brazo1.c: 259:    if(RD1) xmj1=0; xmss1=1;
+  1357  0532  1C8F               	btfss	15,1	;volatile
+  1358  0533  2D35               	goto	u841
+  1359  0534  2D36               	goto	u840
+  1360  0535                     u841:
+  1361  0535  2D37               	goto	l1478
+  1362  0536                     u840:
+  1363  0536                     l1476:
+  1364  0536  01A9               	clrf	_xmj1
+  1365  0537                     l1478:
+  1366  0537  01A8               	clrf	_xmss1
+  1367  0538  0AA8               	incf	_xmss1,f
+  1368  0539                     l1480:
+  1369                           
+  1370                           ;brazo1.c: 261:   if(dato_rx == '6'){
+  1371  0539  3036               	movlw	54
+  1372  053A  067D               	xorwf	main@dato_rx,w
+  1373  053B  1D03               	btfss	3,2
+  1374  053C  2D3E               	goto	u851
+  1375  053D  2D3F               	goto	u850
+  1376  053E                     u851:
+  1377  053E  2D48               	goto	l1486
+  1378  053F                     u850:
+  1379  053F                     l1482:
+  1380                           
+  1381                           ;brazo1.c: 262:    UART_printf("mov. arriba1 \n\r");
+  1382  053F  3080               	movlw	low (STR_8| (0+32768))
+  1383  0540  00F1               	movwf	UART_printf@cadena
+  1384  0541  3088               	movlw	high (STR_8| (0+32768))
+  1385  0542  00F2               	movwf	UART_printf@cadena+1
+  1386  0543  3183  23DD  3184   	fcall	_UART_printf
+  1387  0546                     l1484:
+  1388                           
+  1389                           ;brazo1.c: 263:    RE3 = 0;
+  1390  0546  0020               	movlb	0	; select bank0
+  1391  0547  1190               	bcf	16,3	;volatile
+  1392  0548                     l1486:
+  1393                           
+  1394                           ;brazo1.c: 265:   if((dato_rx == '7')&&(xmss1)){
+  1395  0548  3037               	movlw	55
+  1396  0549  067D               	xorwf	main@dato_rx,w
+  1397  054A  1D03               	btfss	3,2
+  1398  054B  2D4D               	goto	u861
+  1399  054C  2D4E               	goto	u860
+  1400  054D                     u861:
+  1401  054D  2D64               	goto	l1500
+  1402  054E                     u860:
+  1403  054E                     l1488:
+  1404  054E  0020               	movlb	0	; select bank0
+  1405  054F  0828               	movf	_xmss1,w
+  1406  0550  1903               	btfsc	3,2
+  1407  0551  2D53               	goto	u871
+  1408  0552  2D54               	goto	u870
+  1409  0553                     u871:
+  1410  0553  2D64               	goto	l1500
+  1411  0554                     u870:
+  1412  0554                     l1490:
+  1413                           
+  1414                           ;brazo1.c: 266:    UART_printf("mov. arriba1 \n\r");
+  1415  0554  3080               	movlw	low (STR_8| (0+32768))
+  1416  0555  00F1               	movwf	UART_printf@cadena
+  1417  0556  3088               	movlw	high (STR_8| (0+32768))
+  1418  0557  00F2               	movwf	UART_printf@cadena+1
+  1419  0558  3183  23DD  3184   	fcall	_UART_printf
+  1420  055B                     l1492:
+  1421                           
+  1422                           ;brazo1.c: 267:    RE3 = 1;
+  1423  055B  0020               	movlb	0	; select bank0
+  1424  055C  1590               	bsf	16,3	;volatile
+  1425  055D                     l1494:
+  1426                           
+  1427                           ;brazo1.c: 268:    if(RD1) xmss1=0; xmj1=1;
+  1428  055D  1C8F               	btfss	15,1	;volatile
+  1429  055E  2D60               	goto	u881
+  1430  055F  2D61               	goto	u880
+  1431  0560                     u881:
+  1432  0560  2D62               	goto	l1498
+  1433  0561                     u880:
+  1434  0561                     l1496:
+  1435  0561  01A8               	clrf	_xmss1
+  1436  0562                     l1498:
+  1437  0562  01A9               	clrf	_xmj1
+  1438  0563  0AA9               	incf	_xmj1,f
+  1439  0564                     l1500:
+  1440                           
+  1441                           ;brazo1.c: 270:   if(dato_rx == '8'){
+  1442  0564  3038               	movlw	56
+  1443  0565  067D               	xorwf	main@dato_rx,w
+  1444  0566  1D03               	btfss	3,2
+  1445  0567  2D69               	goto	u891
+  1446  0568  2D6A               	goto	u890
+  1447  0569                     u891:
+  1448  0569  2D73               	goto	l1506
+  1449  056A                     u890:
+  1450  056A                     l1502:
+  1451                           
+  1452                           ;brazo1.c: 271:    UART_printf("mov. arriba2 \n\r");
+  1453  056A  3090               	movlw	low (STR_10| (0+32768))
+  1454  056B  00F1               	movwf	UART_printf@cadena
+  1455  056C  3088               	movlw	high (STR_10| (0+32768))
+  1456  056D  00F2               	movwf	UART_printf@cadena+1
+  1457  056E  3183  23DD  3184   	fcall	_UART_printf
+  1458  0571                     l1504:
+  1459                           
+  1460                           ;brazo1.c: 272:    RE4 = 0;
+  1461  0571  0020               	movlb	0	; select bank0
+  1462  0572  1210               	bcf	16,4	;volatile
+  1463  0573                     l1506:
+  1464                           
+  1465                           ;brazo1.c: 274:   if((dato_rx == '9')&&(xmss2)){
+  1466  0573  3039               	movlw	57
+  1467  0574  067D               	xorwf	main@dato_rx,w
+  1468  0575  1D03               	btfss	3,2
+  1469  0576  2D78               	goto	u901
+  1470  0577  2D79               	goto	u900
+  1471  0578                     u901:
+  1472  0578  2D8F               	goto	l1520
+  1473  0579                     u900:
+  1474  0579                     l1508:
+  1475  0579  0020               	movlb	0	; select bank0
+  1476  057A  0827               	movf	_xmss2,w
+  1477  057B  1903               	btfsc	3,2
+  1478  057C  2D7E               	goto	u911
+  1479  057D  2D7F               	goto	u910
+  1480  057E                     u911:
+  1481  057E  2D8F               	goto	l1520
+  1482  057F                     u910:
+  1483  057F                     l1510:
+  1484                           
+  1485                           ;brazo1.c: 275:    UART_printf("mov. arriba2 \n\r");
+  1486  057F  3090               	movlw	low (STR_10| (0+32768))
+  1487  0580  00F1               	movwf	UART_printf@cadena
+  1488  0581  3088               	movlw	high (STR_10| (0+32768))
+  1489  0582  00F2               	movwf	UART_printf@cadena+1
+  1490  0583  3183  23DD  3184   	fcall	_UART_printf
+  1491  0586                     l1512:
+  1492                           
+  1493                           ;brazo1.c: 276:    RE4 = 1;
+  1494  0586  0020               	movlb	0	; select bank0
+  1495  0587  1610               	bsf	16,4	;volatile
+  1496  0588                     l1514:
+  1497                           
+  1498                           ;brazo1.c: 277:    if(RD2) xmss2=0; xmj2=1;
+  1499  0588  1D0F               	btfss	15,2	;volatile
+  1500  0589  2D8B               	goto	u921
+  1501  058A  2D8C               	goto	u920
+  1502  058B                     u921:
+  1503  058B  2D8D               	goto	l1518
+  1504  058C                     u920:
+  1505  058C                     l1516:
+  1506  058C  01A7               	clrf	_xmss2
+  1507  058D                     l1518:
+  1508  058D  01A6               	clrf	_xmj2
+  1509  058E  0AA6               	incf	_xmj2,f
+  1510  058F                     l1520:
+  1511                           
+  1512                           ;brazo1.c: 279:   if(dato_rx == 'A'){
+  1513  058F  3041               	movlw	65
+  1514  0590  067D               	xorwf	main@dato_rx,w
+  1515  0591  1D03               	btfss	3,2
+  1516  0592  2D94               	goto	u931
+  1517  0593  2D95               	goto	u930
+  1518  0594                     u931:
+  1519  0594  2D9E               	goto	l1526
+  1520  0595                     u930:
+  1521  0595                     l1522:
+  1522                           
+  1523                           ;brazo1.c: 280:    UART_printf("mov. abajo2 \n\r");
+  1524  0595  30BF               	movlw	low (STR_12| (0+32768))
+  1525  0596  00F1               	movwf	UART_printf@cadena
+  1526  0597  3088               	movlw	high (STR_12| (0+32768))
+  1527  0598  00F2               	movwf	UART_printf@cadena+1
+  1528  0599  3183  23DD  3184   	fcall	_UART_printf
+  1529  059C                     l1524:
+  1530                           
+  1531                           ;brazo1.c: 281:    RE5 = 0;
+  1532  059C  0020               	movlb	0	; select bank0
+  1533  059D  1290               	bcf	16,5	;volatile
+  1534  059E                     l1526:
+  1535                           
+  1536                           ;brazo1.c: 283:   if((dato_rx == 'B')&&(xmj2)){
+  1537  059E  3042               	movlw	66
+  1538  059F  067D               	xorwf	main@dato_rx,w
+  1539  05A0  1D03               	btfss	3,2
+  1540  05A1  2DA3               	goto	u941
+  1541  05A2  2DA4               	goto	u940
+  1542  05A3                     u941:
+  1543  05A3  2DBA               	goto	l1540
+  1544  05A4                     u940:
+  1545  05A4                     l1528:
+  1546  05A4  0020               	movlb	0	; select bank0
+  1547  05A5  0826               	movf	_xmj2,w
+  1548  05A6  1903               	btfsc	3,2
+  1549  05A7  2DA9               	goto	u951
+  1550  05A8  2DAA               	goto	u950
+  1551  05A9                     u951:
+  1552  05A9  2DBA               	goto	l1540
+  1553  05AA                     u950:
+  1554  05AA                     l1530:
+  1555                           
+  1556                           ;brazo1.c: 284:    UART_printf("mov. abajo2 \n\r");
+  1557  05AA  30BF               	movlw	low (STR_12| (0+32768))
+  1558  05AB  00F1               	movwf	UART_printf@cadena
+  1559  05AC  3088               	movlw	high (STR_12| (0+32768))
+  1560  05AD  00F2               	movwf	UART_printf@cadena+1
+  1561  05AE  3183  23DD  3184   	fcall	_UART_printf
+  1562  05B1                     l1532:
+  1563                           
+  1564                           ;brazo1.c: 285:    RE5 = 1;
+  1565  05B1  0020               	movlb	0	; select bank0
+  1566  05B2  1690               	bsf	16,5	;volatile
+  1567  05B3                     l1534:
+  1568                           
+  1569                           ;brazo1.c: 286:    if(RD2) xmj2=0; xmss2=1;
+  1570  05B3  1D0F               	btfss	15,2	;volatile
+  1571  05B4  2DB6               	goto	u961
+  1572  05B5  2DB7               	goto	u960
+  1573  05B6                     u961:
+  1574  05B6  2DB8               	goto	l1538
+  1575  05B7                     u960:
+  1576  05B7                     l1536:
+  1577  05B7  01A6               	clrf	_xmj2
+  1578  05B8                     l1538:
+  1579  05B8  01A7               	clrf	_xmss2
+  1580  05B9  0AA7               	incf	_xmss2,f
+  1581  05BA                     l1540:
+  1582                           
+  1583                           ;brazo1.c: 288:   if(dato_rx == 'C'){
+  1584  05BA  3043               	movlw	67
+  1585  05BB  067D               	xorwf	main@dato_rx,w
+  1586  05BC  1D03               	btfss	3,2
+  1587  05BD  2DBF               	goto	u971
+  1588  05BE  2DC0               	goto	u970
+  1589  05BF                     u971:
+  1590  05BF  2DC9               	goto	l1546
+  1591  05C0                     u970:
+  1592  05C0                     l1542:
+  1593                           
+  1594                           ;brazo1.c: 289:    UART_printf("mov. arriba3 \n\r");
+  1595  05C0  30A0               	movlw	low (STR_14| (0+32768))
+  1596  05C1  00F1               	movwf	UART_printf@cadena
+  1597  05C2  3088               	movlw	high (STR_14| (0+32768))
+  1598  05C3  00F2               	movwf	UART_printf@cadena+1
+  1599  05C4  3183  23DD  3184   	fcall	_UART_printf
+  1600  05C7                     l1544:
+  1601                           
+  1602                           ;brazo1.c: 290:    RE6 = 0;
+  1603  05C7  0020               	movlb	0	; select bank0
+  1604  05C8  1310               	bcf	16,6	;volatile
+  1605  05C9                     l1546:
+  1606                           
+  1607                           ;brazo1.c: 292:   if((dato_rx == 'D')&&(xmss3)){
+  1608  05C9  3044               	movlw	68
+  1609  05CA  067D               	xorwf	main@dato_rx,w
+  1610  05CB  1D03               	btfss	3,2
+  1611  05CC  2DCE               	goto	u981
+  1612  05CD  2DCF               	goto	u980
+  1613  05CE                     u981:
+  1614  05CE  2DE5               	goto	l1560
+  1615  05CF                     u980:
+  1616  05CF                     l1548:
+  1617  05CF  0020               	movlb	0	; select bank0
+  1618  05D0  0825               	movf	_xmss3,w
+  1619  05D1  1903               	btfsc	3,2
+  1620  05D2  2DD4               	goto	u991
+  1621  05D3  2DD5               	goto	u990
+  1622  05D4                     u991:
+  1623  05D4  2DE5               	goto	l1560
+  1624  05D5                     u990:
+  1625  05D5                     l1550:
+  1626                           
+  1627                           ;brazo1.c: 293:    UART_printf("mov. arriba3 \n\r");
+  1628  05D5  30A0               	movlw	low (STR_14| (0+32768))
+  1629  05D6  00F1               	movwf	UART_printf@cadena
+  1630  05D7  3088               	movlw	high (STR_14| (0+32768))
+  1631  05D8  00F2               	movwf	UART_printf@cadena+1
+  1632  05D9  3183  23DD  3184   	fcall	_UART_printf
+  1633  05DC                     l1552:
+  1634                           
+  1635                           ;brazo1.c: 294:    RE6 = 1;
+  1636  05DC  0020               	movlb	0	; select bank0
+  1637  05DD  1710               	bsf	16,6	;volatile
+  1638  05DE                     l1554:
+  1639                           
+  1640                           ;brazo1.c: 295:    if(RD3) xmss3=0; xmj3=1;
+  1641  05DE  1D8F               	btfss	15,3	;volatile
+  1642  05DF  2DE1               	goto	u1001
+  1643  05E0  2DE2               	goto	u1000
+  1644  05E1                     u1001:
+  1645  05E1  2DE3               	goto	l1558
+  1646  05E2                     u1000:
+  1647  05E2                     l1556:
+  1648  05E2  01A5               	clrf	_xmss3
+  1649  05E3                     l1558:
+  1650  05E3  01A4               	clrf	_xmj3
+  1651  05E4  0AA4               	incf	_xmj3,f
+  1652  05E5                     l1560:
+  1653                           
+  1654                           ;brazo1.c: 297:   if(dato_rx == 'E'){
+  1655  05E5  3045               	movlw	69
+  1656  05E6  067D               	xorwf	main@dato_rx,w
+  1657  05E7  1D03               	btfss	3,2
+  1658  05E8  2DEA               	goto	u1011
+  1659  05E9  2DEB               	goto	u1010
+  1660  05EA                     u1011:
+  1661  05EA  2DF4               	goto	l1566
+  1662  05EB                     u1010:
+  1663  05EB                     l1562:
+  1664                           
+  1665                           ;brazo1.c: 298:    UART_printf("mov. abajo3 \n\r");
+  1666  05EB  30CE               	movlw	low (STR_16| (0+32768))
+  1667  05EC  00F1               	movwf	UART_printf@cadena
+  1668  05ED  3088               	movlw	high (STR_16| (0+32768))
+  1669  05EE  00F2               	movwf	UART_printf@cadena+1
+  1670  05EF  3183  23DD  3184   	fcall	_UART_printf
+  1671  05F2                     l1564:
+  1672                           
+  1673                           ;brazo1.c: 299:    RF0 = 0;
+  1674  05F2  0025               	movlb	5	; select bank5
+  1675  05F3  100C               	bcf	12,0	;volatile
+  1676  05F4                     l1566:
+  1677                           
+  1678                           ;brazo1.c: 301:   if((dato_rx == 'F')&&(xmj3)){
+  1679  05F4  3046               	movlw	70
+  1680  05F5  067D               	xorwf	main@dato_rx,w
+  1681  05F6  1D03               	btfss	3,2
+  1682  05F7  2DF9               	goto	u1021
+  1683  05F8  2DFA               	goto	u1020
+  1684  05F9                     u1021:
+  1685  05F9  2E11               	goto	l1580
+  1686  05FA                     u1020:
+  1687  05FA                     l1568:
+  1688  05FA  0020               	movlb	0	; select bank0
+  1689  05FB  0824               	movf	_xmj3,w
+  1690  05FC  1903               	btfsc	3,2
+  1691  05FD  2DFF               	goto	u1031
+  1692  05FE  2E00               	goto	u1030
+  1693  05FF                     u1031:
+  1694  05FF  2E11               	goto	l1580
+  1695  0600                     u1030:
+  1696  0600                     l1570:
+  1697                           
+  1698                           ;brazo1.c: 302:    UART_printf("mov. abajo3 \n\r");
+  1699  0600  30CE               	movlw	low (STR_16| (0+32768))
+  1700  0601  00F1               	movwf	UART_printf@cadena
+  1701  0602  3088               	movlw	high (STR_16| (0+32768))
+  1702  0603  00F2               	movwf	UART_printf@cadena+1
+  1703  0604  3183  23DD  3184   	fcall	_UART_printf
+  1704  0607                     l1572:
+  1705                           
+  1706                           ;brazo1.c: 303:    RF0 = 1;
+  1707  0607  0025               	movlb	5	; select bank5
+  1708  0608  140C               	bsf	12,0	;volatile
+  1709  0609                     l1574:
+  1710                           
+  1711                           ;brazo1.c: 304:    if(RD3) xmj3=0; xmss3=1;
+  1712  0609  0020               	movlb	0	; select bank0
+  1713  060A  1D8F               	btfss	15,3	;volatile
+  1714  060B  2E0D               	goto	u1041
+  1715  060C  2E0E               	goto	u1040
+  1716  060D                     u1041:
+  1717  060D  2E0F               	goto	l1578
+  1718  060E                     u1040:
+  1719  060E                     l1576:
+  1720  060E  01A4               	clrf	_xmj3
+  1721  060F                     l1578:
+  1722  060F  01A5               	clrf	_xmss3
+  1723  0610  0AA5               	incf	_xmss3,f
+  1724  0611                     l1580:
+  1725                           
+  1726                           ;brazo1.c: 306:   if(dato_rx == 'G'){
+  1727  0611  3047               	movlw	71
+  1728  0612  067D               	xorwf	main@dato_rx,w
+  1729  0613  1D03               	btfss	3,2
+  1730  0614  2E16               	goto	u1051
+  1731  0615  2E17               	goto	u1050
+  1732  0616                     u1051:
+  1733  0616  2E20               	goto	l1586
+  1734  0617                     u1050:
+  1735  0617                     l1582:
+  1736                           
+  1737                           ;brazo1.c: 307:    UART_printf("sujetando izquierda \n\r");
+  1738  0617  301B               	movlw	low (STR_18| (0+32768))
+  1739  0618  00F1               	movwf	UART_printf@cadena
+  1740  0619  3088               	movlw	high (STR_18| (0+32768))
+  1741  061A  00F2               	movwf	UART_printf@cadena+1
+  1742  061B  3183  23DD  3184   	fcall	_UART_printf
+  1743  061E                     l1584:
+  1744                           
+  1745                           ;brazo1.c: 308:    RF1 = 0;
+  1746  061E  0025               	movlb	5	; select bank5
+  1747  061F  108C               	bcf	12,1	;volatile
+  1748  0620                     l1586:
+  1749                           
+  1750                           ;brazo1.c: 310:   if((dato_rx == 'H')&&(xmzzx)){
+  1751  0620  3048               	movlw	72
+  1752  0621  067D               	xorwf	main@dato_rx,w
+  1753  0622  1D03               	btfss	3,2
+  1754  0623  2E25               	goto	u1061
+  1755  0624  2E26               	goto	u1060
+  1756  0625                     u1061:
+  1757  0625  2E3D               	goto	l1600
+  1758  0626                     u1060:
+  1759  0626                     l1588:
+  1760  0626  0020               	movlb	0	; select bank0
+  1761  0627  0823               	movf	_xmzzx,w
+  1762  0628  1903               	btfsc	3,2
+  1763  0629  2E2B               	goto	u1071
+  1764  062A  2E2C               	goto	u1070
+  1765  062B                     u1071:
+  1766  062B  2E3D               	goto	l1600
+  1767  062C                     u1070:
+  1768  062C                     l1590:
+  1769                           
+  1770                           ;brazo1.c: 311:    UART_printf("sujetando izquierda \n\r");
+  1771  062C  301B               	movlw	low (STR_18| (0+32768))
+  1772  062D  00F1               	movwf	UART_printf@cadena
+  1773  062E  3088               	movlw	high (STR_18| (0+32768))
+  1774  062F  00F2               	movwf	UART_printf@cadena+1
+  1775  0630  3183  23DD  3184   	fcall	_UART_printf
+  1776  0633                     l1592:
+  1777                           
+  1778                           ;brazo1.c: 312:    RF1 = 1;
+  1779  0633  0025               	movlb	5	; select bank5
+  1780  0634  148C               	bsf	12,1	;volatile
+  1781  0635                     l1594:
+  1782                           
+  1783                           ;brazo1.c: 313:    if(RD4) xmzzx=0; xmzyx=1;
+  1784  0635  0020               	movlb	0	; select bank0
+  1785  0636  1E0F               	btfss	15,4	;volatile
+  1786  0637  2E39               	goto	u1081
+  1787  0638  2E3A               	goto	u1080
+  1788  0639                     u1081:
+  1789  0639  2E3B               	goto	l1598
+  1790  063A                     u1080:
+  1791  063A                     l1596:
+  1792  063A  01A3               	clrf	_xmzzx
+  1793  063B                     l1598:
+  1794  063B  01A2               	clrf	_xmzyx
+  1795  063C  0AA2               	incf	_xmzyx,f
+  1796  063D                     l1600:
+  1797                           
+  1798                           ;brazo1.c: 315:   if(dato_rx == 'I'){
+  1799  063D  3049               	movlw	73
+  1800  063E  067D               	xorwf	main@dato_rx,w
+  1801  063F  1D03               	btfss	3,2
+  1802  0640  2E42               	goto	u1091
+  1803  0641  2E43               	goto	u1090
+  1804  0642                     u1091:
+  1805  0642  2E4C               	goto	l1606
+  1806  0643                     u1090:
+  1807  0643                     l1602:
+  1808                           
+  1809                           ;brazo1.c: 316:    UART_printf("sujetando derecha \n\r");
+  1810  0643  3032               	movlw	low (STR_20| (0+32768))
+  1811  0644  00F1               	movwf	UART_printf@cadena
+  1812  0645  3088               	movlw	high (STR_20| (0+32768))
+  1813  0646  00F2               	movwf	UART_printf@cadena+1
+  1814  0647  3183  23DD  3184   	fcall	_UART_printf
+  1815  064A                     l1604:
+  1816                           
+  1817                           ;brazo1.c: 317:    RF2 = 0;
+  1818  064A  0025               	movlb	5	; select bank5
+  1819  064B  110C               	bcf	12,2	;volatile
+  1820  064C                     l1606:
+  1821                           
+  1822                           ;brazo1.c: 319:   if((dato_rx == 'J')&&(xmzyx)){
+  1823  064C  304A               	movlw	74
+  1824  064D  067D               	xorwf	main@dato_rx,w
+  1825  064E  1D03               	btfss	3,2
+  1826  064F  2E51               	goto	u1101
+  1827  0650  2E52               	goto	u1100
+  1828  0651                     u1101:
+  1829  0651  2E69               	goto	l1620
+  1830  0652                     u1100:
+  1831  0652                     l1608:
+  1832  0652  0020               	movlb	0	; select bank0
+  1833  0653  0822               	movf	_xmzyx,w
+  1834  0654  1903               	btfsc	3,2
+  1835  0655  2E57               	goto	u1111
+  1836  0656  2E58               	goto	u1110
+  1837  0657                     u1111:
+  1838  0657  2E69               	goto	l1620
+  1839  0658                     u1110:
+  1840  0658                     l1610:
+  1841                           
+  1842                           ;brazo1.c: 320:    UART_printf("sujetando derecha \n\r");
+  1843  0658  3032               	movlw	low (STR_20| (0+32768))
+  1844  0659  00F1               	movwf	UART_printf@cadena
+  1845  065A  3088               	movlw	high (STR_20| (0+32768))
+  1846  065B  00F2               	movwf	UART_printf@cadena+1
+  1847  065C  3183  23DD  3184   	fcall	_UART_printf
+  1848  065F                     l1612:
+  1849                           
+  1850                           ;brazo1.c: 321:    RF2 = 1;
+  1851  065F  0025               	movlb	5	; select bank5
+  1852  0660  150C               	bsf	12,2	;volatile
+  1853  0661                     l1614:
+  1854                           
+  1855                           ;brazo1.c: 322:    if(RD4) xmzyx=0; xmzzx=1;
+  1856  0661  0020               	movlb	0	; select bank0
+  1857  0662  1E0F               	btfss	15,4	;volatile
+  1858  0663  2E65               	goto	u1121
+  1859  0664  2E66               	goto	u1120
+  1860  0665                     u1121:
+  1861  0665  2E67               	goto	l1618
+  1862  0666                     u1120:
+  1863  0666                     l1616:
+  1864  0666  01A2               	clrf	_xmzyx
+  1865  0667                     l1618:
+  1866  0667  01A3               	clrf	_xmzzx
+  1867  0668  0AA3               	incf	_xmzzx,f
+  1868  0669                     l1620:
+  1869                           
+  1870                           ;brazo1.c: 324:   if(dato_rx == 'K'){
+  1871  0669  304B               	movlw	75
+  1872  066A  067D               	xorwf	main@dato_rx,w
+  1873  066B  1D03               	btfss	3,2
+  1874  066C  2E6E               	goto	u1131
+  1875  066D  2E6F               	goto	u1130
+  1876  066E                     u1131:
+  1877  066E  2E78               	goto	l1626
+  1878  066F                     u1130:
+  1879  066F                     l1622:
+  1880                           
+  1881                           ;brazo1.c: 325:    UART_printf("relajacion \n\r");
+  1882  066F  30DD               	movlw	low (STR_22| (0+32768))
+  1883  0670  00F1               	movwf	UART_printf@cadena
+  1884  0671  3088               	movlw	high (STR_22| (0+32768))
+  1885  0672  00F2               	movwf	UART_printf@cadena+1
+  1886  0673  3183  23DD  3184   	fcall	_UART_printf
+  1887  0676                     l1624:
+  1888                           
+  1889                           ;brazo1.c: 326:    RF3 = 0;
+  1890  0676  0025               	movlb	5	; select bank5
+  1891  0677  118C               	bcf	12,3	;volatile
+  1892  0678                     l1626:
+  1893                           
+  1894                           ;brazo1.c: 328:   if((dato_rx == 'L')&&(mfs)){
+  1895  0678  304C               	movlw	76
+  1896  0679  067D               	xorwf	main@dato_rx,w
+  1897  067A  1D03               	btfss	3,2
+  1898  067B  2E7D               	goto	u1141
+  1899  067C  2E7E               	goto	u1140
+  1900  067D                     u1141:
+  1901  067D  2E95               	goto	l1640
+  1902  067E                     u1140:
+  1903  067E                     l1628:
+  1904  067E  0020               	movlb	0	; select bank0
+  1905  067F  0821               	movf	_mfs,w
+  1906  0680  1903               	btfsc	3,2
+  1907  0681  2E83               	goto	u1151
+  1908  0682  2E84               	goto	u1150
+  1909  0683                     u1151:
+  1910  0683  2E95               	goto	l1640
+  1911  0684                     u1150:
+  1912  0684                     l1630:
+  1913                           
+  1914                           ;brazo1.c: 329:    UART_printf("relajacion \n\r");
+  1915  0684  30DD               	movlw	low (STR_22| (0+32768))
+  1916  0685  00F1               	movwf	UART_printf@cadena
+  1917  0686  3088               	movlw	high (STR_22| (0+32768))
+  1918  0687  00F2               	movwf	UART_printf@cadena+1
+  1919  0688  3183  23DD  3184   	fcall	_UART_printf
+  1920  068B                     l1632:
+  1921                           
+  1922                           ;brazo1.c: 330:    RF3 = 1;
+  1923  068B  0025               	movlb	5	; select bank5
+  1924  068C  158C               	bsf	12,3	;volatile
+  1925  068D                     l1634:
+  1926                           
+  1927                           ;brazo1.c: 331:    if(RD5) mfs=0; mzj=1;
+  1928  068D  0020               	movlb	0	; select bank0
+  1929  068E  1E8F               	btfss	15,5	;volatile
+  1930  068F  2E91               	goto	u1161
+  1931  0690  2E92               	goto	u1160
+  1932  0691                     u1161:
+  1933  0691  2E93               	goto	l1638
+  1934  0692                     u1160:
+  1935  0692                     l1636:
+  1936  0692  01A1               	clrf	_mfs
+  1937  0693                     l1638:
+  1938  0693  01A0               	clrf	_mzj
+  1939  0694  0AA0               	incf	_mzj,f
+  1940  0695                     l1640:
+  1941                           
+  1942                           ;brazo1.c: 333:   if(dato_rx == 'M'){
+  1943  0695  304D               	movlw	77
+  1944  0696  067D               	xorwf	main@dato_rx,w
+  1945  0697  1D03               	btfss	3,2
+  1946  0698  2E9A               	goto	u1171
+  1947  0699  2E9B               	goto	u1170
+  1948  069A                     u1171:
+  1949  069A  2EA4               	goto	l1646
+  1950  069B                     u1170:
+  1951  069B                     l1642:
+  1952                           
+  1953                           ;brazo1.c: 334:    UART_printf("preste atencion \n\r");
+  1954  069B  305B               	movlw	low (STR_24| (0+32768))
+  1955  069C  00F1               	movwf	UART_printf@cadena
+  1956  069D  3088               	movlw	high (STR_24| (0+32768))
+  1957  069E  00F2               	movwf	UART_printf@cadena+1
+  1958  069F  3183  23DD  3184   	fcall	_UART_printf
+  1959  06A2                     l1644:
+  1960                           
+  1961                           ;brazo1.c: 335:    RF4 = 0;
+  1962  06A2  0025               	movlb	5	; select bank5
+  1963  06A3  120C               	bcf	12,4	;volatile
+  1964  06A4                     l1646:
+  1965                           
+  1966                           ;brazo1.c: 337:   if((dato_rx == 'N')&&(mzj)){
+  1967  06A4  304E               	movlw	78
+  1968  06A5  067D               	xorwf	main@dato_rx,w
+  1969  06A6  1D03               	btfss	3,2
+  1970  06A7  2EA9               	goto	u1181
+  1971  06A8  2EAA               	goto	u1180
+  1972  06A9                     u1181:
+  1973  06A9  2EC1               	goto	l1660
+  1974  06AA                     u1180:
+  1975  06AA                     l1648:
+  1976  06AA  0020               	movlb	0	; select bank0
+  1977  06AB  0820               	movf	_mzj,w
+  1978  06AC  1903               	btfsc	3,2
+  1979  06AD  2EAF               	goto	u1191
+  1980  06AE  2EB0               	goto	u1190
+  1981  06AF                     u1191:
+  1982  06AF  2EC1               	goto	l1660
+  1983  06B0                     u1190:
+  1984  06B0                     l1650:
+  1985                           
+  1986                           ;brazo1.c: 338:    UART_printf("preste atencion \n\r");
+  1987  06B0  305B               	movlw	low (STR_24| (0+32768))
+  1988  06B1  00F1               	movwf	UART_printf@cadena
+  1989  06B2  3088               	movlw	high (STR_24| (0+32768))
+  1990  06B3  00F2               	movwf	UART_printf@cadena+1
+  1991  06B4  3183  23DD  3184   	fcall	_UART_printf
+  1992  06B7                     l1652:
+  1993                           
+  1994                           ;brazo1.c: 339:    RF4 = 1;
+  1995  06B7  0025               	movlb	5	; select bank5
+  1996  06B8  160C               	bsf	12,4	;volatile
+  1997  06B9                     l1654:
+  1998                           
+  1999                           ;brazo1.c: 340:    if(RD6) mzj=0; mfs=1;
+  2000  06B9  0020               	movlb	0	; select bank0
+  2001  06BA  1F0F               	btfss	15,6	;volatile
+  2002  06BB  2EBD               	goto	u1201
+  2003  06BC  2EBE               	goto	u1200
+  2004  06BD                     u1201:
+  2005  06BD  2EBF               	goto	l1658
+  2006  06BE                     u1200:
+  2007  06BE                     l1656:
+  2008  06BE  01A0               	clrf	_mzj
+  2009  06BF                     l1658:
+  2010  06BF  01A1               	clrf	_mfs
+  2011  06C0  0AA1               	incf	_mfs,f
+  2012  06C1                     l1660:
+  2013                           
+  2014                           ;brazo1.c: 342:          if(dato_rx=='O')
+  2015  06C1  304F               	movlw	79
+  2016  06C2  067D               	xorwf	main@dato_rx,w
+  2017  06C3  1D03               	btfss	3,2
+  2018  06C4  2EC6               	goto	u1211
+  2019  06C5  2EC7               	goto	u1210
+  2020  06C6                     u1211:
+  2021  06C6  2F37               	goto	l1704
+  2022  06C7                     u1210:
+  2023  06C7                     l1662:
+  2024                           
+  2025                           ;brazo1.c: 343:          {;brazo1.c: 344:              RE1=1;
+  2026  06C7  0020               	movlb	0	; select bank0
+  2027  06C8  1490               	bsf	16,1	;volatile
+  2028  06C9                     l1664:
+  2029                           
+  2030                           ;brazo1.c: 345:  delay(8);
+  2031  06C9  3008               	movlw	8
+  2032  06CA  00F6               	movwf	delay@sec
+  2033  06CB  3000               	movlw	0
+  2034  06CC  00F7               	movwf	delay@sec+1
+  2035  06CD  3184  2450  3184   	fcall	_delay
+  2036  06D0                     l1666:
+  2037                           
+  2038                           ;brazo1.c: 346:  RE1=0;
+  2039  06D0  0020               	movlb	0	; select bank0
+  2040  06D1  1090               	bcf	16,1	;volatile
+  2041  06D2                     l1668:
+  2042                           
+  2043                           ;brazo1.c: 347:  RE2=1;
+  2044  06D2  1510               	bsf	16,2	;volatile
+  2045                           
+  2046                           ;brazo1.c: 348:  delay(10);
+  2047  06D3  300A               	movlw	10
+  2048  06D4  00F6               	movwf	delay@sec
+  2049  06D5  3000               	movlw	0
+  2050  06D6  00F7               	movwf	delay@sec+1
+  2051  06D7  3184  2450  3184   	fcall	_delay
+  2052  06DA                     l1670:
+  2053                           
+  2054                           ;brazo1.c: 349:  RE2=0;
+  2055  06DA  0020               	movlb	0	; select bank0
+  2056  06DB  1110               	bcf	16,2	;volatile
+  2057  06DC                     l1672:
+  2058                           
+  2059                           ;brazo1.c: 350:  RE5=1;
+  2060  06DC  1690               	bsf	16,5	;volatile
+  2061                           
+  2062                           ;brazo1.c: 351:  delay(10);
+  2063  06DD  300A               	movlw	10
+  2064  06DE  00F6               	movwf	delay@sec
+  2065  06DF  3000               	movlw	0
+  2066  06E0  00F7               	movwf	delay@sec+1
+  2067  06E1  3184  2450  3184   	fcall	_delay
+  2068  06E4                     l1674:
+  2069                           
+  2070                           ;brazo1.c: 352:  RE5=0;
+  2071  06E4  0020               	movlb	0	; select bank0
+  2072  06E5  1290               	bcf	16,5	;volatile
+  2073  06E6                     l1676:
+  2074                           
+  2075                           ;brazo1.c: 353:  RF4=1;
+  2076  06E6  0025               	movlb	5	; select bank5
+  2077  06E7  160C               	bsf	12,4	;volatile
+  2078                           
+  2079                           ;brazo1.c: 354:  delay(10);
+  2080  06E8  300A               	movlw	10
+  2081  06E9  00F6               	movwf	delay@sec
+  2082  06EA  3000               	movlw	0
+  2083  06EB  00F7               	movwf	delay@sec+1
+  2084  06EC  3184  2450  3184   	fcall	_delay
+  2085  06EF                     l1678:
+  2086                           
+  2087                           ;brazo1.c: 355:  RF4=0;
+  2088  06EF  0025               	movlb	5	; select bank5
+  2089  06F0  120C               	bcf	12,4	;volatile
+  2090  06F1                     l1680:
+  2091                           
+  2092                           ;brazo1.c: 356:  RE3=1;
+  2093  06F1  0020               	movlb	0	; select bank0
+  2094  06F2  1590               	bsf	16,3	;volatile
+  2095                           
+  2096                           ;brazo1.c: 357:  delay(15);
+  2097  06F3  300F               	movlw	15
+  2098  06F4  00F6               	movwf	delay@sec
+  2099  06F5  3000               	movlw	0
+  2100  06F6  00F7               	movwf	delay@sec+1
+  2101  06F7  3184  2450  3184   	fcall	_delay
+  2102  06FA                     l1682:
+  2103                           
+  2104                           ;brazo1.c: 358:  RE3=0;
+  2105  06FA  0020               	movlb	0	; select bank0
+  2106  06FB  1190               	bcf	16,3	;volatile
+  2107  06FC                     l1684:
+  2108                           
+  2109                           ;brazo1.c: 359:  RE1=1;
+  2110  06FC  1490               	bsf	16,1	;volatile
+  2111                           
+  2112                           ;brazo1.c: 360:  delay(30);
+  2113  06FD  301E               	movlw	30
+  2114  06FE  00F6               	movwf	delay@sec
+  2115  06FF  3000               	movlw	0
+  2116  0700  00F7               	movwf	delay@sec+1
+  2117  0701  3184  2450  3184   	fcall	_delay
+  2118  0704                     l1686:
+  2119                           
+  2120                           ;brazo1.c: 361:  RE1=0;
+  2121  0704  0020               	movlb	0	; select bank0
+  2122  0705  1090               	bcf	16,1	;volatile
+  2123  0706                     l1688:
+  2124                           
+  2125                           ;brazo1.c: 362:  RE2=1;
+  2126  0706  1510               	bsf	16,2	;volatile
+  2127                           
+  2128                           ;brazo1.c: 363:  delay(15);
+  2129  0707  300F               	movlw	15
+  2130  0708  00F6               	movwf	delay@sec
+  2131  0709  3000               	movlw	0
+  2132  070A  00F7               	movwf	delay@sec+1
+  2133  070B  3184  2450  3184   	fcall	_delay
+  2134  070E                     l1690:
+  2135                           
+  2136                           ;brazo1.c: 364:  RE2=0;
+  2137  070E  0020               	movlb	0	; select bank0
+  2138  070F  1110               	bcf	16,2	;volatile
+  2139  0710                     l1692:
+  2140                           
+  2141                           ;brazo1.c: 365:  RF3=1;
+  2142  0710  0025               	movlb	5	; select bank5
+  2143  0711  158C               	bsf	12,3	;volatile
+  2144                           
+  2145                           ;brazo1.c: 366:  delay(10);
+  2146  0712  300A               	movlw	10
+  2147  0713  00F6               	movwf	delay@sec
+  2148  0714  3000               	movlw	0
+  2149  0715  00F7               	movwf	delay@sec+1
+  2150  0716  3184  2450  3184   	fcall	_delay
+  2151  0719                     l1694:
+  2152                           
+  2153                           ;brazo1.c: 367:  RF3=0;
+  2154  0719  0025               	movlb	5	; select bank5
+  2155  071A  118C               	bcf	12,3	;volatile
+  2156  071B                     l1696:
+  2157                           
+  2158                           ;brazo1.c: 368:  RE4=1;
+  2159  071B  0020               	movlb	0	; select bank0
+  2160  071C  1610               	bsf	16,4	;volatile
+  2161                           
+  2162                           ;brazo1.c: 369:  delay(10);
+  2163  071D  300A               	movlw	10
+  2164  071E  00F6               	movwf	delay@sec
+  2165  071F  3000               	movlw	0
+  2166  0720  00F7               	movwf	delay@sec+1
+  2167  0721  3184  2450  3184   	fcall	_delay
+  2168  0724                     l1698:
+  2169                           
+  2170                           ;brazo1.c: 370:  RE4=0;
+  2171  0724  0020               	movlb	0	; select bank0
+  2172  0725  1210               	bcf	16,4	;volatile
+  2173  0726                     l1700:
+  2174                           
+  2175                           ;brazo1.c: 371:  RE3=1;
+  2176  0726  1590               	bsf	16,3	;volatile
+  2177                           
+  2178                           ;brazo1.c: 372:  delay(10);
+  2179  0727  300A               	movlw	10
+  2180  0728  00F6               	movwf	delay@sec
+  2181  0729  3000               	movlw	0
+  2182  072A  00F7               	movwf	delay@sec+1
+  2183  072B  3184  2450  3184   	fcall	_delay
+  2184  072E                     l1702:
+  2185                           
+  2186                           ;brazo1.c: 373:  RE3=0;
+  2187  072E  0020               	movlb	0	; select bank0
+  2188  072F  1190               	bcf	16,3	;volatile
+  2189                           
+  2190                           ;brazo1.c: 374:  while(RD0)RE0=1;
+  2191  0730  2F32               	goto	l204
+  2192  0731                     l205:
+  2193  0731  1410               	bsf	16,0	;volatile
+  2194  0732                     l204:
+  2195  0732  180F               	btfsc	15,0	;volatile
+  2196  0733  2F35               	goto	u1221
+  2197  0734  2F36               	goto	u1220
+  2198  0735                     u1221:
+  2199  0735  2F31               	goto	l205
+  2200  0736                     u1220:
+  2201  0736                     l206:
+  2202                           
+  2203                           ;brazo1.c: 375:  RE0=0;
+  2204  0736  1010               	bcf	16,0	;volatile
+  2205  0737                     l1704:
+  2206                           
+  2207                           ;brazo1.c: 378:                  if(dato_rx=='Q')
+  2208  0737  3051               	movlw	81
+  2209  0738  067D               	xorwf	main@dato_rx,w
+  2210  0739  1D03               	btfss	3,2
+  2211  073A  2F3C               	goto	u1231
+  2212  073B  2F3D               	goto	u1230
+  2213  073C                     u1231:
+  2214  073C  2F97               	goto	l1740
+  2215  073D                     u1230:
+  2216  073D                     l1706:
+  2217                           
+  2218                           ;brazo1.c: 379:          {;brazo1.c: 380:              RE1=1;
+  2219  073D  0020               	movlb	0	; select bank0
+  2220  073E  1490               	bsf	16,1	;volatile
+  2221  073F                     l1708:
+  2222                           
+  2223                           ;brazo1.c: 381:  delay(8);
+  2224  073F  3008               	movlw	8
+  2225  0740  00F6               	movwf	delay@sec
+  2226  0741  3000               	movlw	0
+  2227  0742  00F7               	movwf	delay@sec+1
+  2228  0743  3184  2450  3184   	fcall	_delay
+  2229  0746                     l1710:
+  2230                           
+  2231                           ;brazo1.c: 382:  RE1=0;
+  2232  0746  0020               	movlb	0	; select bank0
+  2233  0747  1090               	bcf	16,1	;volatile
+  2234  0748                     l1712:
+  2235                           
+  2236                           ;brazo1.c: 383:  RE3=1;
+  2237  0748  1590               	bsf	16,3	;volatile
+  2238                           
+  2239                           ;brazo1.c: 384:  delay(10);
+  2240  0749  300A               	movlw	10
+  2241  074A  00F6               	movwf	delay@sec
+  2242  074B  3000               	movlw	0
+  2243  074C  00F7               	movwf	delay@sec+1
+  2244  074D  3184  2450  3184   	fcall	_delay
+  2245  0750                     l1714:
+  2246                           
+  2247                           ;brazo1.c: 385:  RE3=0;
+  2248  0750  0020               	movlb	0	; select bank0
+  2249  0751  1190               	bcf	16,3	;volatile
+  2250  0752                     l1716:
+  2251                           
+  2252                           ;brazo1.c: 386:  RE5=1;
+  2253  0752  1690               	bsf	16,5	;volatile
+  2254                           
+  2255                           ;brazo1.c: 387:  delay(10);
+  2256  0753  300A               	movlw	10
+  2257  0754  00F6               	movwf	delay@sec
+  2258  0755  3000               	movlw	0
+  2259  0756  00F7               	movwf	delay@sec+1
+  2260  0757  3184  2450  3184   	fcall	_delay
+  2261  075A                     l1718:
+  2262                           
+  2263                           ;brazo1.c: 388:  RE5=0;
+  2264  075A  0020               	movlb	0	; select bank0
+  2265  075B  1290               	bcf	16,5	;volatile
+  2266  075C                     l1720:
+  2267                           
+  2268                           ;brazo1.c: 389:  RF0=1;
+  2269  075C  0025               	movlb	5	; select bank5
+  2270  075D  140C               	bsf	12,0	;volatile
+  2271                           
+  2272                           ;brazo1.c: 390:  delay(10);
+  2273  075E  300A               	movlw	10
+  2274  075F  00F6               	movwf	delay@sec
+  2275  0760  3000               	movlw	0
+  2276  0761  00F7               	movwf	delay@sec+1
+  2277  0762  3184  2450  3184   	fcall	_delay
+  2278  0765                     l1722:
+  2279                           
+  2280                           ;brazo1.c: 391:  RF0=0;
+  2281  0765  0025               	movlb	5	; select bank5
+  2282  0766  100C               	bcf	12,0	;volatile
+  2283  0767                     l1724:
+  2284                           
+  2285                           ;brazo1.c: 392:  RF1=1;
+  2286  0767  148C               	bsf	12,1	;volatile
+  2287                           
+  2288                           ;brazo1.c: 393:  delay(10);
+  2289  0768  300A               	movlw	10
+  2290  0769  00F6               	movwf	delay@sec
+  2291  076A  3000               	movlw	0
+  2292  076B  00F7               	movwf	delay@sec+1
+  2293  076C  3184  2450  3184   	fcall	_delay
+  2294  076F                     l1726:
+  2295                           
+  2296                           ;brazo1.c: 394:  RF1=0;
+  2297  076F  0025               	movlb	5	; select bank5
+  2298  0770  108C               	bcf	12,1	;volatile
+  2299  0771                     l1728:
+  2300                           
+  2301                           ;brazo1.c: 395:  RF2=1;
+  2302  0771  150C               	bsf	12,2	;volatile
+  2303                           
+  2304                           ;brazo1.c: 396:  delay(10);
+  2305  0772  300A               	movlw	10
+  2306  0773  00F6               	movwf	delay@sec
+  2307  0774  3000               	movlw	0
+  2308  0775  00F7               	movwf	delay@sec+1
+  2309  0776  3184  2450  3184   	fcall	_delay
+  2310  0779                     l1730:
+  2311                           
+  2312                           ;brazo1.c: 397:  RF2=0;
+  2313  0779  0025               	movlb	5	; select bank5
+  2314  077A  110C               	bcf	12,2	;volatile
+  2315  077B                     l1732:
+  2316                           
+  2317                           ;brazo1.c: 398:  RF3=1;
+  2318  077B  158C               	bsf	12,3	;volatile
+  2319                           
+  2320                           ;brazo1.c: 399:  delay(15);
+  2321  077C  300F               	movlw	15
+  2322  077D  00F6               	movwf	delay@sec
+  2323  077E  3000               	movlw	0
+  2324  077F  00F7               	movwf	delay@sec+1
+  2325  0780  3184  2450  3184   	fcall	_delay
+  2326  0783                     l1734:
+  2327                           
+  2328                           ;brazo1.c: 400:  RF3=0;
+  2329  0783  0025               	movlb	5	; select bank5
+  2330  0784  118C               	bcf	12,3	;volatile
+  2331  0785                     l1736:
+  2332                           
+  2333                           ;brazo1.c: 401:  RF4=1;
+  2334  0785  160C               	bsf	12,4	;volatile
+  2335                           
+  2336                           ;brazo1.c: 402:  delay(10);
+  2337  0786  300A               	movlw	10
+  2338  0787  00F6               	movwf	delay@sec
+  2339  0788  3000               	movlw	0
+  2340  0789  00F7               	movwf	delay@sec+1
+  2341  078A  3184  2450  3184   	fcall	_delay
+  2342  078D                     l1738:
+  2343                           
+  2344                           ;brazo1.c: 403:  RF4=0;
+  2345  078D  0025               	movlb	5	; select bank5
+  2346  078E  120C               	bcf	12,4	;volatile
+  2347                           
+  2348                           ;brazo1.c: 405:  while(RD0)RE0=1;
+  2349  078F  2F91               	goto	l208
+  2350  0790                     l209:
+  2351  0790  1410               	bsf	16,0	;volatile
+  2352  0791                     l208:
+  2353  0791  0020               	movlb	0	; select bank0
+  2354  0792  180F               	btfsc	15,0	;volatile
+  2355  0793  2F95               	goto	u1241
+  2356  0794  2F96               	goto	u1240
+  2357  0795                     u1241:
+  2358  0795  2F90               	goto	l209
+  2359  0796                     u1240:
+  2360  0796                     l210:
+  2361                           
+  2362                           ;brazo1.c: 406:  RE0=0;
+  2363  0796  1010               	bcf	16,0	;volatile
+  2364  0797                     l1740:
+  2365                           
+  2366                           ;brazo1.c: 409:                  if(dato_rx=='R')
+  2367  0797  3052               	movlw	82
+  2368  0798  067D               	xorwf	main@dato_rx,w
+  2369  0799  1D03               	btfss	3,2
+  2370  079A  2F9C               	goto	u1251
+  2371  079B  2F9D               	goto	u1250
+  2372  079C                     u1251:
+  2373  079C  2FFA               	goto	l215
+  2374  079D                     u1250:
+  2375  079D                     l1742:
+  2376                           
+  2377                           ;brazo1.c: 410:          {;brazo1.c: 411:              RE1=1;
+  2378  079D  0020               	movlb	0	; select bank0
+  2379  079E  1490               	bsf	16,1	;volatile
+  2380  079F                     l1744:
+  2381                           
+  2382                           ;brazo1.c: 412:  delay(8);
+  2383  079F  3008               	movlw	8
+  2384  07A0  00F6               	movwf	delay@sec
+  2385  07A1  3000               	movlw	0
+  2386  07A2  00F7               	movwf	delay@sec+1
+  2387  07A3  3184  2450  3184   	fcall	_delay
+  2388  07A6                     l1746:
+  2389                           
+  2390                           ;brazo1.c: 413:  RE1=0;
+  2391  07A6  0020               	movlb	0	; select bank0
+  2392  07A7  1090               	bcf	16,1	;volatile
+  2393  07A8                     l1748:
+  2394                           
+  2395                           ;brazo1.c: 414:  RE2=1;
+  2396  07A8  1510               	bsf	16,2	;volatile
+  2397                           
+  2398                           ;brazo1.c: 415:  delay(10);
+  2399  07A9  300A               	movlw	10
+  2400  07AA  00F6               	movwf	delay@sec
+  2401  07AB  3000               	movlw	0
+  2402  07AC  00F7               	movwf	delay@sec+1
+  2403  07AD  3184  2450  3184   	fcall	_delay
+  2404  07B0                     l1750:
+  2405                           
+  2406                           ;brazo1.c: 416:  RE2=0;
+  2407  07B0  0020               	movlb	0	; select bank0
+  2408  07B1  1110               	bcf	16,2	;volatile
+  2409  07B2                     l1752:
+  2410                           
+  2411                           ;brazo1.c: 417:  RE5=1;
+  2412  07B2  1690               	bsf	16,5	;volatile
+  2413                           
+  2414                           ;brazo1.c: 418:  delay(10);
+  2415  07B3  300A               	movlw	10
+  2416  07B4  00F6               	movwf	delay@sec
+  2417  07B5  3000               	movlw	0
+  2418  07B6  00F7               	movwf	delay@sec+1
+  2419  07B7  3184  2450  3184   	fcall	_delay
+  2420  07BA                     l1754:
+  2421                           
+  2422                           ;brazo1.c: 419:  RE5=0;
+  2423  07BA  0020               	movlb	0	; select bank0
+  2424  07BB  1290               	bcf	16,5	;volatile
+  2425  07BC                     l1756:
+  2426                           
+  2427                           ;brazo1.c: 420:  RF4=1;
+  2428  07BC  0025               	movlb	5	; select bank5
+  2429  07BD  160C               	bsf	12,4	;volatile
+  2430                           
+  2431                           ;brazo1.c: 421:  delay(10);
+  2432  07BE  300A               	movlw	10
+  2433  07BF  00F6               	movwf	delay@sec
+  2434  07C0  3000               	movlw	0
+  2435  07C1  00F7               	movwf	delay@sec+1
+  2436  07C2  3184  2450  3184   	fcall	_delay
+  2437  07C5                     l1758:
+  2438                           
+  2439                           ;brazo1.c: 422:  RF4=0;
+  2440  07C5  0025               	movlb	5	; select bank5
+  2441  07C6  120C               	bcf	12,4	;volatile
+  2442  07C7                     l1760:
+  2443                           
+  2444                           ;brazo1.c: 423:  RE3=1;
+  2445  07C7  0020               	movlb	0	; select bank0
+  2446  07C8  1590               	bsf	16,3	;volatile
+  2447                           
+  2448                           ;brazo1.c: 424:  delay(15);
+  2449  07C9  300F               	movlw	15
+  2450  07CA  00F6               	movwf	delay@sec
+  2451  07CB  3000               	movlw	0
+  2452  07CC  00F7               	movwf	delay@sec+1
+  2453  07CD  3184  2450  3184   	fcall	_delay
+  2454  07D0                     l1762:
+  2455                           
+  2456                           ;brazo1.c: 425:  RE3=0;
+  2457  07D0  0020               	movlb	0	; select bank0
+  2458  07D1  1190               	bcf	16,3	;volatile
+  2459  07D2                     l1764:
+  2460                           
+  2461                           ;brazo1.c: 426:  RE1=1;
+  2462  07D2  1490               	bsf	16,1	;volatile
+  2463                           
+  2464                           ;brazo1.c: 427:  delay(30);
+  2465  07D3  301E               	movlw	30
+  2466  07D4  00F6               	movwf	delay@sec
+  2467  07D5  3000               	movlw	0
+  2468  07D6  00F7               	movwf	delay@sec+1
+  2469  07D7  3184  2450  3184   	fcall	_delay
+  2470  07DA                     l1766:
+  2471                           
+  2472                           ;brazo1.c: 428:  RE1=0;
+  2473  07DA  0020               	movlb	0	; select bank0
+  2474  07DB  1090               	bcf	16,1	;volatile
+  2475  07DC                     l1768:
+  2476                           
+  2477                           ;brazo1.c: 429:  RE2=1;
+  2478  07DC  1510               	bsf	16,2	;volatile
+  2479                           
+  2480                           ;brazo1.c: 430:  delay(15);
+  2481  07DD  300F               	movlw	15
+  2482  07DE  00F6               	movwf	delay@sec
+  2483  07DF  3000               	movlw	0
+  2484  07E0  00F7               	movwf	delay@sec+1
+  2485  07E1  3184  2450  3184   	fcall	_delay
+  2486  07E4                     l1770:
+  2487                           
+  2488                           ;brazo1.c: 431:  RE2=0;
+  2489  07E4  0020               	movlb	0	; select bank0
+  2490  07E5  1110               	bcf	16,2	;volatile
+  2491  07E6                     l1772:
+  2492                           
+  2493                           ;brazo1.c: 432:  RF3=1;
+  2494  07E6  0025               	movlb	5	; select bank5
+  2495  07E7  158C               	bsf	12,3	;volatile
+  2496                           
+  2497                           ;brazo1.c: 433:  delay(10);
+  2498  07E8  300A               	movlw	10
+  2499  07E9  00F6               	movwf	delay@sec
+  2500  07EA  3000               	movlw	0
+  2501  07EB  00F7               	movwf	delay@sec+1
+  2502  07EC  3184  2450  3184   	fcall	_delay
+  2503  07EF                     l1774:
+  2504                           
+  2505                           ;brazo1.c: 434:  RF3=0;
+  2506  07EF  0025               	movlb	5	; select bank5
+  2507  07F0  118C               	bcf	12,3	;volatile
+  2508                           
+  2509                           ;brazo1.c: 436:  while(RD0)RE0=1;
+  2510  07F1  2FF3               	goto	l212
+  2511  07F2                     l213:
+  2512  07F2  1410               	bsf	16,0	;volatile
+  2513  07F3                     l212:
+  2514  07F3  0020               	movlb	0	; select bank0
+  2515  07F4  180F               	btfsc	15,0	;volatile
+  2516  07F5  2FF7               	goto	u1261
+  2517  07F6  2FF8               	goto	u1260
+  2518  07F7                     u1261:
+  2519  07F7  2FF2               	goto	l213
+  2520  07F8                     u1260:
+  2521  07F8                     l214:
+  2522                           
+  2523                           ;brazo1.c: 437:  RE0=0;
+  2524  07F8  1010               	bcf	16,0	;volatile
+  2525  07F9  2CB2               	goto	l1418
+  2526  07FA                     l215:	
+  2527                           ;brazo1.c: 441:          {;brazo1.c: 442:          }
+  2528                           
+  2529  07FA  2CB2               	goto	l1418
+  2530  07FB  3180  2802         	ljmp	start
+  2531  07FD                     __end_of_main:
+  2532                           
+  2533                           	psect	text1
+  2534  0450                     __ptext1:	
+  2535 ;; *************** function _delay *****************
+  2536 ;; Defined at:
+  2537 ;;		line 102 in file "brazo1.c"
+  2538 ;; Parameters:    Size  Location     Type
+  2539 ;;  sec             2    6[COMMON] unsigned int 
+  2540 ;; Auto vars:     Size  Location     Type
+  2541 ;;  j               2   10[COMMON] unsigned int 
+  2542 ;;  i               2    8[COMMON] unsigned int 
+  2543 ;; Return value:  Size  Location     Type
+  2544 ;;                  1    wreg      void 
+  2545 ;; Registers used:
+  2546 ;;		wreg, status,2, status,0, pclath, cstack
+  2547 ;; Tracked objects:
+  2548 ;;		On entry : 0/0
+  2549 ;;		On exit  : 0/0
+  2550 ;;		Unchanged: 0/0
+  2551 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+  2552 ;;      Params:         2       0       0       0       0       0       0       0
+  2553 ;;      Locals:         4       0       0       0       0       0       0       0
+  2554 ;;      Temps:          0       0       0       0       0       0       0       0
+  2555 ;;      Totals:         6       0       0       0       0       0       0       0
+  2556 ;;Total ram usage:        6 bytes
+  2557 ;; Hardware stack levels used:    1
+  2558 ;; Hardware stack levels required when called:    1
+  2559 ;; This function calls:
+  2560 ;;		___wmul
+  2561 ;; This function is called by:
+  2562 ;;		_main
+  2563 ;; This function uses a non-reentrant model
+  2564 ;;
+  2565                           
+  2566                           
+  2567                           ;psect for function _delay
+  2568  0450                     _delay:
+  2569  0450                     l1318:	
+  2570                           ;incstack = 0
+  2571                           ; Regs used in _delay: [wreg+status,2+status,0+pclath+cstack]
+  2572                           
+  2573                           
+  2574                           ;brazo1.c: 102: void delay(unsigned int sec);brazo1.c: 103: {;brazo1.c: 104:   unsigned 
+      +                          int i,j;;brazo1.c: 105:  j=sec*30;
+  2575  0450  0877               	movf	delay@sec+1,w
+  2576  0451  00F1               	movwf	___wmul@multiplier+1
+  2577  0452  0876               	movf	delay@sec,w
+  2578  0453  00F0               	movwf	___wmul@multiplier
+  2579  0454  301E               	movlw	30
+  2580  0455  00F2               	movwf	___wmul@multiplicand
+  2581  0456  3000               	movlw	0
+  2582  0457  00F3               	movwf	___wmul@multiplicand+1
+  2583  0458  3184  2410  3184   	fcall	___wmul
+  2584  045B  0871               	movf	?___wmul+1,w
+  2585  045C  00FB               	movwf	delay@j+1
+  2586  045D  0870               	movf	?___wmul,w
+  2587  045E  00FA               	movwf	delay@j
+  2588                           
+  2589                           ;brazo1.c: 106:    while(j--)
+  2590  045F  2C6E               	goto	l1324
+  2591  0460                     l1320:
+  2592                           
+  2593                           ;brazo1.c: 107:    {;brazo1.c: 108:      i=561;
+  2594  0460  3031               	movlw	49
+  2595  0461  00F8               	movwf	delay@i
+  2596  0462  3002               	movlw	2
+  2597  0463  00F9               	movwf	delay@i+1
+  2598  0464                     l1322:	
+  2599                           ;brazo1.c: 109:      while(--i);
+  2600                           
+  2601  0464  3001               	movlw	1
+  2602  0465  02F8               	subwf	delay@i,f
+  2603  0466  3000               	movlw	0
+  2604  0467  3BF9               	subwfb	delay@i+1,f
+  2605  0468  0878               	movf	delay@i,w
+  2606  0469  0479               	iorwf	delay@i+1,w
+  2607  046A  1D03               	btfss	3,2
+  2608  046B  2C6D               	goto	u691
+  2609  046C  2C6E               	goto	u690
+  2610  046D                     u691:
+  2611  046D  2C64               	goto	l1322
+  2612  046E                     u690:
+  2613  046E                     l1324:
+  2614                           
+  2615                           ;brazo1.c: 106:    while(j--)
+  2616  046E  3001               	movlw	1
+  2617  046F  02FA               	subwf	delay@j,f
+  2618  0470  3000               	movlw	0
+  2619  0471  3BFB               	subwfb	delay@j+1,f
+  2620  0472  0A7A               	incf	delay@j,w
+  2621  0473  1D03               	skipz
+  2622  0474  2C79               	goto	u701
+  2623  0475  0A7B               	incf	delay@j+1,w
+  2624  0476  1D03               	btfss	3,2
+  2625  0477  2C79               	goto	u701
+  2626  0478  2C7A               	goto	u700
+  2627  0479                     u701:
+  2628  0479  2C60               	goto	l1320
+  2629  047A                     u700:
+  2630  047A                     l135:
+  2631  047A  0008               	return
+  2632  047B                     __end_of_delay:
+  2633                           
+  2634                           	psect	text2
+  2635  0410                     __ptext2:	
+  2636 ;; *************** function ___wmul *****************
+  2637 ;; Defined at:
+  2638 ;;		line 15 in file "C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\Umul16.c"
+  2639 ;; Parameters:    Size  Location     Type
+  2640 ;;  multiplier      2    0[COMMON] unsigned int 
+  2641 ;;  multiplicand    2    2[COMMON] unsigned int 
+  2642 ;; Auto vars:     Size  Location     Type
+  2643 ;;  product         2    4[COMMON] unsigned int 
+  2644 ;; Return value:  Size  Location     Type
+  2645 ;;                  2    0[COMMON] unsigned int 
+  2646 ;; Registers used:
+  2647 ;;		wreg, status,2, status,0
+  2648 ;; Tracked objects:
+  2649 ;;		On entry : 0/0
+  2650 ;;		On exit  : 0/0
+  2651 ;;		Unchanged: 0/0
+  2652 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+  2653 ;;      Params:         4       0       0       0       0       0       0       0
+  2654 ;;      Locals:         2       0       0       0       0       0       0       0
+  2655 ;;      Temps:          0       0       0       0       0       0       0       0
+  2656 ;;      Totals:         6       0       0       0       0       0       0       0
+  2657 ;;Total ram usage:        6 bytes
+  2658 ;; Hardware stack levels used:    1
+  2659 ;; This function calls:
+  2660 ;;		Nothing
+  2661 ;; This function is called by:
+  2662 ;;		_delay
+  2663 ;; This function uses a non-reentrant model
+  2664 ;;
+  2665                           
+  2666                           
+  2667                           ;psect for function ___wmul
+  2668  0410                     ___wmul:
+  2669  0410                     l1304:	
+  2670                           ;incstack = 0
+  2671                           ; Regs used in ___wmul: [wreg+status,2+status,0]
+  2672                           
+  2673  0410  01F4               	clrf	___wmul@product
+  2674  0411  01F5               	clrf	___wmul@product+1
+  2675  0412                     l1306:
+  2676  0412  1C70               	btfss	___wmul@multiplier,0
+  2677  0413  2C15               	goto	u651
+  2678  0414  2C16               	goto	u650
+  2679  0415                     u651:
+  2680  0415  2C1A               	goto	l368
+  2681  0416                     u650:
+  2682  0416                     l1308:
+  2683  0416  0872               	movf	___wmul@multiplicand,w
+  2684  0417  07F4               	addwf	___wmul@product,f
+  2685  0418  0873               	movf	___wmul@multiplicand+1,w
+  2686  0419  3DF5               	addwfc	___wmul@product+1,f
+  2687  041A                     l368:
+  2688  041A  3001               	movlw	1
+  2689  041B                     u665:
+  2690  041B  35F2               	lslf	___wmul@multiplicand,f
+  2691  041C  0DF3               	rlf	___wmul@multiplicand+1,f
+  2692  041D  0B89               	decfsz	9,f
+  2693  041E  2C1B               	goto	u665
+  2694  041F                     l1310:
+  2695  041F  3001               	movlw	1
+  2696  0420                     u675:
+  2697  0420  36F1               	lsrf	___wmul@multiplier+1,f
+  2698  0421  0CF0               	rrf	___wmul@multiplier,f
+  2699  0422  0B89               	decfsz	9,f
+  2700  0423  2C20               	goto	u675
+  2701  0424                     l1312:
+  2702  0424  0870               	movf	___wmul@multiplier,w
+  2703  0425  0471               	iorwf	___wmul@multiplier+1,w
+  2704  0426  1D03               	btfss	3,2
+  2705  0427  2C29               	goto	u681
+  2706  0428  2C2A               	goto	u680
+  2707  0429                     u681:
+  2708  0429  2C12               	goto	l1306
+  2709  042A                     u680:
+  2710  042A                     l1314:
+  2711  042A  0875               	movf	___wmul@product+1,w
+  2712  042B  00F1               	movwf	?___wmul+1
+  2713  042C  0874               	movf	___wmul@product,w
+  2714  042D  00F0               	movwf	?___wmul
+  2715  042E                     l370:
+  2716  042E  0008               	return
+  2717  042F                     __end_of___wmul:
+  2718                           
+  2719                           	psect	text3
+  2720  03C3                     __ptext3:	
+  2721 ;; *************** function _UART_read *****************
+  2722 ;; Defined at:
+  2723 ;;		line 174 in file "brazo1.c"
+  2724 ;; Parameters:    Size  Location     Type
+  2725 ;;		None
+  2726 ;; Auto vars:     Size  Location     Type
+  2727 ;;		None
+  2728 ;; Return value:  Size  Location     Type
+  2729 ;;                  1    wreg      unsigned char 
+  2730 ;; Registers used:
+  2731 ;;		wreg
+  2732 ;; Tracked objects:
+  2733 ;;		On entry : 0/0
+  2734 ;;		On exit  : 0/0
+  2735 ;;		Unchanged: 0/0
+  2736 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+  2737 ;;      Params:         0       0       0       0       0       0       0       0
+  2738 ;;      Locals:         0       0       0       0       0       0       0       0
+  2739 ;;      Temps:          0       0       0       0       0       0       0       0
+  2740 ;;      Totals:         0       0       0       0       0       0       0       0
+  2741 ;;Total ram usage:        0 bytes
+  2742 ;; Hardware stack levels used:    1
+  2743 ;; This function calls:
+  2744 ;;		Nothing
+  2745 ;; This function is called by:
+  2746 ;;		_main
+  2747 ;; This function uses a non-reentrant model
+  2748 ;;
+  2749                           
+  2750                           
+  2751                           ;psect for function _UART_read
+  2752  03C3                     _UART_read:
+  2753  03C3                     l1392:	
+  2754                           ;incstack = 0
+  2755                           ; Regs used in _UART_read: [wreg]
+  2756                           
+  2757                           
+  2758                           ;brazo1.c: 176:  if(PIR4bits.RC2IF == 1)
+  2759  03C3  0020               	movlb	0	; select bank0
+  2760  03C4  1E94               	btfss	20,5	;volatile
+  2761  03C5  2BC7               	goto	u711
+  2762  03C6  2BC8               	goto	u710
+  2763  03C7                     u711:
+  2764  03C7  2BCB               	goto	l1400
+  2765  03C8                     u710:
+  2766  03C8                     l1394:
+  2767                           
+  2768                           ;brazo1.c: 177:   return RC2REG;
+  2769  03C8  0029               	movlb	9	; select bank9
+  2770  03C9  0811               	movf	17,w	;volatile
+  2771  03CA  2BCC               	goto	l148
+  2772  03CB                     l1400:
+  2773                           
+  2774                           ;brazo1.c: 179:   return 0;
+  2775  03CB  3000               	movlw	0
+  2776  03CC                     l148:
+  2777  03CC  0008               	return
+  2778  03CD                     __end_of_UART_read:
+  2779                           
+  2780                           	psect	text4
+  2781  03DD                     __ptext4:	
+  2782 ;; *************** function _UART_printf *****************
+  2783 ;; Defined at:
+  2784 ;;		line 188 in file "brazo1.c"
+  2785 ;; Parameters:    Size  Location     Type
+  2786 ;;  cadena          2    1[COMMON] PTR unsigned char 
+  2787 ;;		 -> STR_25(19), STR_24(19), STR_23(14), STR_22(14), 
+  2788 ;;		 -> STR_21(21), STR_20(21), STR_19(23), STR_18(23), 
+  2789 ;;		 -> STR_17(15), STR_16(15), STR_15(16), STR_14(16), 
+  2790 ;;		 -> STR_13(15), STR_12(15), STR_11(16), STR_10(16), 
+  2791 ;;		 -> STR_9(16), STR_8(16), STR_7(15), STR_6(15), 
+  2792 ;;		 -> STR_5(18), STR_4(18), STR_3(20), STR_2(20), 
+  2793 ;;		 -> STR_1(27), 
+  2794 ;; Auto vars:     Size  Location     Type
+  2795 ;;		None
+  2796 ;; Return value:  Size  Location     Type
+  2797 ;;                  1    wreg      void 
+  2798 ;; Registers used:
+  2799 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+  2800 ;; Tracked objects:
+  2801 ;;		On entry : 0/0
+  2802 ;;		On exit  : 0/0
+  2803 ;;		Unchanged: 0/0
+  2804 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+  2805 ;;      Params:         2       0       0       0       0       0       0       0
+  2806 ;;      Locals:         0       0       0       0       0       0       0       0
+  2807 ;;      Temps:          1       0       0       0       0       0       0       0
+  2808 ;;      Totals:         3       0       0       0       0       0       0       0
+  2809 ;;Total ram usage:        3 bytes
+  2810 ;; Hardware stack levels used:    1
+  2811 ;; Hardware stack levels required when called:    1
+  2812 ;; This function calls:
+  2813 ;;		_UART_write
+  2814 ;; This function is called by:
+  2815 ;;		_main
+  2816 ;; This function uses a non-reentrant model
+  2817 ;;
+  2818                           
+  2819                           
+  2820                           ;psect for function _UART_printf
+  2821  03DD                     _UART_printf:
+  2822  03DD                     l1404:	
+  2823                           ;incstack = 0
+  2824                           ; Regs used in _UART_printf: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+  2825                           
+  2826                           
+  2827                           ;brazo1.c: 188: void UART_printf(char *cadena);brazo1.c: 189: {;brazo1.c: 190:  while(*c
+      +                          adena !=0x00){
+  2828  03DD  2BEA               	goto	l1410
+  2829  03DE                     l1406:
+  2830                           
+  2831                           ;brazo1.c: 191:   UART_write(*cadena);
+  2832  03DE  0871               	movf	UART_printf@cadena,w
+  2833  03DF  0084               	movwf	4
+  2834  03E0  0872               	movf	UART_printf@cadena+1,w
+  2835  03E1  0085               	movwf	5
+  2836  03E2  0800               	movf	0,w	;code access
+  2837  03E3  3183  23BA  3183   	fcall	_UART_write
+  2838  03E6                     l1408:
+  2839                           
+  2840                           ;brazo1.c: 192:   cadena++;
+  2841  03E6  3001               	movlw	1
+  2842  03E7  07F1               	addwf	UART_printf@cadena,f
+  2843  03E8  3000               	movlw	0
+  2844  03E9  3DF2               	addwfc	UART_printf@cadena+1,f
+  2845  03EA                     l1410:
+  2846                           
+  2847                           ;brazo1.c: 190:  while(*cadena !=0x00){
+  2848  03EA  0871               	movf	UART_printf@cadena,w
+  2849  03EB  0084               	movwf	4
+  2850  03EC  0872               	movf	UART_printf@cadena+1,w
+  2851  03ED  0085               	movwf	5
+  2852  03EE  0012               	moviw fsr0++
+  2853  03EF  1D03               	btfss	3,2
+  2854  03F0  2BF2               	goto	u721
+  2855  03F1  2BF3               	goto	u720
+  2856  03F2                     u721:
+  2857  03F2  2BDE               	goto	l1406
+  2858  03F3                     u720:
+  2859  03F3                     l161:
+  2860  03F3  0008               	return
+  2861  03F4                     __end_of_UART_printf:
+  2862                           
+  2863                           	psect	text5
+  2864  03BA                     __ptext5:	
+  2865 ;; *************** function _UART_write *****************
+  2866 ;; Defined at:
+  2867 ;;		line 182 in file "brazo1.c"
+  2868 ;; Parameters:    Size  Location     Type
+  2869 ;;  dato            1    wreg     unsigned char 
+  2870 ;; Auto vars:     Size  Location     Type
+  2871 ;;  dato            1    0[COMMON] unsigned char 
+  2872 ;; Return value:  Size  Location     Type
+  2873 ;;                  1    wreg      void 
+  2874 ;; Registers used:
+  2875 ;;		wreg
+  2876 ;; Tracked objects:
+  2877 ;;		On entry : 0/0
+  2878 ;;		On exit  : 0/0
+  2879 ;;		Unchanged: 0/0
+  2880 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+  2881 ;;      Params:         0       0       0       0       0       0       0       0
+  2882 ;;      Locals:         1       0       0       0       0       0       0       0
+  2883 ;;      Temps:          0       0       0       0       0       0       0       0
+  2884 ;;      Totals:         1       0       0       0       0       0       0       0
+  2885 ;;Total ram usage:        1 bytes
+  2886 ;; Hardware stack levels used:    1
+  2887 ;; This function calls:
+  2888 ;;		Nothing
+  2889 ;; This function is called by:
+  2890 ;;		_UART_printf
+  2891 ;; This function uses a non-reentrant model
+  2892 ;;
+  2893                           
+  2894                           
+  2895                           ;psect for function _UART_write
+  2896  03BA                     _UART_write:
+  2897                           
+  2898                           ;incstack = 0
+  2899                           ; Regs used in _UART_write: [wreg]
+  2900                           ;UART_write@dato stored from wreg
+  2901  03BA  00F0               	movwf	UART_write@dato
+  2902  03BB                     l1302:
+  2903                           
+  2904                           ;brazo1.c: 182: void UART_write(char dato);brazo1.c: 183: {;brazo1.c: 184:  TX2REG = dat
+      +                          o;
+  2905  03BB  0870               	movf	UART_write@dato,w
+  2906  03BC  0029               	movlb	9	; select bank9
+  2907  03BD  0092               	movwf	18	;volatile
+  2908  03BE                     l152:	
+  2909                           ;brazo1.c: 185:  while(TX2STAbits.TRMT == 0);
+  2910                           
+  2911  03BE  1C96               	btfss	22,1	;volatile
+  2912  03BF  2BC1               	goto	u641
+  2913  03C0  2BC2               	goto	u640
+  2914  03C1                     u641:
+  2915  03C1  2BBE               	goto	l152
+  2916  03C2                     u640:
+  2917  03C2                     l155:
+  2918  03C2  0008               	return
+  2919  03C3                     __end_of_UART_write:
+  2920                           
+  2921                           	psect	text6
+  2922  03CD                     __ptext6:	
+  2923 ;; *************** function _UART_init *****************
+  2924 ;; Defined at:
+  2925 ;;		line 158 in file "brazo1.c"
+  2926 ;; Parameters:    Size  Location     Type
+  2927 ;;		None
+  2928 ;; Auto vars:     Size  Location     Type
+  2929 ;;		None
+  2930 ;; Return value:  Size  Location     Type
+  2931 ;;                  1    wreg      void 
+  2932 ;; Registers used:
+  2933 ;;		wreg, status,2
+  2934 ;; Tracked objects:
+  2935 ;;		On entry : 0/0
+  2936 ;;		On exit  : 0/0
+  2937 ;;		Unchanged: 0/0
+  2938 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+  2939 ;;      Params:         0       0       0       0       0       0       0       0
+  2940 ;;      Locals:         0       0       0       0       0       0       0       0
+  2941 ;;      Temps:          0       0       0       0       0       0       0       0
+  2942 ;;      Totals:         0       0       0       0       0       0       0       0
+  2943 ;;Total ram usage:        0 bytes
+  2944 ;; Hardware stack levels used:    1
+  2945 ;; This function calls:
+  2946 ;;		Nothing
+  2947 ;; This function is called by:
+  2948 ;;		_main
+  2949 ;; This function uses a non-reentrant model
+  2950 ;;
+  2951                           
+  2952                           
+  2953                           ;psect for function _UART_init
+  2954  03CD                     _UART_init:
+  2955  03CD                     l1372:	
+  2956                           ;incstack = 0
+  2957                           ; Regs used in _UART_init: [wreg+status,2]
+  2958                           
+  2959                           
+  2960                           ;brazo1.c: 160:     TRISGbits.TRISG2 = 1;
+  2961  03CD  0026               	movlb	6	; select bank6
+  2962  03CE  150D               	bsf	13,2	;volatile
+  2963                           
+  2964                           ;brazo1.c: 161:     TRISGbits.TRISG1 = 0;
+  2965  03CF  108D               	bcf	13,1	;volatile
+  2966  03D0                     l1374:
+  2967                           
+  2968                           ;brazo1.c: 162:     ANSELG=0x00;
+  2969  03D0  0028               	movlb	8	; select bank8
+  2970  03D1  018D               	clrf	13	;volatile
+  2971  03D2                     l1376:
+  2972                           
+  2973                           ;brazo1.c: 163:     TX2STAbits.SYNC = 0;
+  2974  03D2  0029               	movlb	9	; select bank9
+  2975  03D3  1216               	bcf	22,4	;volatile
+  2976  03D4                     l1378:
+  2977                           
+  2978                           ;brazo1.c: 164:     TX2STAbits.TX9 = 0;
+  2979  03D4  1316               	bcf	22,6	;volatile
+  2980  03D5                     l1380:
+  2981                           
+  2982                           ;brazo1.c: 165:     TX2STAbits.BRGH = 1;
+  2983  03D5  1516               	bsf	22,2	;volatile
+  2984  03D6                     l1382:
+  2985                           
+  2986                           ;brazo1.c: 166:     SP2BRGL = 103;
+  2987  03D6  3067               	movlw	103
+  2988  03D7  0093               	movwf	19	;volatile
+  2989  03D8                     l1384:
+  2990                           
+  2991                           ;brazo1.c: 168:  BAUD2CONbits.BRG16 = 0;
+  2992  03D8  1197               	bcf	23,3	;volatile
+  2993  03D9                     l1386:
+  2994                           
+  2995                           ;brazo1.c: 169:  RC2STAbits.SPEN = 1;
+  2996  03D9  1795               	bsf	21,7	;volatile
+  2997  03DA                     l1388:
+  2998                           
+  2999                           ;brazo1.c: 170:     TX2STAbits.TXEN = 1;
+  3000  03DA  1696               	bsf	22,5	;volatile
+  3001  03DB                     l1390:
+  3002                           
+  3003                           ;brazo1.c: 171:     RC2STAbits.CREN = 1;
+  3004  03DB  1615               	bsf	21,4	;volatile
+  3005  03DC                     l144:
+  3006  03DC  0008               	return
+  3007  03DD                     __end_of_UART_init:
+  3008                           
+  3009                           	psect	text7
+  3010  042F                     __ptext7:	
+  3011 ;; *************** function _PWM_init *****************
+  3012 ;; Defined at:
+  3013 ;;		line 133 in file "brazo1.c"
+  3014 ;; Parameters:    Size  Location     Type
+  3015 ;;		None
+  3016 ;; Auto vars:     Size  Location     Type
+  3017 ;;		None
+  3018 ;; Return value:  Size  Location     Type
+  3019 ;;                  1    wreg      void 
+  3020 ;; Registers used:
+  3021 ;;		wreg, status,2
+  3022 ;; Tracked objects:
+  3023 ;;		On entry : 0/0
+  3024 ;;		On exit  : 0/0
+  3025 ;;		Unchanged: 0/0
+  3026 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+  3027 ;;      Params:         0       0       0       0       0       0       0       0
+  3028 ;;      Locals:         0       0       0       0       0       0       0       0
+  3029 ;;      Temps:          0       0       0       0       0       0       0       0
+  3030 ;;      Totals:         0       0       0       0       0       0       0       0
+  3031 ;;Total ram usage:        0 bytes
+  3032 ;; Hardware stack levels used:    1
+  3033 ;; This function calls:
+  3034 ;;		Nothing
+  3035 ;; This function is called by:
+  3036 ;;		_main
+  3037 ;; This function uses a non-reentrant model
+  3038 ;;
+  3039                           
+  3040                           
+  3041                           ;psect for function _PWM_init
+  3042  042F                     _PWM_init:
+  3043  042F                     l1350:	
+  3044                           ;incstack = 0
+  3045                           ; Regs used in _PWM_init: [wreg+status,2]
+  3046                           
+  3047                           
+  3048                           ;brazo1.c: 135:  PR2=50;
+  3049  042F  3032               	movlw	50
+  3050  0430  0020               	movlb	0	; select bank0
+  3051  0431  009B               	movwf	27	;volatile
+  3052                           
+  3053                           ;brazo1.c: 136:  CCP1CON=0x0f;
+  3054  0432  300F               	movlw	15
+  3055  0433  0025               	movlb	5	; select bank5
+  3056  0434  0093               	movwf	19	;volatile
+  3057                           
+  3058                           ;brazo1.c: 137:  CCPR1L=25;
+  3059  0435  3019               	movlw	25
+  3060  0436  0091               	movwf	17	;volatile
+  3061  0437                     l1352:
+  3062                           
+  3063                           ;brazo1.c: 138:  CCPTMRS0=0x00;
+  3064  0437  019E               	clrf	30	;volatile
+  3065  0438                     l1354:
+  3066                           
+  3067                           ;brazo1.c: 139:  T2CON=0X07;
+  3068  0438  3007               	movlw	7
+  3069  0439  0020               	movlb	0	; select bank0
+  3070  043A  009C               	movwf	28	;volatile
+  3071  043B                     l1356:
+  3072                           
+  3073                           ;brazo1.c: 140:   TRISC2=0;
+  3074  043B  0021               	movlb	1	; select bank1
+  3075  043C  110E               	bcf	14,2	;volatile
+  3076  043D                     l1358:
+  3077                           
+  3078                           ;brazo1.c: 142:  PR4=50;
+  3079  043D  3032               	movlw	50
+  3080  043E  0028               	movlb	8	; select bank8
+  3081  043F  0096               	movwf	22	;volatile
+  3082  0440                     l1360:
+  3083                           
+  3084                           ;brazo1.c: 143:  CCP2CON=0x0f;
+  3085  0440  300F               	movlw	15
+  3086  0441  0025               	movlb	5	; select bank5
+  3087  0442  009A               	movwf	26	;volatile
+  3088  0443                     l1362:
+  3089                           
+  3090                           ;brazo1.c: 144:  CCPR2L=25;
+  3091  0443  3019               	movlw	25
+  3092  0444  0098               	movwf	24	;volatile
+  3093  0445                     l1364:
+  3094                           
+  3095                           ;brazo1.c: 145:  CCPTMRS0=0x04;
+  3096  0445  3004               	movlw	4
+  3097  0446  009E               	movwf	30	;volatile
+  3098  0447                     l1366:
+  3099                           
+  3100                           ;brazo1.c: 146:  T4CON=0X07;
+  3101  0447  3007               	movlw	7
+  3102  0448  0028               	movlb	8	; select bank8
+  3103  0449  0097               	movwf	23	;volatile
+  3104  044A                     l1368:
+  3105                           
+  3106                           ;brazo1.c: 147:  APFCON=0x04;
+  3107  044A  3004               	movlw	4
+  3108  044B  0022               	movlb	2	; select bank2
+  3109  044C  009D               	movwf	29	;volatile
+  3110  044D                     l1370:
+  3111                           
+  3112                           ;brazo1.c: 148:  TRISE7=0;
+  3113  044D  0021               	movlb	1	; select bank1
+  3114  044E  1390               	bcf	16,7	;volatile
+  3115  044F                     l141:
+  3116  044F  0008               	return
+  3117  0450                     __end_of_PWM_init:
+  3118                           
+  3119                           	psect	text8
+  3120  03F4                     __ptext8:	
+  3121 ;; *************** function _IO_init *****************
+  3122 ;; Defined at:
+  3123 ;;		line 115 in file "brazo1.c"
+  3124 ;; Parameters:    Size  Location     Type
+  3125 ;;		None
+  3126 ;; Auto vars:     Size  Location     Type
+  3127 ;;		None
+  3128 ;; Return value:  Size  Location     Type
+  3129 ;;                  1    wreg      void 
+  3130 ;; Registers used:
+  3131 ;;		wreg, status,2
+  3132 ;; Tracked objects:
+  3133 ;;		On entry : 0/0
+  3134 ;;		On exit  : 0/0
+  3135 ;;		Unchanged: 0/0
+  3136 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+  3137 ;;      Params:         0       0       0       0       0       0       0       0
+  3138 ;;      Locals:         0       0       0       0       0       0       0       0
+  3139 ;;      Temps:          0       0       0       0       0       0       0       0
+  3140 ;;      Totals:         0       0       0       0       0       0       0       0
+  3141 ;;Total ram usage:        0 bytes
+  3142 ;; Hardware stack levels used:    1
+  3143 ;; This function calls:
+  3144 ;;		Nothing
+  3145 ;; This function is called by:
+  3146 ;;		_main
+  3147 ;; This function uses a non-reentrant model
+  3148 ;;
+  3149                           
+  3150                           
+  3151                           ;psect for function _IO_init
+  3152  03F4                     _IO_init:
+  3153  03F4                     l1326:	
+  3154                           ;incstack = 0
+  3155                           ; Regs used in _IO_init: [wreg+status,2]
+  3156                           
+  3157                           
+  3158                           ;brazo1.c: 117:  TRISA=0xff;
+  3159  03F4  30FF               	movlw	255
+  3160  03F5  0021               	movlb	1	; select bank1
+  3161  03F6  008C               	movwf	12	;volatile
+  3162  03F7                     l1328:
+  3163                           
+  3164                           ;brazo1.c: 118:  ANSELA=0x00;
+  3165  03F7  0023               	movlb	3	; select bank3
+  3166  03F8  018C               	clrf	12	;volatile
+  3167  03F9                     l1330:
+  3168                           
+  3169                           ;brazo1.c: 119:  TRISB=0xff;
+  3170  03F9  30FF               	movlw	255
+  3171  03FA  0021               	movlb	1	; select bank1
+  3172  03FB  008D               	movwf	13	;volatile
+  3173  03FC                     l1332:
+  3174                           
+  3175                           ;brazo1.c: 120:  TRISC=0xff;
+  3176  03FC  30FF               	movlw	255
+  3177  03FD  008E               	movwf	14	;volatile
+  3178  03FE                     l1334:
+  3179                           
+  3180                           ;brazo1.c: 121:  APFCON=0xff;
+  3181  03FE  30FF               	movlw	255
+  3182  03FF  0022               	movlb	2	; select bank2
+  3183  0400  009D               	movwf	29	;volatile
+  3184  0401                     l1336:
+  3185                           
+  3186                           ;brazo1.c: 122:  TRISD=0xff;
+  3187  0401  30FF               	movlw	255
+  3188  0402  0021               	movlb	1	; select bank1
+  3189  0403  008F               	movwf	15	;volatile
+  3190  0404                     l1338:
+  3191                           
+  3192                           ;brazo1.c: 123:  TRISE=0X00;
+  3193  0404  0190               	clrf	16	;volatile
+  3194  0405                     l1340:
+  3195                           
+  3196                           ;brazo1.c: 124:  ANSELE=0x00;
+  3197  0405  0023               	movlb	3	; select bank3
+  3198  0406  0190               	clrf	16	;volatile
+  3199  0407                     l1342:
+  3200                           
+  3201                           ;brazo1.c: 125:  TRISF=0x00;
+  3202  0407  0026               	movlb	6	; select bank6
+  3203  0408  018C               	clrf	12	;volatile
+  3204  0409                     l1344:
+  3205                           
+  3206                           ;brazo1.c: 126:  ANSELF=0x00;
+  3207  0409  0028               	movlb	8	; select bank8
+  3208  040A  018C               	clrf	12	;volatile
+  3209  040B                     l1346:
+  3210                           
+  3211                           ;brazo1.c: 127:  PORTE=0x00;
+  3212  040B  0020               	movlb	0	; select bank0
+  3213  040C  0190               	clrf	16	;volatile
+  3214  040D                     l1348:
+  3215                           
+  3216                           ;brazo1.c: 128:  PORTF=0x00;
+  3217  040D  0025               	movlb	5	; select bank5
+  3218  040E  018C               	clrf	12	;volatile
+  3219  040F                     l138:
+  3220  040F  0008               	return
+  3221  0410                     __end_of_IO_init:
+  3222  007E                     btemp	set	126	;btemp
+  3223  007E                     wtemp0	set	126
+  3224                           
+  3225                           	psect	idloc
+  3226                           
+  3227                           ;Config register IDLOC0 @ 0x8000
+  3228                           ;	unspecified, using default values
+  3229  8000                     	org	32768
+  3230  8000  3FFF               	dw	16383
+  3231                           
+  3232                           ;Config register IDLOC1 @ 0x8001
+  3233                           ;	unspecified, using default values
+  3234  8001                     	org	32769
+  3235  8001  3FFF               	dw	16383
+  3236                           
+  3237                           ;Config register IDLOC2 @ 0x8002
+  3238                           ;	unspecified, using default values
+  3239  8002                     	org	32770
+  3240  8002  3FFF               	dw	16383
+  3241                           
+  3242                           ;Config register IDLOC3 @ 0x8003
+  3243                           ;	unspecified, using default values
+  3244  8003                     	org	32771
+  3245  8003  3FFF               	dw	16383
+  3246                           
+  3247                           	psect	config
+  3248                           
+  3249                           ;Config register CONFIG1 @ 0x8007
+  3250                           ;	Oscillator Selection
+  3251                           ;	FOSC = HS, HS Oscillator, High-speed crystal/resonator connected between OSC1 and OSC2
+      +                           pins
+  3252                           ;	Watchdog Timer Enable
+  3253                           ;	WDTE = OFF, WDT disabled
+  3254                           ;	Power-up Timer Enable
+  3255                           ;	PWRTE = OFF, PWRT disabled
+  3256                           ;	MCLR Pin Function Select
+  3257                           ;	MCLRE = ON, MCLR/VPP pin function is MCLR
+  3258                           ;	Flash Program Memory Code Protection
+  3259                           ;	CP = OFF, Program memory code protection is disabled
+  3260                           ;	Data Memory Code Protection
+  3261                           ;	CPD = OFF, Data memory code protection is disabled
+  3262                           ;	Brown-out Reset Enable
+  3263                           ;	BOREN = ON, Brown-out Reset enabled
+  3264                           ;	Clock Out Enable
+  3265                           ;	CLKOUTEN = OFF, CLKOUT function is disabled. I/O or oscillator function on the CLKOUT 
+      +                          pin
+  3266                           ;	Internal/External Switchover
+  3267                           ;	IESO = ON, Internal/External Switchover mode is enabled
+  3268                           ;	Fail-Safe Clock Monitor Enable
+  3269                           ;	FCMEN = ON, Fail-Safe Clock Monitor is enabled
+  3270  8007                     	org	32775
+  3271  8007  3FE2               	dw	16354
+  3272                           
+  3273                           ;Config register CONFIG2 @ 0x8008
+  3274                           ;	Flash Memory Self-Write Protection
+  3275                           ;	WRT = OFF, Write protection off
+  3276                           ;	Voltage Regulator Capacitor Enable
+  3277                           ;	VCAPEN = OFF, VCAP pin functionality is disabled
+  3278                           ;	PLL Enable
+  3279                           ;	PLLEN = ON, 4x PLL enabled
+  3280                           ;	Stack Overflow/Underflow Reset Enable
+  3281                           ;	STVREN = ON, Stack Overflow or Underflow will cause a Reset
+  3282                           ;	Brown-out Reset Voltage Selection
+  3283                           ;	BORV = LO, Brown-out Reset Voltage (Vbor), low trip point selected.
+  3284                           ;	Low-Voltage Programming Enable
+  3285                           ;	LVP = ON, Low-voltage programming enabled
+  3286  8008                     	org	32776
+  3287  8008  3FFF               	dw	16383
+
+Data Sizes:
+    Strings     235
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  44
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14     14      14
+    BANK0            80      0      12
+    BANK1            80      0       0
+    BANK2            80      0       0
+    BANK3            80      0       0
+    BANK4            80      0       0
+    BANK5            80      0       0
+    BANK6            16      0       0
+
+Pointer List with Targets:
+
+    UART_printf@cadena	PTR unsigned char  size(2) Largest target is 27
+		 -> STR_25(CODE[19]), STR_24(CODE[19]), STR_23(CODE[14]), STR_22(CODE[14]), 
+		 -> STR_21(CODE[21]), STR_20(CODE[21]), STR_19(CODE[23]), STR_18(CODE[23]), 
+		 -> STR_17(CODE[15]), STR_16(CODE[15]), STR_15(CODE[16]), STR_14(CODE[16]), 
+		 -> STR_13(CODE[15]), STR_12(CODE[15]), STR_11(CODE[16]), STR_10(CODE[16]), 
+		 -> STR_9(CODE[16]), STR_8(CODE[16]), STR_7(CODE[15]), STR_6(CODE[15]), 
+		 -> STR_5(CODE[18]), STR_4(CODE[18]), STR_3(CODE[20]), STR_2(CODE[20]), 
+		 -> STR_1(CODE[27]), 
+
+
+Critical Paths under _main in COMMON
+
+    _main->_delay
+    _delay->___wmul
+    _UART_printf->_UART_write
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 2     2      0    4872
+                                             12 COMMON     2     2      0
+                            _IO_init
+                           _PWM_init
+                          _UART_init
+                        _UART_printf
+                          _UART_read
+                              _delay
+ ---------------------------------------------------------------------------------
+ (1) _delay                                                6     4      2    2288
+                                              6 COMMON     6     4      2
+                             ___wmul
+ ---------------------------------------------------------------------------------
+ (2) ___wmul                                               6     2      4     244
+                                              0 COMMON     6     2      4
+ ---------------------------------------------------------------------------------
+ (1) _UART_read                                            0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _UART_printf                                          3     1      2    1967
+                                              1 COMMON     3     1      2
+                         _UART_write
+ ---------------------------------------------------------------------------------
+ (2) _UART_write                                           1     1      0      22
+                                              0 COMMON     1     1      0
+ ---------------------------------------------------------------------------------
+ (1) _UART_init                                            0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _PWM_init                                             0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _IO_init                                              0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _IO_init
+   _PWM_init
+   _UART_init
+   _UART_printf
+     _UART_write
+   _UART_read
+   _delay
+     ___wmul
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM             1F0      0       0       0        0.0%
+EEDATA             100      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+BITCOMMON            E      0       0       1        0.0%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+COMMON               E      E       E       2      100.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+BITSFR2              0      0       0       3        0.0%
+SFR2                 0      0       0       3        0.0%
+STACK                0      0       0       3        0.0%
+BITSFR3              0      0       0       4        0.0%
+SFR3                 0      0       0       4        0.0%
+ABS                  0      0      1A       4        0.0%
+BITBANK0            50      0       0       5        0.0%
+BITSFR4              0      0       0       5        0.0%
+SFR4                 0      0       0       5        0.0%
+BANK0               50      0       C       6       15.0%
+BITSFR5              0      0       0       6        0.0%
+SFR5                 0      0       0       6        0.0%
+BITBANK1            50      0       0       7        0.0%
+BITSFR6              0      0       0       7        0.0%
+SFR6                 0      0       0       7        0.0%
+BANK1               50      0       0       8        0.0%
+BITSFR7              0      0       0       8        0.0%
+SFR7                 0      0       0       8        0.0%
+BITBANK2            50      0       0       9        0.0%
+BITSFR8              0      0       0       9        0.0%
+SFR8                 0      0       0       9        0.0%
+BANK2               50      0       0      10        0.0%
+BITSFR9              0      0       0      10        0.0%
+SFR9                 0      0       0      10        0.0%
+BITBANK3            50      0       0      11        0.0%
+BITSFR10             0      0       0      11        0.0%
+SFR10                0      0       0      11        0.0%
+BANK3               50      0       0      12        0.0%
+BITSFR11             0      0       0      12        0.0%
+SFR11                0      0       0      12        0.0%
+BITBANK4            50      0       0      13        0.0%
+BITSFR12             0      0       0      13        0.0%
+SFR12                0      0       0      13        0.0%
+BANK4               50      0       0      14        0.0%
+BITSFR13             0      0       0      14        0.0%
+SFR13                0      0       0      14        0.0%
+BITBANK5            50      0       0      15        0.0%
+BITSFR14             0      0       0      15        0.0%
+SFR14                0      0       0      15        0.0%
+BANK5               50      0       0      16        0.0%
+BITSFR15             0      0       0      16        0.0%
+SFR15                0      0       0      16        0.0%
+BITBANK6            10      0       0      17        0.0%
+BITSFR16             0      0       0      17        0.0%
+SFR16                0      0       0      17        0.0%
+BANK6               10      0       0      18        0.0%
+BITSFR17             0      0       0      18        0.0%
+SFR17                0      0       0      18        0.0%
+BITSFR18             0      0       0      19        0.0%
+SFR18                0      0       0      19        0.0%
+DATA                 0      0      1A      19        0.0%
+BITSFR19             0      0       0      20        0.0%
+SFR19                0      0       0      20        0.0%
+BITSFR20             0      0       0      21        0.0%
+SFR20                0      0       0      21        0.0%
+BITSFR21             0      0       0      22        0.0%
+SFR21                0      0       0      22        0.0%
+BITSFR22             0      0       0      23        0.0%
+SFR22                0      0       0      23        0.0%
+BITSFR23             0      0       0      24        0.0%
+SFR23                0      0       0      24        0.0%
+BITSFR24             0      0       0      25        0.0%
+SFR24                0      0       0      25        0.0%
+BITSFR25             0      0       0      26        0.0%
+SFR25                0      0       0      26        0.0%
+BITSFR26             0      0       0      27        0.0%
+SFR26                0      0       0      27        0.0%
+BITSFR27             0      0       0      28        0.0%
+SFR27                0      0       0      28        0.0%
+BITSFR28             0      0       0      29        0.0%
+SFR28                0      0       0      29        0.0%
+BITSFR29             0      0       0      30        0.0%
+SFR29                0      0       0      30        0.0%
+BITSFR30             0      0       0      31        0.0%
+SFR30                0      0       0      31        0.0%
+BITSFR31             0      0       0      32        0.0%
+SFR31                0      0       0      32        0.0%
+
+
+Microchip Technology PIC Macro Assembler V2.30 build 20200825195618 
+Symbol Table                                                                                   Fri Dec 22 09:35:24 2023
+
+    ___wmul@multiplicand 0072                      l210 0796                      l212 07F3  
+                    l204 0732                      l141 044F                      l213 07F2  
+                    l205 0731                      l214 07F8                      l206 0736  
+                    l135 047A                      l215 07FA                      l144 03DC  
+                    l152 03BE                      l208 0791                      l161 03F3  
+                    l209 0790                      l138 040F                      l155 03C2  
+                    l148 03CC                      l370 042E                      l368 041A  
+                    _RD0 0078                      _RD1 0079                      _RE0 0080  
+                    _RD2 007A                      _RE1 0081                      _RD3 007B  
+                    _RF0 1460                      _RE2 0082                      _RD4 007C  
+                    _RF1 1461                      _RE3 0083                      _RD5 007D  
+                    _RF2 1462                      _RE4 0084                      _RD6 007E  
+                    _RF3 1463                      _RE5 0085                      _RF4 1464  
+                    _RE6 0086                      _PR2 001B                      _PR4 0416  
+                    u700 047A                      u701 0479                      u710 03C8  
+                    u711 03C7                      u640 03C2                      u720 03F3  
+                    u800 050B                      u641 03C1                      u721 03F2  
+                    u801 050A                      u650 0416                      u810 0514  
+                    u730 04BE                      u651 0415                      u811 0513  
+                    u731 04BD                      u900 0579                      u820 0523  
+                    u740 04CD                      u901 0578                      u821 0522  
+                    u741 04CC                      u910 057F                      u830 0529  
+                    u750 04D3                      u911 057E                      u831 0528  
+                    u751 04D2                      u680 042A                      u920 058C  
+                    u840 0536                      u760 04E0                      u681 0429  
+                    u665 041B                      u921 058B                      u841 0535  
+                    u761 04DF                      u690 046E                      u930 0595  
+                    u850 053F                      u770 04E9                      u675 0420  
+                    u691 046D                      u931 0594                      u851 053E  
+                    u771 04E8                      u940 05A4                      u860 054E  
+                    u780 04F8                      u941 05A3                      u861 054D  
+                    u781 04F7                      u950 05AA                      u870 0554  
+                    u790 04FE                      u951 05A9                      u871 0553  
+                    u791 04FD                      u960 05B7                      u880 0561  
+                    u961 05B6                      u881 0560                      u970 05C0  
+                    u890 056A                      u971 05BF                      u891 0569  
+                    u980 05CF                      u981 05CE                      u990 05D5  
+                    u991 05D4                      _mfs 0021                      _mzj 0020  
+                    _zmx 002B                      _zmy 002A                      wreg 0009  
+            main@dato_rx 007D             _BAUD2CONbits 0497                     l1302 03BB  
+                   l1310 041F                     l1400 03CB                     l1312 0424  
+                   l1304 0410                     l1320 0460                     l1330 03F9  
+                   l1410 03EA                     l1314 042A                     l1306 0412  
+                   l1322 0464                     l1340 0405                     l1332 03FC  
+                   l1404 03DD                     l1308 0416                     l1324 046E  
+                   l1500 0564                     l1420 04B8                     l1412 047B  
+                   l1342 0407                     l1334 03FE                     l1326 03F4  
+                   l1350 042F                     l1406 03DE                     l1318 0450  
+                   l1510 057F                     l1502 056A                     l1430 04D3  
+                   l1422 04BE                     l1414 04A2                     l1344 0409  
+                   l1336 0401                     l1328 03F7                     l1360 0440  
+                   l1352 0437                     l1408 03E6                     l1600 063D  
+                   l1512 0586                     l1520 058F                     l1504 0571  
+                   l1432 04DA                     l1440 04E3                     l1424 04C5  
+                   l1416 04AB                     l1346 040B                     l1338 0404  
+                   l1370 044D                     l1362 0443                     l1354 0438  
+                   l1610 0658                     l1602 0643                     l1530 05AA  
+                   l1522 0595                     l1514 0588                     l1506 0573  
+                   l1450 04FE                     l1442 04E9                     l1434 04DC  
+                   l1426 04C7                     l1418 04B2                     l1348 040D  
+                   l1364 0445                     l1356 043B                     l1380 03D5  
+                   l1372 03CD                     l1700 0726                     l1612 065F  
+                   l1620 0669                     l1604 064A                     l1532 05B1  
+                   l1540 05BA                     l1524 059C                     l1516 058C  
+                   l1508 0579                     l1452 0505                     l1460 050E  
+                   l1444 04F0                     l1436 04E0                     l1428 04CD  
+                   l1366 0447                     l1358 043D                     l1390 03DB  
+                   l1382 03D6                     l1374 03D0                     l1710 0746  
+                   l1702 072E                     l1630 0684                     l1622 066F  
+                   l1614 0661                     l1606 064C                     l1550 05D5  
+                   l1542 05C0                     l1534 05B3                     l1526 059E  
+                   l1518 058D                     l1470 0529                     l1462 0514  
+                   l1454 0507                     l1446 04F2                     l1438 04E1  
+                   l1368 044A                     l1384 03D8                     l1376 03D2  
+                   l1392 03C3                     l1720 075C                     l1712 0748  
+                   l1704 0737                     l1632 068B                     l1640 0695  
+                   l1624 0676                     l1616 0666                     l1608 0652  
+                   l1552 05DC                     l1560 05E5                     l1544 05C7  
+                   l1536 05B7                     l1528 05A4                     l1472 0530  
+                   l1480 0539                     l1464 051B                     l1456 050B  
+                   l1448 04F8                     l1386 03D9                     l1378 03D4  
+                   l1394 03C8                     l1730 0779                     l1722 0765  
+                   l1714 0750                     l1706 073D                     l1650 06B0  
+                   l1642 069B                     l1634 068D                     l1626 0678  
+                   l1618 0667                     l1570 0600                     l1562 05EB  
+                   l1554 05DE                     l1546 05C9                     l1538 05B8  
+                   l1490 0554                     l1482 053F                     l1474 0532  
+                   l1466 051D                     l1458 050C                     l1388 03DA  
+                   l1732 077B                     l1724 0767                     l1716 0752  
+                   l1708 073F                     l1740 0797                     l1652 06B7  
+                   l1660 06C1                     l1644 06A2                     l1636 0692  
+                   l1628 067E                     l1572 0607                     l1580 0611  
+                   l1564 05F2                     l1556 05E2                     l1548 05CF  
+                   l1492 055B                     l1484 0546                     l1476 0536  
+                   l1468 0523                     l1750 07B0                     l1742 079D  
+                   l1734 0783                     l1726 076F                     l1718 075A  
+                   l1670 06DA                     l1662 06C7                     l1654 06B9  
+                   l1646 06A4                     l1638 0693                     l1590 062C  
+                   l1582 0617                     l1574 0609                     l1566 05F4  
+                   l1558 05E3                     l1494 055D                     l1486 0548  
+                   l1478 0537                     l1760 07C7                     l1752 07B2  
+                   l1744 079F                     l1736 0785                     l1728 0771  
+                   l1680 06F1                     l1672 06DC                     l1664 06C9  
+                   l1656 06BE                     l1648 06AA                     l1592 0633  
+                   l1584 061E                     l1576 060E                     l1568 05FA  
+                   l1496 0561                     l1488 054E                     l1770 07E4  
+                   l1762 07D0                     l1754 07BA                     l1746 07A6  
+                   l1738 078D                     l1690 070E                     l1682 06FA  
+                   l1674 06E4                     l1666 06D0                     l1658 06BF  
+                   l1594 0635                     l1586 0620                     l1578 060F  
+                   l1498 0562                     l1772 07E6                     l1764 07D2  
+                   l1756 07BC                     l1748 07A8                     l1692 0710  
+                   l1684 06FC                     l1676 06E6                     l1668 06D2  
+                   l1596 063A                     l1588 0626                     l1774 07EF  
+                   l1766 07DA                     l1758 07C5                     l1694 0719  
+                   l1686 0704                     l1678 06EF                     l1598 063B  
+                   l1768 07DC                     l1696 071B                     l1688 0706  
+                   l1698 0724                     STR_1 0800                     STR_2 0847  
+                   STR_3 0847                     STR_4 086E                     STR_5 086E  
+                   STR_6 08B0                     STR_7 08B0                     STR_8 0880  
+                   STR_9 0880                     u1000 05E2                     u1001 05E1  
+                   u1010 05EB                     u1011 05EA                     u1100 0652  
+                   u1020 05FA                     u1101 0651                     u1021 05F9  
+                   u1110 0658                     u1030 0600                     u1111 0657  
+                   u1031 05FF                     u1200 06BE                     u1120 0666  
+                   u1040 060E                     u1201 06BD                     u1121 0665  
+                   u1041 060D                     u1210 06C7                     u1130 066F  
+                   u1050 0617                     u1211 06C6                     u1131 066E  
+                   u1051 0616                     u1220 0736                     u1140 067E  
+                   u1060 0626                     u1221 0735                     u1141 067D  
+                   u1061 0625                     u1230 073D                     u1150 0684  
+                   u1070 062C                     u1231 073C                     u1151 0683  
+                   u1071 062B                     u1240 0796                     u1160 0692  
+                   u1080 063A                     u1241 0795                     u1161 0691  
+                   u1081 0639                     u1250 079D                     u1170 069B  
+                   u1090 0643                     u1251 079C                     u1171 069A  
+                   u1091 0642                     u1260 07F8                     u1180 06AA  
+                   u1261 07F7                     u1181 06A9                     u1190 06B0  
+                   u1191 06AF                     _main 047B          __end_of_IO_init 0410  
+                   _xmj1 0029                     _xmj2 0026                     _xmj3 0024  
+                   fsr0h 0005                     indf0 0000                     fsr0l 0004  
+                   btemp 007E                     start 0002         nosup@@$_$_CONFIG 0000  
+                  ?_main 0070                    STR_10 0890                    STR_11 0890  
+                  STR_12 08BF                    STR_20 0832                    STR_13 08BF  
+                  STR_21 0832                    STR_22 08DD                    STR_14 08A0  
+                  STR_15 08A0                    STR_23 08DD                    STR_16 08CE  
+                  STR_24 085B                    STR_17 08CE                    STR_25 085B  
+                  STR_18 081B                    STR_19 081B                    _T2CON 001C  
+                  _T4CON 0417                    _PORTE 0010                    _PORTF 028C  
+                  _TRISA 008C                    _TRISB 008D                    _TRISC 008E  
+                  _TRISD 008F                    _TRISE 0090                    _TRISF 030C  
+                  _delay 0450       __size_of_UART_init 0010       __size_of_UART_read 000A  
+            ?_UART_write 0070                    _xmss1 0028                    _xmss2 0027  
+                  _xmss3 0025                    _xmzyx 0022                    _xmzzx 0023  
+       __end_of_PWM_init 0450                    status 0003                    wtemp0 007E  
+        __initialization 07FD             __end_of_main 07FD                   ??_main 007C  
+                 ?_delay 0076                ??_IO_init 0070                   _CCPR1L 0291  
+                 _CCPR2L 0298                   _APFCON 011D                   _ANSELA 018C  
+                 _ANSELE 0190                   _ANSELF 040C                   _ANSELG 040D  
+                 _RC2REG 0491                   _TX2REG 0492                   _TRISC2 0472  
+                 _TRISE7 0487                   ___wmul 0410        __end_of_UART_init 03DD  
+      __end_of_UART_read 03CD      __size_of_UART_write 0009             ?_UART_printf 0071  
+                 delay@i 0078                   delay@j 007A  __end_of__initialization 07FD  
+         __pcstackCOMMON 0070            __end_of_delay 047B                ?_PWM_init 0070  
+                ??_delay 0078               __pmaintext 047B                  ?___wmul 0070  
+                _CCP1CON 0293                  _CCP2CON 029A               ??_PWM_init 0070  
+                _SP2BRGL 0493                  _IO_init 03F4             ??_UART_write 0070  
+        __size_of___wmul 001F       __end_of_UART_write 03C3                  __ptext1 0450  
+                __ptext2 0410                  __ptext3 03C3                  __ptext4 03DD  
+                __ptext5 03BA                  __ptext6 03CD                  __ptext7 042F  
+                __ptext8 03F4     __size_of_UART_printf 0017     end_of_initialization 07FD  
+              _UART_init 03CD                _UART_read 03C3                _TRISGbits 030D  
+         __end_of___wmul 042F               ?_UART_init 0070               ?_UART_read 0070  
+    start_initialization 07FD        __size_of_PWM_init 0021                 ??___wmul 0074  
+              ___latbits 0002                 ?_IO_init 0070        UART_printf@cadena 0071  
+              __pnvBANK0 0020              ??_UART_init 0070              ??_UART_read 0070  
+               _CCPTMRS0 029E           __size_of_delay 002B           ___wmul@product 0074  
+               _PIR4bits 0014            ??_UART_printf 0073        ___wmul@multiplier 0070  
+               _PWM_init 042F           UART_write@dato 0070         __size_of_IO_init 001C  
+    __end_of_UART_printf 03F4            __size_of_main 0382                 delay@sec 0076  
+             _RC2STAbits 0495           __pstringtext10 08B0           __pstringtext11 08BF  
+         __pstringtext12 08CE           __pstringtext13 08DD           __pstringtext14 0000  
+            _UART_printf 03DD            __pstringtext1 0800            __pstringtext2 081B  
+          __pstringtext3 0832            __pstringtext4 0847            __pstringtext5 085B  
+          __pstringtext6 086E            __pstringtext7 0880            __pstringtext8 0890  
+          __pstringtext9 08A0               _TX2STAbits 0496               _UART_write 03BA  

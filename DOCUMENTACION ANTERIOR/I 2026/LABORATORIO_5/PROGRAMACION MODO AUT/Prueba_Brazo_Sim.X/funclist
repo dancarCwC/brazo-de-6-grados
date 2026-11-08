@@ -1,0 +1,17 @@
+_delay: CODE, 452 0 54
+_secuencia1: CODE, 1077 0 123
+_secuencia2: CODE, 580 0 90
+_secuencia3: CODE, 861 0 108
+_secuencia4: CODE, 670 0 90
+_secuencia5: CODE, 969 0 108
+_main: CODE, 506 0 74
+_rest: CODE, 760 0 101
+_PWM_init: CODE, 192 0 33
+_IO_init: CODE, 164 0 28
+_hand: CODE, 1200 0 848
+_aut: CODE, 403 0 49
+_check: CODE, 355 0 48
+_keycan: CODE, 308 0 47
+_delay_ms: CODE, 261 0 47
+___wmul: CODE, 225 0 36
+Total: 1884

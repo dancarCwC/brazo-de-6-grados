@@ -1,0 +1,134 @@
+MPLINK 5.09, LINKER
+Linker Map File - Created Wed Dec 14 15:20:47 2022
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000288
+                   .cinit    romdata   0x000144    program   0x000004
+.config_2007_BUILD/DEFAULT/PRODUCTION/DEBUG/D       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000145      
+                            0x002007    0x002007      
+            327 out of 8454 program addresses used, program memory utilization is 3%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                      FIN   0x000131    program     static debug\default\newpic_8b_general.asm
+                   GRAD10   0x000021    program     static debug\default\newpic_8b_general.asm
+                   GRAD11   0x0000c1    program     static debug\default\newpic_8b_general.asm
+                   GRAD13   0x000129    program     static debug\default\newpic_8b_general.asm
+                    GRAD2   0x000066    program     static debug\default\newpic_8b_general.asm
+                   GRAD20   0x00002e    program     static debug\default\newpic_8b_general.asm
+                   GRAD21   0x0000b4    program     static debug\default\newpic_8b_general.asm
+                   GRAD22   0x0000ce    program     static debug\default\newpic_8b_general.asm
+                   GRAD23   0x00011c    program     static debug\default\newpic_8b_general.asm
+                    GRAD3   0x000073    program     static debug\default\newpic_8b_general.asm
+                   GRAD30   0x00003b    program     static debug\default\newpic_8b_general.asm
+                   GRAD31   0x0000a7    program     static debug\default\newpic_8b_general.asm
+                   GRAD32   0x0000db    program     static debug\default\newpic_8b_general.asm
+                   GRAD33   0x00010f    program     static debug\default\newpic_8b_general.asm
+                    GRAD4   0x000080    program     static debug\default\newpic_8b_general.asm
+                   GRAD40   0x000048    program     static debug\default\newpic_8b_general.asm
+                   GRAD41   0x00009a    program     static debug\default\newpic_8b_general.asm
+                   GRAD42   0x0000e8    program     static debug\default\newpic_8b_general.asm
+                   GRAD43   0x000102    program     static debug\default\newpic_8b_general.asm
+                    GRAD6   0x00008d    program     static debug\default\newpic_8b_general.asm
+                   GRAD60   0x000055    program     static debug\default\newpic_8b_general.asm
+                   GRAD62   0x0000f5    program     static debug\default\newpic_8b_general.asm
+                     MAIN   0x00005d    program     static debug\default\newpic_8b_general.asm
+                    REP10   0x00001e    program     static debug\default\newpic_8b_general.asm
+                    REP11   0x0000be    program     static debug\default\newpic_8b_general.asm
+                    REP13   0x000126    program     static debug\default\newpic_8b_general.asm
+                     REP2   0x000063    program     static debug\default\newpic_8b_general.asm
+                    REP20   0x00002b    program     static debug\default\newpic_8b_general.asm
+                    REP21   0x0000b1    program     static debug\default\newpic_8b_general.asm
+                    REP22   0x0000cb    program     static debug\default\newpic_8b_general.asm
+                    REP23   0x000119    program     static debug\default\newpic_8b_general.asm
+                     REP3   0x000070    program     static debug\default\newpic_8b_general.asm
+                    REP30   0x000038    program     static debug\default\newpic_8b_general.asm
+                    REP31   0x0000a4    program     static debug\default\newpic_8b_general.asm
+                    REP32   0x0000d8    program     static debug\default\newpic_8b_general.asm
+                    REP33   0x00010c    program     static debug\default\newpic_8b_general.asm
+                     REP4   0x00007d    program     static debug\default\newpic_8b_general.asm
+                    REP40   0x000045    program     static debug\default\newpic_8b_general.asm
+                    REP41   0x000097    program     static debug\default\newpic_8b_general.asm
+                    REP42   0x0000e5    program     static debug\default\newpic_8b_general.asm
+                    REP43   0x0000ff    program     static debug\default\newpic_8b_general.asm
+                     REP6   0x00008a    program     static debug\default\newpic_8b_general.asm
+                    REP60   0x000052    program     static debug\default\newpic_8b_general.asm
+                    REP62   0x0000f2    program     static debug\default\newpic_8b_general.asm
+                  RETARDO   0x000132    program     static debug\default\newpic_8b_general.asm
+                 RETARDO1   0x000138    program     static debug\default\newpic_8b_general.asm
+                 RETARDO2   0x00013e    program     static debug\default\newpic_8b_general.asm
+                SECUENCIA   0x00005f    program     static debug\default\newpic_8b_general.asm
+                       X1   0x000140    program     static debug\default\newpic_8b_general.asm
+                       X2   0x00013a    program     static debug\default\newpic_8b_general.asm
+                       X3   0x000134    program     static debug\default\newpic_8b_general.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    REP10   0x00001e    program     static debug\default\newpic_8b_general.asm
+                   GRAD10   0x000021    program     static debug\default\newpic_8b_general.asm
+                    REP20   0x00002b    program     static debug\default\newpic_8b_general.asm
+                   GRAD20   0x00002e    program     static debug\default\newpic_8b_general.asm
+                    REP30   0x000038    program     static debug\default\newpic_8b_general.asm
+                   GRAD30   0x00003b    program     static debug\default\newpic_8b_general.asm
+                    REP40   0x000045    program     static debug\default\newpic_8b_general.asm
+                   GRAD40   0x000048    program     static debug\default\newpic_8b_general.asm
+                    REP60   0x000052    program     static debug\default\newpic_8b_general.asm
+                   GRAD60   0x000055    program     static debug\default\newpic_8b_general.asm
+                     MAIN   0x00005d    program     static debug\default\newpic_8b_general.asm
+                SECUENCIA   0x00005f    program     static debug\default\newpic_8b_general.asm
+                     REP2   0x000063    program     static debug\default\newpic_8b_general.asm
+                    GRAD2   0x000066    program     static debug\default\newpic_8b_general.asm
+                     REP3   0x000070    program     static debug\default\newpic_8b_general.asm
+                    GRAD3   0x000073    program     static debug\default\newpic_8b_general.asm
+                     REP4   0x00007d    program     static debug\default\newpic_8b_general.asm
+                    GRAD4   0x000080    program     static debug\default\newpic_8b_general.asm
+                     REP6   0x00008a    program     static debug\default\newpic_8b_general.asm
+                    GRAD6   0x00008d    program     static debug\default\newpic_8b_general.asm
+                    REP41   0x000097    program     static debug\default\newpic_8b_general.asm
+                   GRAD41   0x00009a    program     static debug\default\newpic_8b_general.asm
+                    REP31   0x0000a4    program     static debug\default\newpic_8b_general.asm
+                   GRAD31   0x0000a7    program     static debug\default\newpic_8b_general.asm
+                    REP21   0x0000b1    program     static debug\default\newpic_8b_general.asm
+                   GRAD21   0x0000b4    program     static debug\default\newpic_8b_general.asm
+                    REP11   0x0000be    program     static debug\default\newpic_8b_general.asm
+                   GRAD11   0x0000c1    program     static debug\default\newpic_8b_general.asm
+                    REP22   0x0000cb    program     static debug\default\newpic_8b_general.asm
+                   GRAD22   0x0000ce    program     static debug\default\newpic_8b_general.asm
+                    REP32   0x0000d8    program     static debug\default\newpic_8b_general.asm
+                   GRAD32   0x0000db    program     static debug\default\newpic_8b_general.asm
+                    REP42   0x0000e5    program     static debug\default\newpic_8b_general.asm
+                   GRAD42   0x0000e8    program     static debug\default\newpic_8b_general.asm
+                    REP62   0x0000f2    program     static debug\default\newpic_8b_general.asm
+                   GRAD62   0x0000f5    program     static debug\default\newpic_8b_general.asm
+                    REP43   0x0000ff    program     static debug\default\newpic_8b_general.asm
+                   GRAD43   0x000102    program     static debug\default\newpic_8b_general.asm
+                    REP33   0x00010c    program     static debug\default\newpic_8b_general.asm
+                   GRAD33   0x00010f    program     static debug\default\newpic_8b_general.asm
+                    REP23   0x000119    program     static debug\default\newpic_8b_general.asm
+                   GRAD23   0x00011c    program     static debug\default\newpic_8b_general.asm
+                    REP13   0x000126    program     static debug\default\newpic_8b_general.asm
+                   GRAD13   0x000129    program     static debug\default\newpic_8b_general.asm
+                      FIN   0x000131    program     static debug\default\newpic_8b_general.asm
+                  RETARDO   0x000132    program     static debug\default\newpic_8b_general.asm
+                       X3   0x000134    program     static debug\default\newpic_8b_general.asm
+                 RETARDO1   0x000138    program     static debug\default\newpic_8b_general.asm
+                       X2   0x00013a    program     static debug\default\newpic_8b_general.asm
+                 RETARDO2   0x00013e    program     static debug\default\newpic_8b_general.asm
+                       X1   0x000140    program     static debug\default\newpic_8b_general.asm
+
+

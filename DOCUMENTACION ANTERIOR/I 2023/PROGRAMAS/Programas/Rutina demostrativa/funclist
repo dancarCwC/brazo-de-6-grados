@@ -1,0 +1,11 @@
+_delay: CODE, 1383 0 54
+_main: CODE, 1437 0 55
+_rest: CODE, 1492 0 74
+_PWM_init: CODE, 1266 0 33
+_IO_init: CODE, 1238 0 28
+_hand: CODE, 1679 0 369
+_aut: CODE, 1566 0 113
+_check: CODE, 1335 0 48
+_keycan: CODE, 1205 0 16
+___wmul: CODE, 1299 0 36
+Total: 826

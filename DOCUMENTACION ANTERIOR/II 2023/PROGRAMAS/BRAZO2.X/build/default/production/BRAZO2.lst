@@ -1,0 +1,1634 @@
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001          LIST P=16F877A
+                      00002         INCLUDE "P16F877A.INC"
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ; Build date : Jan 06 2020
+                      00005 ;  MPASM PIC16F877A processor include
+                      00006 ; 
+                      00007 ;  (c) Copyright 1999-2020 Microchip Technology, All rights reserved
+                      00008 ;==========================================================================
+                      00009 
+                      00567         LIST
+                      00003         CBLOCK 0X20
+  00000020            00004         T1,T2,T3
+  00000023            00005         zero1,zero2,zero3,zero4,zero5
+  00000028            00006         izq,der,arr1,aba1,arr2,aba2,arr3,aba3,giri,gird,suje,suel
+  00000034            00007         CNT1,CNT2,CNT3,CNT4,CNT5,CNT6
+  0000003A            00008         CNT,CNT7
+Error[121]  : Illegal label (__CONFIG _FOSC_HS & _WDTE_OFF & _PWRTE_ON & _BOREN_OFF & _LVP_OFF & _CPD_OFF & _WRT_OFF & _CP_OFF)
+  0000003C            00009         __CONFIG _FOSC_HS & _WDTE_OFF & _PWRTE_ON & _BOREN_OFF & _LVP_OFF & _CPD_OFF & _WRT_OFF & _CP_OF
+                            F
+Error[121]  : Illegal label (ORG 0X0000)
+  0000003D            00010         ORG 0X0000
+                      00011         ;definimos los PULSADORES de ENTRADA
+Error[121]  : Illegal label (#DEFINE bd1  PORTA)
+Error[115]  : Duplicate label ("RA0" or redefining symbol that cannot be redefined)
+  0000003E            00012         #DEFINE bd1  PORTA,RA0   
+Error[121]  : Illegal label (#DEFINE bi1  PORTA)
+Error[115]  : Duplicate label ("RA1" or redefining symbol that cannot be redefined)
+  00000040            00013         #DEFINE bi1  PORTA,RA1
+Error[121]  : Illegal label (#DEFINE bd2  PORTA)
+Error[115]  : Duplicate label ("RA2" or redefining symbol that cannot be redefined)
+  00000042            00014         #DEFINE bd2  PORTA,RA2   
+Error[121]  : Illegal label (#DEFINE bi2  PORTA)
+Error[115]  : Duplicate label ("RA3" or redefining symbol that cannot be redefined)
+  00000044            00015         #DEFINE bi2  PORTA,RA3
+Error[121]  : Illegal label (#DEFINE bd3  PORTA)
+Error[115]  : Duplicate label ("RA4" or redefining symbol that cannot be redefined)
+  00000046            00016         #DEFINE bd3  PORTA,RA4   
+Error[121]  : Illegal label (#DEFINE bi3  PORTA)
+Error[115]  : Duplicate label ("RA5" or redefining symbol that cannot be redefined)
+  00000048            00017         #DEFINE bi3  PORTA,RA5
+Error[121]  : Illegal label (#DEFINE bd4  PORTB)
+Error[115]  : Duplicate label ("RB0" or redefining symbol that cannot be redefined)
+  0000004A            00018         #DEFINE bd4  PORTB,RB0   
+Error[121]  : Illegal label (#DEFINE bi4  PORTB)
+Error[115]  : Duplicate label ("RB1" or redefining symbol that cannot be redefined)
+  0000004C            00019         #DEFINE bi4  PORTB,RB1
+Error[121]  : Illegal label (#DEFINE bd5  PORTB)
+Error[115]  : Duplicate label ("RB2" or redefining symbol that cannot be redefined)
+  0000004E            00020         #DEFINE bd5  PORTB,RB2   
+Error[121]  : Illegal label (#DEFINE bi5  PORTB)
+Error[115]  : Duplicate label ("RB3" or redefining symbol that cannot be redefined)
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+  00000050            00021         #DEFINE bi5  PORTB,RB3
+Error[121]  : Illegal label (#DEFINE bd6  PORTB)
+Error[115]  : Duplicate label ("RB4" or redefining symbol that cannot be redefined)
+  00000052            00022         #DEFINE bd6  PORTB,RB4   
+Error[121]  : Illegal label (#DEFINE bi6  PORTB)
+Error[115]  : Duplicate label ("RB5" or redefining symbol that cannot be redefined)
+  00000054            00023         #DEFINE bi6  PORTB,RB5
+Error[121]  : Illegal label (#DEFINE secu PORTB)
+Error[115]  : Duplicate label ("RB6" or redefining symbol that cannot be redefined)
+  00000056            00024         #DEFINE secu PORTB,RB6   
+Error[121]  : Illegal label (#DEFINE stop PORTB)
+Error[115]  : Duplicate label ("RB7" or redefining symbol that cannot be redefined)
+  00000058            00025         #DEFINE stop PORTB,RB7
+                      00026         ;definimos las entradas para SENSORES
+Error[121]  : Illegal label (#DEFINE s1   PORTC)
+Error[115]  : Duplicate label ("RC1" or redefining symbol that cannot be redefined)
+  0000005A            00027         #DEFINE s1   PORTC,RC1
+Error[121]  : Illegal label (#DEFINE s2   PORTC)
+Error[115]  : Duplicate label ("RC2" or redefining symbol that cannot be redefined)
+  0000005C            00028         #DEFINE s2   PORTC,RC2
+Error[121]  : Illegal label (#DEFINE s3   PORTC)
+Error[115]  : Duplicate label ("RC3" or redefining symbol that cannot be redefined)
+  0000005E            00029         #DEFINE s3   PORTC,RC3
+Error[121]  : Illegal label (#DEFINE s4   PORTC)
+Error[115]  : Duplicate label ("RC4" or redefining symbol that cannot be redefined)
+  00000060            00030         #DEFINE s4   PORTC,RC4
+Error[121]  : Illegal label (#DEFINE s5   PORTC)
+Error[115]  : Duplicate label ("RC5" or redefining symbol that cannot be redefined)
+  00000062            00031         #DEFINE s5   PORTC,RC5
+Error[121]  : Illegal label (#DEFINE fcopen   PORTC)
+Error[115]  : Duplicate label ("RC6" or redefining symbol that cannot be redefined)
+  00000064            00032         #DEFINE fcopen   PORTC,RC6
+Error[121]  : Illegal label (#DEFINE fcclose  PORTC)
+Error[115]  : Duplicate label ("RC7" or redefining symbol that cannot be redefined)
+  00000066            00033         #DEFINE fcclose  PORTC,RC7
+                      00034         ;definimos las variables de DIR(DIRECION) y PUL(PULSO)
+Error[121]  : Illegal label (#DEFINE dir1 PORTD)
+Error[115]  : Duplicate label ("RD0" or redefining symbol that cannot be redefined)
+  00000068            00035         #DEFINE dir1 PORTD,RD0
+Error[121]  : Illegal label (#DEFINE pul1 PORTD)
+Error[115]  : Duplicate label ("RD1" or redefining symbol that cannot be redefined)
+  0000006A            00036         #DEFINE pul1 PORTD,RD1
+Error[121]  : Illegal label (#DEFINE dir2 PORTD)
+Error[115]  : Duplicate label ("RD2" or redefining symbol that cannot be redefined)
+  0000006C            00037         #DEFINE dir2 PORTD,RD2
+Error[121]  : Illegal label (#DEFINE pul2 PORTD)
+Error[115]  : Duplicate label ("RD3" or redefining symbol that cannot be redefined)
+  0000006E            00038         #DEFINE pul2 PORTD,RD3
+Error[121]  : Illegal label (#DEFINE dir3 PORTD)
+Error[115]  : Duplicate label ("RD4" or redefining symbol that cannot be redefined)
+  00000070            00039         #DEFINE dir3 PORTD,RD4
+Error[121]  : Illegal label (#DEFINE pul3 PORTD)
+Error[115]  : Duplicate label ("RD5" or redefining symbol that cannot be redefined)
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+  00000072            00040         #DEFINE pul3 PORTD,RD5
+Error[121]  : Illegal label (#DEFINE dir4 PORTD)
+Error[115]  : Duplicate label ("RD6" or redefining symbol that cannot be redefined)
+  00000074            00041         #DEFINE dir4 PORTD,RD6
+Error[121]  : Illegal label (#DEFINE pul4 PORTD)
+Error[115]  : Duplicate label ("RD7" or redefining symbol that cannot be redefined)
+  00000076            00042         #DEFINE pul4 PORTD,RD7
+Error[121]  : Illegal label (#DEFINE dir5 PORTE)
+Error[115]  : Duplicate label ("RE0" or redefining symbol that cannot be redefined)
+  00000078            00043         #DEFINE dir5 PORTE,RE0
+Error[121]  : Illegal label (#DEFINE pul5 PORTE)
+Error[115]  : Duplicate label ("RE1" or redefining symbol that cannot be redefined)
+  0000007A            00044         #DEFINE pul5 PORTE,RE1
+Error[121]  : Illegal label (#DEFINE dir6 PORTE)
+Error[115]  : Duplicate label ("RE2" or redefining symbol that cannot be redefined)
+  0000007C            00045         #DEFINE dir6 PORTE,RE2
+Error[121]  : Illegal label (#DEFINE pul6 PORTC)
+Error[115]  : Duplicate label ("RC0" or redefining symbol that cannot be redefined)
+  0000007E            00046         #DEFINE pul6 PORTC,RC0  ;REGISTRO diferente
+                      00047 ;-------declaracion de PUERTOS de ENTRADA Y SALIDA  ----------------------  
+Error[121]  : Illegal label (BCF       STATUS)
+Error[115]  : Duplicate label ("RP0" or redefining symbol that cannot be redefined)
+  00000080            00048 BCF       STATUS, RP0
+Error[121]  : Illegal label (BCF       STATUS)
+Error[115]  : Duplicate label ("RP1" or redefining symbol that cannot be redefined)
+  00000082            00049 BCF       STATUS, RP1
+Error[121]  : Illegal label (CLRF      PORTA)
+  00000084            00050 CLRF      PORTA
+Error[121]  : Illegal label (BSF       STATUS)
+Error[115]  : Duplicate label ("RP0" or redefining symbol that cannot be redefined)
+  00000085            00051 BSF       STATUS, RP0
+Error[121]  : Illegal label (MOVLW     0X06)
+  00000087            00052 MOVLW     0X06
+Error[121]  : Illegal label (MOVWF     ADCON1)
+  00000088            00053 MOVWF     ADCON1
+Error[121]  : Illegal label (MOVLW     0XFF)
+  00000089            00054 MOVLW     0XFF
+Error[121]  : Illegal label (MOVWF     TRISA)
+  0000008A            00055 MOVWF     TRISA
+                      00056 
+Error[121]  : Illegal label (BCF       STATUS)
+Error[115]  : Duplicate label ("RP0" or redefining symbol that cannot be redefined)
+  0000008B            00057 BCF       STATUS, RP0
+Error[121]  : Illegal label (BCF       STATUS)
+Error[115]  : Duplicate label ("RP1" or redefining symbol that cannot be redefined)
+  0000008D            00058 BCF       STATUS, RP1
+Error[121]  : Illegal label (CLRF      PORTB)
+  0000008F            00059 CLRF      PORTB
+Error[121]  : Illegal label (BSF      STATUS)
+Error[115]  : Duplicate label ("RP0" or redefining symbol that cannot be redefined)
+  00000090            00060 BSF      STATUS, RP0
+                      00061 ;MOVLW     0X06
+                      00062 ;MOVWF     ADCON1
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00063 ;BCF      STATUS, RP1
+Error[121]  : Illegal label (MOVLW    .255)
+  00000092            00064 MOVLW    .255
+                      00065 ;BANKSEL  TRISB
+                      00066 ;MOVLW    0XFF
+Error[121]  : Illegal label (MOVWF    TRISB)
+  00000093            00067 MOVWF    TRISB
+                      00068 
+Error[121]  : Illegal label (BSF      STATUS)
+Error[115]  : Duplicate label ("RP0" or redefining symbol that cannot be redefined)
+  00000094            00069 BSF      STATUS, RP0
+Error[121]  : Illegal label (MOVLW    B'11111110')
+  00000096            00070 MOVLW    B'11111110'
+                      00071 ;MOVLW    .255
+Error[121]  : Illegal label (MOVWF    TRISC)
+  00000097            00072 MOVWF    TRISC
+Error[121]  : Illegal label (BCF      STATUS)
+Error[115]  : Duplicate label ("RP0" or redefining symbol that cannot be redefined)
+  00000098            00073 BCF      STATUS, RP0
+Error[121]  : Illegal label (BCF      PORTC)
+Error[115]  : Duplicate label ("RC0" or redefining symbol that cannot be redefined)
+  0000009A            00074 BCF      PORTC, RC0
+                      00075 
+Error[121]  : Illegal label (BSF      STATUS)
+Error[115]  : Duplicate label ("RP0" or redefining symbol that cannot be redefined)
+  0000009C            00076 BSF      STATUS, RP0
+Error[121]  : Illegal label (CLRF     TRISD)
+  0000009E            00077 CLRF     TRISD
+Error[121]  : Illegal label (CLRF     TRISE)
+  0000009F            00078 CLRF     TRISE
+Error[121]  : Illegal label (BANKSEL  PORTD)
+  000000A0            00079 BANKSEL  PORTD
+Error[121]  : Illegal label (CLRF     PORTD)
+  000000A1            00080 CLRF     PORTD
+Error[121]  : Illegal label (BANKSEL  PORTE)
+  000000A2            00081 BANKSEL  PORTE
+Error[121]  : Illegal label (CLRF     PORTE)
+  000000A3            00082 CLRF     PORTE
+                      00083 ;---------------------- INICIO DEL PROGRAMA -------------------------------
+                      00084 ;-------------   PONER EL BRAZO EN UN ESTADO INICIAL     -----------------
+                      00085 ;------------- GIRO 90(o) Y SUBIR BRAZO        ---------------------------
+Error[121]  : Illegal label (MOVLW   .4)
+  000000A4            00086 MOVLW   .4   ;numero de veces que se repetira 255 pasos
+Error[121]  : Illegal label (MOVWF   CNT7)
+  000000A5            00087 MOVWF   CNT7
+  000000A6            00088 REP10
+Error[121]  : Illegal label (MOVLW   .255)
+  000000A7            00089 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT1)
+  000000A8            00090 MOVWF   CNT1
+Error[121]  : Illegal label (BSF     dir1)
+  000000A9            00091 BSF     dir1      ;DIR giro 90 grados, Grado 1
+  000000AA            00092 GRAD10  
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE  5
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[121]  : Illegal label (BSF     pul1)
+  000000AB            00093 BSF     pul1
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000000AC            00094 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul1)
+  000000AD            00095 BCF     pul1
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000000AE            00096 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT1)
+  000000AF            00097 DECFSZ  CNT1
+Error[121]  : Illegal label (GOTO    GRAD10)
+  000000B0            00098 GOTO    GRAD10
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  000000B1            00099 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP10)
+  000000B2            00100 GOTO    REP10
+                      00101         
+Error[121]  : Illegal label (MOVLW   .4)
+  000000B3            00102 MOVLW   .4
+Error[121]  : Illegal label (MOVWF   CNT7)
+  000000B4            00103 MOVWF   CNT7
+  000000B5            00104 REP20
+Error[121]  : Illegal label (MOVLW   .255)
+  000000B6            00105 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT2)
+  000000B7            00106 MOVWF   CNT2
+Error[121]  : Illegal label (BSF     dir2)
+  000000B8            00107 BSF     dir2     ;BCF para subir arriba el Grado 2 
+  000000B9            00108 GRAD20  
+Error[121]  : Illegal label (BSF     pul2)
+  000000BA            00109 BSF     pul2
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000000BB            00110 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul2)
+  000000BC            00111 BCF     pul2
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000000BD            00112 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT2)
+  000000BE            00113 DECFSZ  CNT2
+Error[121]  : Illegal label (GOTO    GRAD20)
+  000000BF            00114 GOTO    GRAD20
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  000000C0            00115 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP20)
+  000000C1            00116 GOTO    REP20
+                      00117 
+Error[121]  : Illegal label (MOVLW   .4)
+  000000C2            00118 MOVLW   .4
+Error[121]  : Illegal label (MOVWF   CNT7)
+  000000C3            00119 MOVWF   CNT7
+  000000C4            00120 REP30
+Error[121]  : Illegal label (MOVLW   .255)
+  000000C5            00121 MOVLW   .255
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE  6
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[121]  : Illegal label (MOVWF   CNT3)
+  000000C6            00122 MOVWF   CNT3
+Error[121]  : Illegal label (BCF     dir3)
+  000000C7            00123 BCF     dir3     ;DIR arriba grado 3
+  000000C8            00124 GRAD30
+Error[121]  : Illegal label (BSF     pul3)
+  000000C9            00125 BSF     pul3
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000000CA            00126 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul3)
+  000000CB            00127 BCF     pul3
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000000CC            00128 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT3)
+  000000CD            00129 DECFSZ  CNT3
+Error[121]  : Illegal label (GOTO    GRAD30)
+  000000CE            00130 GOTO    GRAD30
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  000000CF            00131 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP30)
+  000000D0            00132 GOTO    REP30
+                      00133         
+Error[121]  : Illegal label (MOVLW   .4)
+  000000D1            00134 MOVLW   .4
+Error[121]  : Illegal label (MOVWF   CNT7)
+  000000D2            00135 MOVWF   CNT7
+  000000D3            00136 REP40
+Error[121]  : Illegal label (MOVLW   .255)
+  000000D4            00137 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT4)
+  000000D5            00138 MOVWF   CNT4
+Error[121]  : Illegal label (BCF     dir4)
+  000000D6            00139 BCF     dir4     ;DIR arriba grado 4
+  000000D7            00140 GRAD40  
+Error[121]  : Illegal label (BSF     pul4)
+  000000D8            00141 BSF     pul4
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000000D9            00142 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul4)
+  000000DA            00143 BCF     pul4
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000000DB            00144 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT4)
+  000000DC            00145 DECFSZ  CNT4
+Error[121]  : Illegal label (GOTO    GRAD40)
+  000000DD            00146 GOTO    GRAD40
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  000000DE            00147 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP40)
+  000000DF            00148 GOTO    REP40
+                      00149         
+Error[121]  : Illegal label (MOVLW   .2)
+  000000E0            00150 MOVLW   .2
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE  7
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[121]  : Illegal label (MOVWF   CNT7)
+  000000E1            00151 MOVWF   CNT7
+  000000E2            00152 REP50
+Error[121]  : Illegal label (MOVLW   .255)
+  000000E3            00153 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT5)
+  000000E4            00154 MOVWF   CNT5
+Error[121]  : Illegal label (BCF     dir5)
+  000000E5            00155 BCF     dir5     ;DIR giro grado 5
+  000000E6            00156 GRAD50
+Error[121]  : Illegal label (BSF     pul5)
+  000000E7            00157 BSF     pul5
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000000E8            00158 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul5)
+  000000E9            00159 BCF     pul5
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000000EA            00160 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT5)
+  000000EB            00161 DECFSZ  CNT5
+Error[121]  : Illegal label (GOTO    GRAD50)
+  000000EC            00162 GOTO    GRAD50
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  000000ED            00163 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP50)
+  000000EE            00164 GOTO    REP50
+                      00165 
+Error[121]  : Illegal label (MOVLW   .5)
+  000000EF            00166 MOVLW   .5
+Error[121]  : Illegal label (MOVWF   CNT7)
+  000000F0            00167 MOVWF   CNT7
+  000000F1            00168 REP60
+Error[121]  : Illegal label (MOVLW   .255)
+  000000F2            00169 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT6)
+  000000F3            00170 MOVWF   CNT6
+Error[121]  : Illegal label (BSF     dir6)
+  000000F4            00171 BSF     dir6    ;DIR agarra pinza grado6
+  000000F5            00172 GRAD60  
+Error[121]  : Illegal label (BSF     pul6)
+  000000F6            00173 BSF     pul6
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000000F7            00174 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul6)
+  000000F8            00175 BCF     pul6
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000000F9            00176 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT6)
+  000000FA            00177 DECFSZ  CNT6
+Error[121]  : Illegal label (GOTO    GRAD60)
+  000000FB            00178 GOTO    GRAD60
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  000000FC            00179 DECFSZ  CNT7
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE  8
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[121]  : Illegal label (GOTO    REP60)
+  000000FD            00180 GOTO    REP60
+                      00181 
+                      00182 
+                      00183 ;-----------------    PROGRAMA QUE SE REPITE     --------------------------     
+  000000FE            00184 MAIN 
+                      00185 ;BTFSS   secu
+                      00186 ;CALL    MANUAL 
+Error[121]  : Illegal label (CALL    SECUENCIA)
+  000000FF            00187 CALL    SECUENCIA
+Error[121]  : Illegal label (GOTO    MAIN)
+  00000100            00188 GOTO    MAIN
+                      00189 
+                      00190 ;--------------- Espera que se detecte un objeto ------------------------
+  00000101            00191 SECUENCIA
+Error[121]  : Illegal label (BTFSS   secu)
+  00000102            00192 BTFSS   secu   ; si no se presiona salta a FIN
+Error[121]  : Illegal label (GOTO    FIN)
+  00000103            00193 GOTO    FIN
+                      00194 ;------------------BAJAR BRAZO Y AGARRAR LA PIEZA---------------------
+Error[121]  : Illegal label (MOVLW   .4)
+  00000104            00195 MOVLW   .4
+Error[121]  : Illegal label (MOVWF   CNT7)
+  00000105            00196 MOVWF   CNT7
+  00000106            00197 REP2
+Error[121]  : Illegal label (MOVLW   .255)
+  00000107            00198 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT2)
+  00000108            00199 MOVWF   CNT2
+Error[121]  : Illegal label (BCF     dir2)
+  00000109            00200 BCF     dir2     ;BCF para bajar el Grado 2 
+  0000010A            00201 GRAD2   
+Error[121]  : Illegal label (BSF     pul2)
+  0000010B            00202 BSF     pul2
+Error[121]  : Illegal label (CALL    RETARDO1)
+  0000010C            00203 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul2)
+  0000010D            00204 BCF     pul2
+Error[121]  : Illegal label (CALL    RETARDO1)
+  0000010E            00205 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT2)
+  0000010F            00206 DECFSZ  CNT2
+Error[121]  : Illegal label (GOTO    GRAD2)
+  00000110            00207 GOTO    GRAD2
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  00000111            00208 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP2)
+  00000112            00209 GOTO    REP2
+                      00210 
+Error[121]  : Illegal label (MOVLW   .4)
+  00000113            00211 MOVLW   .4
+Error[121]  : Illegal label (MOVWF   CNT7)
+  00000114            00212 MOVWF   CNT7
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE  9
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+  00000115            00213 REP3
+Error[121]  : Illegal label (MOVLW   .255)
+  00000116            00214 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT3)
+  00000117            00215 MOVWF   CNT3
+Error[121]  : Illegal label (BSF     dir3)
+  00000118            00216 BSF     dir3     ;DIR bajar grado 3
+  00000119            00217 GRAD3   
+Error[121]  : Illegal label (BSF     pul3)
+  0000011A            00218 BSF     pul3
+Error[121]  : Illegal label (CALL    RETARDO1)
+  0000011B            00219 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul3)
+  0000011C            00220 BCF     pul3
+Error[121]  : Illegal label (CALL    RETARDO1)
+  0000011D            00221 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT3)
+  0000011E            00222 DECFSZ  CNT3
+Error[121]  : Illegal label (GOTO    GRAD3)
+  0000011F            00223 GOTO    GRAD3
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  00000120            00224 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP3)
+  00000121            00225 GOTO    REP3
+                      00226         
+Error[121]  : Illegal label (MOVLW   .4)
+  00000122            00227 MOVLW   .4
+Error[121]  : Illegal label (MOVWF   CNT7)
+  00000123            00228 MOVWF   CNT7
+  00000124            00229 REP4
+Error[121]  : Illegal label (MOVLW   .255)
+  00000125            00230 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT4)
+  00000126            00231 MOVWF   CNT4
+Error[121]  : Illegal label (BSF     dir4)
+  00000127            00232 BSF     dir4     ;DIR bajar grado 4 ; CAMBIADO
+  00000128            00233 GRAD4   
+Error[121]  : Illegal label (BSF     pul4)
+  00000129            00234 BSF     pul4
+Error[121]  : Illegal label (CALL    RETARDO1)
+  0000012A            00235 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul4)
+  0000012B            00236 BCF     pul4
+Error[121]  : Illegal label (CALL    RETARDO1)
+  0000012C            00237 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT4)
+  0000012D            00238 DECFSZ  CNT4
+Error[121]  : Illegal label (GOTO    GRAD4)
+  0000012E            00239 GOTO    GRAD4
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  0000012F            00240 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP4)
+  00000130            00241 GOTO    REP4
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE 10
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00242         
+Error[121]  : Illegal label (MOVLW   .3)
+  00000131            00243 MOVLW   .3
+Error[121]  : Illegal label (MOVWF   CNT7)
+  00000132            00244 MOVWF   CNT7
+  00000133            00245 REP5
+Error[121]  : Illegal label (MOVLW   .255)
+  00000134            00246 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT5)
+  00000135            00247 MOVWF   CNT5
+Error[121]  : Illegal label (BSF     dir5)
+  00000136            00248 BSF     dir5     ;DIR giro grado 5
+  00000137            00249 GRAD5
+Error[121]  : Illegal label (BSF     pul5)
+  00000138            00250 BSF     pul5
+Error[121]  : Illegal label (CALL    RETARDO1)
+  00000139            00251 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul5)
+  0000013A            00252 BCF     pul5
+Error[121]  : Illegal label (CALL    RETARDO1)
+  0000013B            00253 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT5)
+  0000013C            00254 DECFSZ  CNT5
+Error[121]  : Illegal label (GOTO    GRAD5)
+  0000013D            00255 GOTO    GRAD5
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  0000013E            00256 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP5)
+  0000013F            00257 GOTO    REP5
+                      00258 
+Error[121]  : Illegal label (MOVLW   .5)
+  00000140            00259 MOVLW   .5
+Error[121]  : Illegal label (MOVWF   CNT7)
+  00000141            00260 MOVWF   CNT7
+  00000142            00261 REP6
+Error[121]  : Illegal label (MOVLW   .255)
+  00000143            00262 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT6)
+  00000144            00263 MOVWF   CNT6
+Error[121]  : Illegal label (BCF     dir6)
+  00000145            00264 BCF     dir6    ;DIR agarra pieza grado6
+  00000146            00265 GRAD6   
+Error[121]  : Illegal label (BSF     pul6)
+  00000147            00266 BSF     pul6
+Error[121]  : Illegal label (CALL    RETARDO1)
+  00000148            00267 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul6)
+  00000149            00268 BCF     pul6
+Error[121]  : Illegal label (CALL    RETARDO1)
+  0000014A            00269 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT6)
+  0000014B            00270 DECFSZ  CNT6
+Error[121]  : Illegal label (GOTO    GRAD6)
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE 11
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+  0000014C            00271 GOTO    GRAD6
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  0000014D            00272 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP6)
+  0000014E            00273 GOTO    REP6
+                      00274 
+Error[121]  : Illegal label (MOVLW   .3)
+  0000014F            00275 MOVLW   .3
+Error[121]  : Illegal label (MOVWF   CNT7)
+  00000150            00276 MOVWF   CNT7
+  00000151            00277 REP6x
+Error[121]  : Illegal label (MOVLW   .255)
+  00000152            00278 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT6)
+  00000153            00279 MOVWF   CNT6
+Error[121]  : Illegal label (BCF     dir6)
+  00000154            00280 BCF     dir6    ;DIR agarra pieza grado6
+  00000155            00281 GRAD6x  
+Error[121]  : Illegal label (BSF     pul6)
+  00000156            00282 BSF     pul6
+Error[121]  : Illegal label (CALL    RETARDO1)
+  00000157            00283 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul6)
+  00000158            00284 BCF     pul6
+Error[121]  : Illegal label (CALL    RETARDO1)
+  00000159            00285 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT6)
+  0000015A            00286 DECFSZ  CNT6
+Error[121]  : Illegal label (GOTO    GRAD6x)
+  0000015B            00287 GOTO    GRAD6x
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  0000015C            00288 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP6x)
+  0000015D            00289 GOTO    REP6x 
+                      00290 ;CALL    RETARDO
+                      00291 ;----------------- SUBIR BRAZO Y TRASLADAR LA PIEZA -------------------------
+Error[121]  : Illegal label (MOVLW   .4)
+  0000015E            00292 MOVLW   .4
+Error[121]  : Illegal label (MOVWF   CNT7)
+  0000015F            00293 MOVWF   CNT7
+  00000160            00294 REP51
+Error[121]  : Illegal label (MOVLW   .255)
+  00000161            00295 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT5)
+  00000162            00296 MOVWF   CNT5
+Error[121]  : Illegal label (BCF     dir5)
+  00000163            00297 BCF     dir5     ;DIR giro grado 5
+  00000164            00298 GRAD51
+Error[121]  : Illegal label (BSF     pul5)
+  00000165            00299 BSF     pul5
+Error[121]  : Illegal label (CALL    RETARDO1)
+  00000166            00300 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul5)
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE 12
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+  00000167            00301 BCF     pul5
+Error[121]  : Illegal label (CALL    RETARDO1)
+  00000168            00302 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT5)
+  00000169            00303 DECFSZ  CNT5
+Error[121]  : Illegal label (GOTO    GRAD51)
+  0000016A            00304 GOTO    GRAD51
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  0000016B            00305 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP51)
+  0000016C            00306 GOTO    REP51
+                      00307 
+Error[121]  : Illegal label (MOVLW   .4)
+  0000016D            00308 MOVLW   .4
+Error[121]  : Illegal label (MOVWF   CNT7)
+  0000016E            00309 MOVWF   CNT7
+  0000016F            00310 REP41
+Error[121]  : Illegal label (MOVLW   .255)
+  00000170            00311 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT4)
+  00000171            00312 MOVWF   CNT4
+Error[121]  : Illegal label (BCF     dir4)
+  00000172            00313 BCF     dir4     ;DIR arriba grado 4
+  00000173            00314 GRAD41  
+Error[121]  : Illegal label (BSF     pul4)
+  00000174            00315 BSF     pul4
+Error[121]  : Illegal label (CALL    RETARDO1)
+  00000175            00316 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul4)
+  00000176            00317 BCF     pul4
+Error[121]  : Illegal label (CALL    RETARDO1)
+  00000177            00318 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT4)
+  00000178            00319 DECFSZ  CNT4
+Error[121]  : Illegal label (GOTO    GRAD41)
+  00000179            00320 GOTO    GRAD41
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  0000017A            00321 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP41)
+  0000017B            00322 GOTO    REP41
+                      00323 
+Error[121]  : Illegal label (MOVLW   .4)
+  0000017C            00324 MOVLW   .4
+Error[121]  : Illegal label (MOVWF   CNT7)
+  0000017D            00325 MOVWF   CNT7
+  0000017E            00326 REP31
+Error[121]  : Illegal label (MOVLW   .255)
+  0000017F            00327 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT3)
+  00000180            00328 MOVWF   CNT3
+Error[121]  : Illegal label (BCF     dir3)
+  00000181            00329 BCF     dir3     ;DIR arriba grado 3
+  00000182            00330 GRAD31
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE 13
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[121]  : Illegal label (BSF     pul3)
+  00000183            00331 BSF     pul3
+Error[121]  : Illegal label (CALL    RETARDO1)
+  00000184            00332 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul3)
+  00000185            00333 BCF     pul3
+Error[121]  : Illegal label (CALL    RETARDO1)
+  00000186            00334 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT3)
+  00000187            00335 DECFSZ  CNT3
+Error[121]  : Illegal label (GOTO    GRAD31)
+  00000188            00336 GOTO    GRAD31
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  00000189            00337 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP31)
+  0000018A            00338 GOTO    REP31
+                      00339 
+Error[121]  : Illegal label (MOVLW   .4)
+  0000018B            00340 MOVLW   .4
+Error[121]  : Illegal label (MOVWF   CNT7)
+  0000018C            00341 MOVWF   CNT7
+  0000018D            00342 REP21
+Error[121]  : Illegal label (MOVLW   .255)
+  0000018E            00343 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT2)
+  0000018F            00344 MOVWF   CNT2
+Error[121]  : Illegal label (BSF     dir2)
+  00000190            00345 BSF     dir2     ;BSF arriba el Grado 2 
+  00000191            00346 GRAD21
+Error[121]  : Illegal label (BSF     pul2)
+  00000192            00347 BSF     pul2
+Error[121]  : Illegal label (CALL    RETARDO1)
+  00000193            00348 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul2)
+  00000194            00349 BCF     pul2
+Error[121]  : Illegal label (CALL    RETARDO1)
+  00000195            00350 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT2)
+  00000196            00351 DECFSZ  CNT2
+Error[121]  : Illegal label (GOTO    GRAD21)
+  00000197            00352 GOTO    GRAD21
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  00000198            00353 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP21)
+  00000199            00354 GOTO    REP21
+                      00355 
+Error[121]  : Illegal label (MOVLW   .10)
+  0000019A            00356 MOVLW   .10
+Error[121]  : Illegal label (MOVWF   CNT7)
+  0000019B            00357 MOVWF   CNT7
+  0000019C            00358 REP11
+Error[121]  : Illegal label (MOVLW   .255)
+  0000019D            00359 MOVLW   .255
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE 14
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[121]  : Illegal label (MOVWF   CNT1)
+  0000019E            00360 MOVWF   CNT1
+Error[121]  : Illegal label (BSF     dir1)
+  0000019F            00361 BSF     dir1      ;DIR giro 180(o), Grado 1
+  000001A0            00362 GRAD11
+Error[121]  : Illegal label (BSF     pul1)
+  000001A1            00363 BSF     pul1
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000001A2            00364 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul1)
+  000001A3            00365 BCF     pul1
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000001A4            00366 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT1)
+  000001A5            00367 DECFSZ  CNT1
+Error[121]  : Illegal label (GOTO    GRAD11)
+  000001A6            00368 GOTO    GRAD11
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  000001A7            00369 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP11)
+  000001A8            00370 GOTO    REP11
+                      00371 
+                      00372 ;CALL   RETARDO
+                      00373 ;-----------------  BAJAR Y DEJAR LA PIEZA   ----------------------------
+Error[121]  : Illegal label (MOVLW   .4)
+  000001A9            00374 MOVLW   .4
+Error[121]  : Illegal label (MOVWF   CNT7)
+  000001AA            00375 MOVWF   CNT7
+  000001AB            00376 REP22
+Error[121]  : Illegal label (MOVLW   .255)
+  000001AC            00377 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT2)
+  000001AD            00378 MOVWF   CNT2
+Error[121]  : Illegal label (BCF     dir2)
+  000001AE            00379 BCF     dir2     ;BCF para bajar el Grado 2 
+  000001AF            00380 GRAD22  
+Error[121]  : Illegal label (BSF     pul2)
+  000001B0            00381 BSF     pul2
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000001B1            00382 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul2)
+  000001B2            00383 BCF     pul2
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000001B3            00384 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT2)
+  000001B4            00385 DECFSZ  CNT2
+Error[121]  : Illegal label (GOTO    GRAD22)
+  000001B5            00386 GOTO    GRAD22
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  000001B6            00387 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP22)
+  000001B7            00388 GOTO    REP22
+                      00389 
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE 15
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[121]  : Illegal label (MOVLW   .4)
+  000001B8            00390 MOVLW   .4
+Error[121]  : Illegal label (MOVWF   CNT7)
+  000001B9            00391 MOVWF   CNT7
+  000001BA            00392 REP32
+Error[121]  : Illegal label (MOVLW   .255)
+  000001BB            00393 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT3)
+  000001BC            00394 MOVWF   CNT3
+Error[121]  : Illegal label (BSF     dir3)
+  000001BD            00395 BSF     dir3     ;DIR bajar grado 3
+  000001BE            00396 GRAD32  
+Error[121]  : Illegal label (BSF     pul3)
+  000001BF            00397 BSF     pul3
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000001C0            00398 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul3)
+  000001C1            00399 BCF     pul3
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000001C2            00400 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT3)
+  000001C3            00401 DECFSZ  CNT3
+Error[121]  : Illegal label (GOTO    GRAD32)
+  000001C4            00402 GOTO    GRAD32
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  000001C5            00403 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP32)
+  000001C6            00404 GOTO    REP32
+                      00405         
+Error[121]  : Illegal label (MOVLW   .4)
+  000001C7            00406 MOVLW   .4
+Error[121]  : Illegal label (MOVWF   CNT7)
+  000001C8            00407 MOVWF   CNT7
+  000001C9            00408 REP42
+Error[121]  : Illegal label (MOVLW   .255)
+  000001CA            00409 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT4)
+  000001CB            00410 MOVWF   CNT4
+Error[121]  : Illegal label (BSF     dir4)
+  000001CC            00411 BSF     dir4     ;DIR bajar grado 4
+  000001CD            00412 GRAD42  
+Error[121]  : Illegal label (BSF     pul4)
+  000001CE            00413 BSF     pul4
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000001CF            00414 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul4)
+  000001D0            00415 BCF     pul4
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000001D1            00416 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT4)
+  000001D2            00417 DECFSZ  CNT4
+Error[121]  : Illegal label (GOTO    GRAD42)
+  000001D3            00418 GOTO    GRAD42
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE 16
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  000001D4            00419 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP42)
+  000001D5            00420 GOTO    REP42
+                      00421         
+Error[121]  : Illegal label (MOVLW   .4)
+  000001D6            00422 MOVLW   .4
+Error[121]  : Illegal label (MOVWF   CNT7)
+  000001D7            00423 MOVWF   CNT7
+  000001D8            00424 REP52
+Error[121]  : Illegal label (MOVLW   .255)
+  000001D9            00425 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT5)
+  000001DA            00426 MOVWF   CNT5
+Error[121]  : Illegal label (BSF     dir5)
+  000001DB            00427 BSF     dir5     ;DIR giro grado 5
+  000001DC            00428 GRAD52
+Error[121]  : Illegal label (BSF     pul5)
+  000001DD            00429 BSF     pul5
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000001DE            00430 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul5)
+  000001DF            00431 BCF     pul5
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000001E0            00432 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT5)
+  000001E1            00433 DECFSZ  CNT5
+Error[121]  : Illegal label (GOTO    GRAD52)
+  000001E2            00434 GOTO    GRAD52
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  000001E3            00435 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP52)
+  000001E4            00436 GOTO    REP52
+                      00437 
+Error[121]  : Illegal label (MOVLW   .5)
+  000001E5            00438 MOVLW   .5
+Error[121]  : Illegal label (MOVWF   CNT7)
+  000001E6            00439 MOVWF   CNT7
+  000001E7            00440 REP62
+Error[121]  : Illegal label (MOVLW   .255)
+  000001E8            00441 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT6)
+  000001E9            00442 MOVWF   CNT6
+Error[121]  : Illegal label (BSF     dir6)
+  000001EA            00443 BSF     dir6    ;DIR SUELTA pieza grado6
+  000001EB            00444 GRAD62  
+Error[121]  : Illegal label (BSF     pul6)
+  000001EC            00445 BSF     pul6
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000001ED            00446 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul6)
+  000001EE            00447 BCF     pul6
+Error[121]  : Illegal label (CALL    RETARDO1)
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE 17
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+  000001EF            00448 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT6)
+  000001F0            00449 DECFSZ  CNT6
+Error[121]  : Illegal label (GOTO    GRAD62)
+  000001F1            00450 GOTO    GRAD62
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  000001F2            00451 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP62)
+  000001F3            00452 GOTO    REP62
+                      00453 ;------------  SUBIR BRAZO Y RETORNAR A LA POSICION INICIAL  --------------
+Error[121]  : Illegal label (MOVLW   .4)
+  000001F4            00454 MOVLW   .4
+Error[121]  : Illegal label (MOVWF   CNT7)
+  000001F5            00455 MOVWF   CNT7
+  000001F6            00456 REP43
+Error[121]  : Illegal label (MOVLW   .255)
+  000001F7            00457 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT4)
+  000001F8            00458 MOVWF   CNT4
+Error[121]  : Illegal label (BCF     dir4)
+  000001F9            00459 BCF     dir4     ;DIR arriba grado 4
+  000001FA            00460 GRAD43
+Error[121]  : Illegal label (BSF     pul4)
+  000001FB            00461 BSF     pul4
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000001FC            00462 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul4)
+  000001FD            00463 BCF     pul4
+Error[121]  : Illegal label (CALL    RETARDO1)
+  000001FE            00464 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT4)
+  000001FF            00465 DECFSZ  CNT4
+Error[121]  : Illegal label (GOTO    GRAD43)
+  00000200            00466 GOTO    GRAD43
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  00000201            00467 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP43)
+  00000202            00468 GOTO    REP43
+                      00469 
+Error[121]  : Illegal label (MOVLW   .4)
+  00000203            00470 MOVLW   .4
+Error[121]  : Illegal label (MOVWF   CNT7)
+  00000204            00471 MOVWF   CNT7
+  00000205            00472 REP33
+Error[121]  : Illegal label (MOVLW   .255)
+  00000206            00473 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT3)
+  00000207            00474 MOVWF   CNT3
+Error[121]  : Illegal label (BCF     dir3)
+  00000208            00475 BCF     dir3     ;DIR arriba grado 3
+  00000209            00476 GRAD33
+Error[121]  : Illegal label (BSF     pul3)
+  0000020A            00477 BSF     pul3
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE 18
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[121]  : Illegal label (CALL    RETARDO1)
+  0000020B            00478 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul3)
+  0000020C            00479 BCF     pul3
+Error[121]  : Illegal label (CALL    RETARDO1)
+  0000020D            00480 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT3)
+  0000020E            00481 DECFSZ  CNT3
+Error[121]  : Illegal label (GOTO    GRAD33)
+  0000020F            00482 GOTO    GRAD33
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  00000210            00483 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP33)
+  00000211            00484 GOTO    REP33
+                      00485 
+Error[121]  : Illegal label (MOVLW   .4)
+  00000212            00486 MOVLW   .4
+Error[121]  : Illegal label (MOVWF   CNT7)
+  00000213            00487 MOVWF   CNT7
+  00000214            00488 REP23
+Error[121]  : Illegal label (MOVLW   .255)
+  00000215            00489 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT2)
+  00000216            00490 MOVWF   CNT2
+Error[121]  : Illegal label (BSF     dir2)
+  00000217            00491 BSF     dir2     ;BSF arriba el Grado 2 
+  00000218            00492 GRAD23
+Error[121]  : Illegal label (BSF     pul2)
+  00000219            00493 BSF     pul2
+Error[121]  : Illegal label (CALL    RETARDO1)
+  0000021A            00494 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul2)
+  0000021B            00495 BCF     pul2
+Error[121]  : Illegal label (CALL    RETARDO1)
+  0000021C            00496 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT2)
+  0000021D            00497 DECFSZ  CNT2
+Error[121]  : Illegal label (GOTO    GRAD23)
+  0000021E            00498 GOTO    GRAD23
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  0000021F            00499 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP23)
+  00000220            00500 GOTO    REP23
+                      00501 
+Error[121]  : Illegal label (MOVLW   .10)
+  00000221            00502 MOVLW   .10
+Error[121]  : Illegal label (MOVWF   CNT7)
+  00000222            00503 MOVWF   CNT7
+  00000223            00504 REP13
+Error[121]  : Illegal label (MOVLW   .255)
+  00000224            00505 MOVLW   .255
+Error[121]  : Illegal label (MOVWF   CNT1)
+  00000225            00506 MOVWF   CNT1
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE 19
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[121]  : Illegal label (BCF     dir1)
+  00000226            00507 BCF     dir1      ;DIR giro 180(o), Grado 1
+  00000227            00508 GRAD13
+Error[121]  : Illegal label (BSF     pul1)
+  00000228            00509 BSF     pul1
+Error[121]  : Illegal label (CALL    RETARDO1)
+  00000229            00510 CALL    RETARDO1
+Error[121]  : Illegal label (BCF     pul1)
+  0000022A            00511 BCF     pul1
+Error[121]  : Illegal label (CALL    RETARDO1)
+  0000022B            00512 CALL    RETARDO1        
+Error[121]  : Illegal label (DECFSZ  CNT1)
+  0000022C            00513 DECFSZ  CNT1
+Error[121]  : Illegal label (GOTO    GRAD13)
+  0000022D            00514 GOTO    GRAD13
+Error[121]  : Illegal label (DECFSZ  CNT7)
+  0000022E            00515 DECFSZ  CNT7
+Error[121]  : Illegal label (GOTO    REP13)
+  0000022F            00516 GOTO    REP13
+                      00517 
+  00000230            00518 FIN
+Error[121]  : Illegal label (RETURN)
+  00000231            00519 RETURN
+                      00520 
+  00000232            00521  RETARDO
+Error[121]  : Illegal label (MOVLW   .5)
+  00000233            00522        MOVLW   .5
+Error[121]  : Illegal label (MOVWF   T3)
+  00000234            00523        MOVWF   T3  
+Error[121]  : Illegal label (X3   CALL    RETARDO1)
+  00000235            00524   X3   CALL    RETARDO1
+Error[121]  : Illegal label (DECFSZ  T3)
+  00000236            00525        DECFSZ  T3
+Error[121]  : Illegal label (GOTO    X3)
+  00000237            00526        GOTO    X3
+Error[121]  : Illegal label (RETURN)
+  00000238            00527        RETURN
+                      00528        
+  00000239            00529   RETARDO1
+Error[121]  : Illegal label (MOVLW   .10)
+  0000023A            00530        MOVLW   .10
+Error[121]  : Illegal label (MOVWF   T2)
+  0000023B            00531        MOVWF   T2  
+Error[121]  : Illegal label (X2   CALL    RETARDO2)
+  0000023C            00532   X2   CALL    RETARDO2
+Error[121]  : Illegal label (DECFSZ  T2)
+  0000023D            00533        DECFSZ  T2
+Error[121]  : Illegal label (GOTO    X2)
+  0000023E            00534        GOTO    X2
+Error[121]  : Illegal label (RETURN)
+  0000023F            00535        RETURN
+                      00536        
+  00000240            00537   RETARDO2
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE 20
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[121]  : Illegal label (MOVLW   .249)
+  00000241            00538        MOVLW   .249
+Error[121]  : Illegal label (MOVWF   T1)
+  00000242            00539        MOVWF   T1 
+Error[121]  : Illegal label (X1   NOP)
+  00000243            00540   X1   NOP
+Error[121]  : Illegal label (DECFSZ  T1)
+  00000244            00541        DECFSZ  T1
+Error[121]  : Illegal label (GOTO    X1)
+  00000245            00542        GOTO    X1
+Error[121]  : Illegal label (RETURN)
+  00000246            00543        RETURN
+Error[121]  : Illegal label (END)
+  00000247            00544        END 
+Error[129]  : Expected (END)
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE 21
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+ACKDT                             00000005
+ACKEN                             00000004
+ACKSTAT                           00000006
+ADCON0                            0000001F
+ADCON1                            0000009F
+ADCS0                             00000006
+ADCS1                             00000007
+ADCS2                             00000006
+ADDEN                             00000003
+ADFM                              00000007
+ADIE                              00000006
+ADIF                              00000006
+ADON                              00000000
+ADRESH                            0000001E
+ADRESL                            0000009E
+BCLIE                             00000003
+BCLIF                             00000003
+BF                                00000000
+BRGH                              00000002
+C                                 00000000
+C1INV                             00000004
+C1OUT                             00000006
+C2INV                             00000005
+C2OUT                             00000007
+CCP1CON                           00000017
+CCP1IE                            00000002
+CCP1IF                            00000002
+CCP1M0                            00000000
+CCP1M1                            00000001
+CCP1M2                            00000002
+CCP1M3                            00000003
+CCP1X                             00000005
+CCP1Y                             00000004
+CCP2CON                           0000001D
+CCP2IE                            00000000
+CCP2IF                            00000000
+CCP2M0                            00000000
+CCP2M1                            00000001
+CCP2M2                            00000002
+CCP2M3                            00000003
+CCP2X                             00000005
+CCP2Y                             00000004
+CCPR1                             00000015
+CCPR1H                            00000016
+CCPR1L                            00000015
+CCPR2                             0000001B
+CCPR2H                            0000001C
+CCPR2L                            0000001B
+CHS0                              00000003
+CHS1                              00000004
+CHS2                              00000005
+CIS                               00000003
+CKE                               00000006
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE 22
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+CKP                               00000004
+CM0                               00000000
+CM1                               00000001
+CM2                               00000002
+CMCON                             0000009C
+CMIE                              00000006
+CMIF                              00000006
+CNT                               0000003A
+CNT1                              00000034
+CNT2                              00000035
+CNT3                              00000036
+CNT4                              00000037
+CNT5                              00000038
+CNT6                              00000039
+CNT7                              0000003B
+CREN                              00000004
+CSRC                              00000007
+CVR0                              00000000
+CVR1                              00000001
+CVR2                              00000002
+CVR3                              00000003
+CVRCON                            0000009D
+CVREN                             00000007
+CVROE                             00000006
+CVRR                              00000005
+D                                 00000005
+DATA_ADDRESS                      00000005
+DC                                00000001
+D_A                               00000005
+D_NOT_A                           00000005
+EEADR                             0000010D
+EEADRH                            0000010F
+EECON1                            0000018C
+EECON2                            0000018D
+EEDATA                            0000010C
+EEDATH                            0000010E
+EEIE                              00000004
+EEIF                              00000004
+EEPGD                             00000007
+F                                 00000001
+FERR                              00000002
+FIN                               00000230
+FSR                               00000004
+GCEN                              00000007
+GIE                               00000007
+GO                                00000002
+GO_DONE                           00000002
+GO_NOT_DONE                       00000002
+GRAD10                            000000AA
+GRAD11                            000001A0
+GRAD13                            00000227
+GRAD2                             0000010A
+GRAD20                            000000B9
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE 23
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+GRAD21                            00000191
+GRAD22                            000001AF
+GRAD23                            00000218
+GRAD3                             00000119
+GRAD30                            000000C8
+GRAD31                            00000182
+GRAD32                            000001BE
+GRAD33                            00000209
+GRAD4                             00000128
+GRAD40                            000000D7
+GRAD41                            00000173
+GRAD42                            000001CD
+GRAD43                            000001FA
+GRAD5                             00000137
+GRAD50                            000000E6
+GRAD51                            00000164
+GRAD52                            000001DC
+GRAD6                             00000146
+GRAD60                            000000F5
+GRAD62                            000001EB
+GRAD6x                            00000155
+I2C_DATA                          00000005
+I2C_READ                          00000002
+I2C_START                         00000003
+I2C_STOP                          00000004
+IBF                               00000007
+IBOV                              00000005
+INDF                              00000000
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+MAIN                              000000FE
+NOT_A                             00000005
+NOT_ADDRESS                       00000005
+NOT_BO                            00000000
+NOT_BOR                           00000000
+NOT_DONE                          00000002
+NOT_PD                            00000003
+NOT_POR                           00000001
+NOT_RBPU                          00000007
+NOT_RC8                           00000006
+NOT_T1SYNC                        00000002
+NOT_TO                            00000004
+NOT_TX8                           00000006
+NOT_W                             00000002
+NOT_WRITE                         00000002
+OBF                               00000006
+OERR                              00000001
+OPTION_REG                        00000081
+P                                 00000004
+PCFG0                             00000000
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE 24
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+PCFG1                             00000001
+PCFG2                             00000002
+PCFG3                             00000003
+PCL                               00000002
+PCLATH                            0000000A
+PCON                              0000008E
+PEIE                              00000006
+PEN                               00000002
+PIE1                              0000008C
+PIE2                              0000008D
+PIR1                              0000000C
+PIR2                              0000000D
+PORTA                             00000005
+PORTB                             00000006
+PORTC                             00000007
+PORTD                             00000008
+PORTE                             00000009
+PR2                               00000092
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+PSPIE                             00000007
+PSPIF                             00000007
+PSPMODE                           00000004
+R                                 00000002
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+RA3                               00000003
+RA4                               00000004
+RA5                               00000005
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+RB7                               00000007
+RBIE                              00000003
+RBIF                              00000000
+RC0                               00000000
+RC1                               00000001
+RC2                               00000002
+RC3                               00000003
+RC4                               00000004
+RC5                               00000005
+RC6                               00000006
+RC7                               00000007
+RC8_9                             00000006
+RC9                               00000006
+RCD8                              00000000
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE 25
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+RCEN                              00000003
+RCIE                              00000005
+RCIF                              00000005
+RCREG                             0000001A
+RCSTA                             00000018
+RD                                00000000
+RD0                               00000000
+RD1                               00000001
+RD2                               00000002
+RD3                               00000003
+RD4                               00000004
+RD5                               00000005
+RD6                               00000006
+RD7                               00000007
+RE0                               00000000
+RE1                               00000001
+RE2                               00000002
+READ_WRITE                        00000002
+REP10                             000000A6
+REP11                             0000019C
+REP13                             00000223
+REP2                              00000106
+REP20                             000000B5
+REP21                             0000018D
+REP22                             000001AB
+REP23                             00000214
+REP3                              00000115
+REP30                             000000C4
+REP31                             0000017E
+REP32                             000001BA
+REP33                             00000205
+REP4                              00000124
+REP40                             000000D3
+REP41                             0000016F
+REP42                             000001C9
+REP43                             000001F6
+REP5                              00000133
+REP50                             000000E2
+REP51                             00000160
+REP52                             000001D8
+REP6                              00000142
+REP60                             000000F1
+REP62                             000001E7
+REP6x                             00000151
+RETARDO                           00000232
+RETARDO1                          00000239
+RETARDO2                          00000240
+RP0                               00000005
+RP1                               00000006
+RSEN                              00000001
+RX9                               00000006
+RX9D                              00000000
+R_NOT_W                           00000002
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE 26
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+R_W                               00000002
+S                                 00000003
+SECUENCIA                         00000101
+SEN                               00000000
+SMP                               00000007
+SPBRG                             00000099
+SPEN                              00000007
+SREN                              00000005
+SSPADD                            00000093
+SSPBUF                            00000013
+SSPCON                            00000014
+SSPCON2                           00000091
+SSPEN                             00000005
+SSPIE                             00000003
+SSPIF                             00000003
+SSPM0                             00000000
+SSPM1                             00000001
+SSPM2                             00000002
+SSPM3                             00000003
+SSPOV                             00000006
+SSPSTAT                           00000094
+STATUS                            00000003
+SYNC                              00000004
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+T1                                00000020
+T1CKPS0                           00000004
+T1CKPS1                           00000005
+T1CON                             00000010
+T1INSYNC                          00000002
+T1OSCEN                           00000003
+T1SYNC                            00000002
+T2                                00000021
+T2CKPS0                           00000000
+T2CKPS1                           00000001
+T2CON                             00000012
+T3                                00000022
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TMR1                              0000000E
+TMR1CS                            00000001
+TMR1H                             0000000F
+TMR1IE                            00000000
+TMR1IF                            00000000
+TMR1L                             0000000E
+TMR1ON                            00000000
+TMR2                              00000011
+TMR2IE                            00000001
+TMR2IF                            00000001
+TMR2ON                            00000002
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE 27
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+TOUTPS0                           00000003
+TOUTPS1                           00000004
+TOUTPS2                           00000005
+TOUTPS3                           00000006
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+TRISA5                            00000005
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+TRISC                             00000087
+TRISC0                            00000000
+TRISC1                            00000001
+TRISC2                            00000002
+TRISC3                            00000003
+TRISC4                            00000004
+TRISC5                            00000005
+TRISC6                            00000006
+TRISC7                            00000007
+TRISD                             00000088
+TRISD0                            00000000
+TRISD1                            00000001
+TRISD2                            00000002
+TRISD3                            00000003
+TRISD4                            00000004
+TRISD5                            00000005
+TRISD6                            00000006
+TRISD7                            00000007
+TRISE                             00000089
+TRISE0                            00000000
+TRISE1                            00000001
+TRISE2                            00000002
+TRMT                              00000001
+TX8_9                             00000006
+TX9                               00000006
+TX9D                              00000000
+TXD8                              00000000
+TXEN                              00000005
+TXIE                              00000004
+TXIF                              00000004
+TXREG                             00000019
+TXSTA                             00000098
+UA                                00000001
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE 28
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+W                                 00000000
+WCOL                              00000007
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_BODEN_OFF                        00003FBF
+_BODEN_ON                         00003FFF
+_BOREN_OFF                        00003FBF
+_BOREN_ON                         00003FFF
+_CONFIG                           00002007
+_CPD_OFF                          00003FFF
+_CPD_ON                           00003EFF
+_CP_ALL                           00001FFF
+_CP_OFF                           00003FFF
+_CP_ON                            00001FFF
+_DEBUG_OFF                        00003FFF
+_DEBUG_ON                         000037FF
+_DEVID1                           00002006
+_FOSC_EXTRC                       00003FFF
+_FOSC_HS                          00003FFE
+_FOSC_LP                          00003FFC
+_FOSC_XT                          00003FFD
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_LVP_OFF                          00003F7F
+_LVP_ON                           00003FFF
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDTE_OFF                         00003FFB
+_WDTE_ON                          00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_WRT_1FOURTH                      00003BFF
+_WRT_256                          00003DFF
+_WRT_HALF                         000039FF
+_WRT_OFF                          00003FFF
+_XT_OSC                           00003FFD
+__16F877A                         00000001
+aba1                              0000002B
+aba2                              0000002D
+aba3                              0000002F
+arr1                              0000002A
+arr2                              0000002C
+arr3                              0000002E
+der                               00000029
+gird                              00000031
+giri                              00000030
+MPASM 5.87                        BRAZO2.ASM   12-14-2022  9:09:36         PAGE 29
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+izq                               00000028
+suel                              00000033
+suje                              00000032
+zero1                             00000023
+zero2                             00000024
+zero3                             00000025
+zero4                             00000026
+zero5                             00000027
+
+Errors   :   467
+Warnings :     0 reported,     0 suppressed
+Messages :     0 reported,     0 suppressed
+
+

@@ -1,0 +1,1450 @@
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001                 LIST P=16F877A
+                      00002         INCLUDE "P16F877A.INC"
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ; Build date : Jan 06 2020
+                      00005 ;  MPASM PIC16F877A processor include
+                      00006 ; 
+                      00007 ;  (c) Copyright 1999-2020 Microchip Technology, All rights reserved
+                      00008 ;==========================================================================
+                      00009 
+                      00567         LIST
+                      00003         CBLOCK 0X20
+  00000020            00004         T1,T2,T3
+  00000023            00005         zero1,zero2,zero3,zero4,zero5
+  00000028            00006         izq,der,arr1,aba1,arr2,aba2,arr3,aba3,giri,gird,suje,suel
+  00000034            00007         CNT1,CNT2,CNT3,CNT4,CNT5,CNT6
+  0000003A            00008         CNT,CNT7
+                      00009         ENDC
+2007   3F32           00010         __CONFIG _FOSC_HS & _WDTE_OFF & _PWRTE_ON & _BOREN_OFF & _LVP_OFF & _CPD_OFF & _WRT_OFF & _CP_OF
+                            F
+                      00011         ORG 0X0000
+                      00012         ;definimos los PULSADORES de ENTRADA
+                      00013         #DEFINE bd1  PORTA,RA0   
+                      00014         #DEFINE bi1  PORTA,RA1
+                      00015         #DEFINE bd2  PORTA,RA2   
+                      00016         #DEFINE bi2  PORTA,RA3
+                      00017         #DEFINE bd3  PORTA,RA4   
+                      00018         #DEFINE bi3  PORTA,RA5
+                      00019         #DEFINE bd4  PORTB,RB0   
+                      00020         #DEFINE bi4  PORTB,RB1
+                      00021         #DEFINE bd5  PORTB,RB2   
+                      00022         #DEFINE bi5  PORTB,RB3
+                      00023         #DEFINE bd6  PORTB,RB4   
+                      00024         #DEFINE bi6  PORTB,RB5
+                      00025         #DEFINE secu PORTB,RB6   
+                      00026         #DEFINE stop PORTB,RB7
+                      00027         ;definimos las entradas para SENSORES
+                      00028         #DEFINE s1   PORTC,RC1
+                      00029         #DEFINE s2   PORTC,RC2
+                      00030         #DEFINE s3   PORTC,RC3
+                      00031         #DEFINE s4   PORTC,RC4
+                      00032         #DEFINE s5   PORTC,RC5
+                      00033         #DEFINE fcopen   PORTC,RC6
+                      00034         #DEFINE fcclose  PORTC,RC7
+                      00035         ;definimos las variables de DIR(DIRECION) y PUL(PULSO)
+                      00036         #DEFINE dir1 PORTD,RD0
+                      00037         #DEFINE pul1 PORTD,RD1
+                      00038         #DEFINE dir2 PORTD,RD2
+                      00039         #DEFINE pul2 PORTD,RD3
+                      00040         #DEFINE dir3 PORTD,RD4
+                      00041         #DEFINE pul3 PORTD,RD5
+                      00042         #DEFINE dir4 PORTD,RD6
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00043         #DEFINE pul4 PORTD,RD7
+                      00044         #DEFINE dir5 PORTE,RE0
+                      00045         #DEFINE pul5 PORTE,RE1
+                      00046         ;#DEFINE dir6 PORTE,RE2
+                      00047         ;#DEFINE pul6 PORTC,RC0  ;REGISTRO diferente
+                      00048 ;-------declaracion de PUERTOS de ENTRADA Y SALIDA  ----------------------  
+Warning[203]: Found opcode in column 1. (BCF)
+0000   1283           00049 BCF       STATUS, RP0      ;para el PUERTO 
+Warning[203]: Found opcode in column 1. (BCF)
+0001   1303           00050 BCF       STATUS, RP1
+Warning[203]: Found opcode in column 1. (CLRF)
+0002   0185           00051 CLRF      PORTA
+Warning[203]: Found opcode in column 1. (BSF)
+0003   1683           00052 BSF       STATUS, RP0     ; para el TRIS
+Warning[203]: Found opcode in column 1. (MOVLW)
+0004   3006           00053 MOVLW     0X06
+Warning[203]: Found opcode in column 1. (MOVWF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0005   009F           00054 MOVWF     ADCON1
+Warning[203]: Found opcode in column 1. (MOVLW)
+0006   30FF           00055 MOVLW     0XFF
+Warning[203]: Found opcode in column 1. (MOVWF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0007   0085           00056 MOVWF     TRISA
+                      00057 
+Warning[203]: Found opcode in column 1. (BCF)
+0008   1283           00058 BCF       STATUS, RP0
+Warning[203]: Found opcode in column 1. (BCF)
+0009   1303           00059 BCF       STATUS, RP1
+Warning[203]: Found opcode in column 1. (CLRF)
+000A   0186           00060 CLRF      PORTB
+Warning[203]: Found opcode in column 1. (BSF)
+000B   1683           00061 BSF       STATUS, RP0
+                      00062 ;MOVLW     0X06
+                      00063 ;MOVWF     ADCON1
+                      00064 ;BCF      STATUS, RP1
+Warning[203]: Found opcode in column 1. (MOVLW)
+000C   30FF           00065 MOVLW    .255
+                      00066 ;BANKSEL  TRISB
+                      00067 ;MOVLW    0XFF
+Warning[203]: Found opcode in column 1. (MOVWF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+000D   0086           00068 MOVWF    TRISB
+                      00069 
+Warning[203]: Found opcode in column 1. (BCF)
+000E   1283           00070 BCF      STATUS, RP0
+Warning[203]: Found opcode in column 1. (BCF)
+000F   1303           00071 BCF      STATUS, RP1
+Warning[203]: Found opcode in column 1. (CLRF)
+0010   0187           00072 CLRF     PORTC
+Warning[203]: Found opcode in column 1. (BSF)
+0011   1683           00073 BSF      STATUS, RP0
+Warning[203]: Found opcode in column 1. (CLRF)
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0012   0187           00074 CLRF     TRISC
+                      00075 
+Warning[203]: Found opcode in column 1. (BSF)
+0013   1683           00076 BSF      STATUS, RP0
+Warning[203]: Found opcode in column 1. (CLRF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0014   0188           00077 CLRF     TRISD
+Warning[203]: Found opcode in column 1. (CLRF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0015   0189           00078 CLRF     TRISE
+Warning[205]: Found directive in column 1. (BANKSEL)
+0016   1283 1303      00079 BANKSEL  PORTD
+Warning[203]: Found opcode in column 1. (CLRF)
+0018   0188           00080 CLRF     PORTD
+Warning[205]: Found directive in column 1. (BANKSEL)
+0019   1283 1303      00081 BANKSEL  PORTE
+Warning[203]: Found opcode in column 1. (CLRF)
+001B   0189           00082 CLRF     PORTE
+                      00083 ;---------------------- INICIO DEL PROGRAMA -------------------------------
+                      00084 ;-------------   PONER EL BRAZO EN UN ESTADO INICIAL     -----------------
+                      00085 ;------------- GIRO 90(o) Y SUBIR BRAZO        ---------------------------
+Warning[203]: Found opcode in column 1. (MOVLW)
+001C   3006           00086 MOVLW   .6   ;numero de veces que se repetira 255 pasos
+Warning[203]: Found opcode in column 1. (MOVWF)
+001D   00BB           00087 MOVWF   CNT7
+001E                  00088 REP10
+Warning[203]: Found opcode in column 1. (MOVLW)
+001E   30FF           00089 MOVLW   .255
+Warning[203]: Found opcode in column 1. (MOVWF)
+001F   00B4           00090 MOVWF   CNT1
+Warning[203]: Found opcode in column 1. (BSF)
+0020   1408           00091 BSF     dir1      ;DIR giro 90 grados, Grado 1
+0021                  00092 GRAD10  
+Warning[203]: Found opcode in column 1. (BSF)
+0021   1488           00093 BSF     pul1
+Warning[203]: Found opcode in column 1. (CALL)
+0022   2???           00094 CALL    RETARDO1
+Warning[203]: Found opcode in column 1. (BCF)
+0023   1088           00095 BCF     pul1
+Warning[203]: Found opcode in column 1. (CALL)
+0024   2???           00096 CALL    RETARDO1        
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+0025   0BB4           00097 DECFSZ  CNT1
+Warning[203]: Found opcode in column 1. (GOTO)
+0026   2???           00098 GOTO    GRAD10
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+0027   0BBB           00099 DECFSZ  CNT7
+Warning[203]: Found opcode in column 1. (GOTO)
+0028   2???           00100 GOTO    REP10
+                      00101         
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[203]: Found opcode in column 1. (MOVLW)
+0029   3006           00102 MOVLW   .6
+Warning[203]: Found opcode in column 1. (MOVWF)
+002A   00BB           00103 MOVWF   CNT7
+002B                  00104 REP20
+Warning[203]: Found opcode in column 1. (MOVLW)
+002B   30FF           00105 MOVLW   .255
+Warning[203]: Found opcode in column 1. (MOVWF)
+002C   00B5           00106 MOVWF   CNT2
+Warning[203]: Found opcode in column 1. (BSF)
+002D   1508           00107 BSF     dir2     ;BCF para subir arriba el Grado 2 
+002E                  00108 GRAD20  
+Warning[203]: Found opcode in column 1. (BSF)
+002E   1588           00109 BSF     pul2
+Warning[203]: Found opcode in column 1. (CALL)
+002F   2???           00110 CALL    RETARDO1
+Warning[203]: Found opcode in column 1. (BCF)
+0030   1188           00111 BCF     pul2
+Warning[203]: Found opcode in column 1. (CALL)
+0031   2???           00112 CALL    RETARDO1        
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+0032   0BB5           00113 DECFSZ  CNT2
+Warning[203]: Found opcode in column 1. (GOTO)
+0033   2???           00114 GOTO    GRAD20
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+0034   0BBB           00115 DECFSZ  CNT7
+Warning[203]: Found opcode in column 1. (GOTO)
+0035   2???           00116 GOTO    REP20
+                      00117 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0036   300A           00118 MOVLW   .10
+Warning[203]: Found opcode in column 1. (MOVWF)
+0037   00BB           00119 MOVWF   CNT7
+0038                  00120 REP30
+Warning[203]: Found opcode in column 1. (MOVLW)
+0038   30FF           00121 MOVLW   .255
+Warning[203]: Found opcode in column 1. (MOVWF)
+0039   00B6           00122 MOVWF   CNT3
+Warning[203]: Found opcode in column 1. (BCF)
+003A   1208           00123 BCF     dir3     ;DIR arriba grado 3
+003B                  00124 GRAD30
+Warning[203]: Found opcode in column 1. (BSF)
+003B   1688           00125 BSF     pul3
+Warning[203]: Found opcode in column 1. (CALL)
+003C   2???           00126 CALL    RETARDO1
+Warning[203]: Found opcode in column 1. (BCF)
+003D   1288           00127 BCF     pul3
+Warning[203]: Found opcode in column 1. (CALL)
+003E   2???           00128 CALL    RETARDO1        
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE  5
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+003F   0BB6           00129 DECFSZ  CNT3
+Warning[203]: Found opcode in column 1. (GOTO)
+0040   2???           00130 GOTO    GRAD30
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+0041   0BBB           00131 DECFSZ  CNT7
+Warning[203]: Found opcode in column 1. (GOTO)
+0042   2???           00132 GOTO    REP30
+                      00133         
+Warning[203]: Found opcode in column 1. (MOVLW)
+0043   3009           00134 MOVLW   .9
+Warning[203]: Found opcode in column 1. (MOVWF)
+0044   00BB           00135 MOVWF   CNT7
+0045                  00136 REP40
+Warning[203]: Found opcode in column 1. (MOVLW)
+0045   30FF           00137 MOVLW   .255
+Warning[203]: Found opcode in column 1. (MOVWF)
+0046   00B7           00138 MOVWF   CNT4
+Warning[203]: Found opcode in column 1. (BCF)
+0047   1308           00139 BCF     dir4     ;DIR arriba grado 4
+0048                  00140 GRAD40  
+Warning[203]: Found opcode in column 1. (BSF)
+0048   1788           00141 BSF     pul4
+Warning[203]: Found opcode in column 1. (CALL)
+0049   2???           00142 CALL    RETARDO1
+Warning[203]: Found opcode in column 1. (BCF)
+004A   1388           00143 BCF     pul4
+Warning[203]: Found opcode in column 1. (CALL)
+004B   2???           00144 CALL    RETARDO1        
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+004C   0BB7           00145 DECFSZ  CNT4
+Warning[203]: Found opcode in column 1. (GOTO)
+004D   2???           00146 GOTO    GRAD40
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+004E   0BBB           00147 DECFSZ  CNT7
+Warning[203]: Found opcode in column 1. (GOTO)
+004F   2???           00148 GOTO    REP40
+                      00149 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0050   3006           00150 MOVLW   .6
+Warning[203]: Found opcode in column 1. (MOVWF)
+0051   00BB           00151 MOVWF   CNT7
+0052                  00152 REP60
+Warning[203]: Found opcode in column 1. (MOVLW)
+0052   30FF           00153 MOVLW   .255
+Warning[203]: Found opcode in column 1. (MOVWF)
+0053   00B8           00154 MOVWF   CNT5
+Warning[203]: Found opcode in column 1. (BCF)
+0054   1087           00155 BCF     s1    ;DIR agarra pinza grado6**************
+0055                  00156 GRAD60  
+Warning[203]: Found opcode in column 1. (BSF)
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE  6
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0055   1507           00157 BSF     s2
+Warning[203]: Found opcode in column 1. (CALL)
+0056   2???           00158 CALL    RETARDO1
+Warning[203]: Found opcode in column 1. (BCF)
+0057   1107           00159 BCF     s2
+Warning[203]: Found opcode in column 1. (CALL)
+0058   2???           00160 CALL    RETARDO1        
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+0059   0BB8           00161 DECFSZ  CNT5
+Warning[203]: Found opcode in column 1. (GOTO)
+005A   2???           00162 GOTO    GRAD60
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+005B   0BBB           00163 DECFSZ  CNT7
+Warning[203]: Found opcode in column 1. (GOTO)
+005C   2???           00164 GOTO    REP60
+                      00165         
+                      00166 ;-----------------    PROGRAMA QUE SE REPITE     --------------------------     
+005D                  00167 MAIN 
+                      00168 ;BTFSS   secu
+                      00169 ;CALL    MANUAL 
+Warning[203]: Found opcode in column 1. (CALL)
+005D   2???           00170 CALL    SECUENCIA
+Warning[203]: Found opcode in column 1. (GOTO)
+005E   2???           00171 GOTO    MAIN
+                      00172 
+                      00173 ;--------------- Espera que se detecte un objeto ------------------------
+005F                  00174 SECUENCIA
+Warning[203]: Found opcode in column 1. (BTFSS)
+005F   1F06           00175 BTFSS   secu   ; si no se presiona salta a FIN
+Warning[203]: Found opcode in column 1. (GOTO)
+0060   2???           00176 GOTO    FIN
+                      00177 ;------------------BAJAR BRAZO Y AGARRAR LA PIEZA---------------------
+Warning[203]: Found opcode in column 1. (MOVLW)
+0061   3006           00178 MOVLW   .6
+Warning[203]: Found opcode in column 1. (MOVWF)
+0062   00BB           00179 MOVWF   CNT7
+0063                  00180 REP2
+Warning[203]: Found opcode in column 1. (MOVLW)
+0063   30FF           00181 MOVLW   .255
+Warning[203]: Found opcode in column 1. (MOVWF)
+0064   00B5           00182 MOVWF   CNT2
+Warning[203]: Found opcode in column 1. (BCF)
+0065   1108           00183 BCF     dir2     ;BCF para bajar el Grado 2 
+0066                  00184 GRAD2   
+Warning[203]: Found opcode in column 1. (BSF)
+0066   1588           00185 BSF     pul2
+Warning[203]: Found opcode in column 1. (CALL)
+0067   2???           00186 CALL    RETARDO1
+Warning[203]: Found opcode in column 1. (BCF)
+0068   1188           00187 BCF     pul2
+Warning[203]: Found opcode in column 1. (CALL)
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE  7
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0069   2???           00188 CALL    RETARDO1        
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+006A   0BB5           00189 DECFSZ  CNT2
+Warning[203]: Found opcode in column 1. (GOTO)
+006B   2???           00190 GOTO    GRAD2
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+006C   0BBB           00191 DECFSZ  CNT7
+Warning[203]: Found opcode in column 1. (GOTO)
+006D   2???           00192 GOTO    REP2
+                      00193 
+Warning[203]: Found opcode in column 1. (MOVLW)
+006E   300A           00194 MOVLW   .10
+Warning[203]: Found opcode in column 1. (MOVWF)
+006F   00BB           00195 MOVWF   CNT7
+0070                  00196 REP3
+Warning[203]: Found opcode in column 1. (MOVLW)
+0070   30FF           00197 MOVLW   .255
+Warning[203]: Found opcode in column 1. (MOVWF)
+0071   00B6           00198 MOVWF   CNT3
+Warning[203]: Found opcode in column 1. (BSF)
+0072   1608           00199 BSF     dir3     ;DIR bajar grado 3
+0073                  00200 GRAD3   
+Warning[203]: Found opcode in column 1. (BSF)
+0073   1688           00201 BSF     pul3
+Warning[203]: Found opcode in column 1. (CALL)
+0074   2???           00202 CALL    RETARDO1
+Warning[203]: Found opcode in column 1. (BCF)
+0075   1288           00203 BCF     pul3
+Warning[203]: Found opcode in column 1. (CALL)
+0076   2???           00204 CALL    RETARDO1        
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+0077   0BB6           00205 DECFSZ  CNT3
+Warning[203]: Found opcode in column 1. (GOTO)
+0078   2???           00206 GOTO    GRAD3
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+0079   0BBB           00207 DECFSZ  CNT7
+Warning[203]: Found opcode in column 1. (GOTO)
+007A   2???           00208 GOTO    REP3
+                      00209         
+Warning[203]: Found opcode in column 1. (MOVLW)
+007B   3009           00210 MOVLW   .9
+Warning[203]: Found opcode in column 1. (MOVWF)
+007C   00BB           00211 MOVWF   CNT7
+007D                  00212 REP4
+Warning[203]: Found opcode in column 1. (MOVLW)
+007D   30FF           00213 MOVLW   .255
+Warning[203]: Found opcode in column 1. (MOVWF)
+007E   00B7           00214 MOVWF   CNT4
+Warning[203]: Found opcode in column 1. (BSF)
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE  8
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+007F   1708           00215 BSF     dir4     ;DIR bajar grado 4 ; CAMBIADO
+0080                  00216 GRAD4   
+Warning[203]: Found opcode in column 1. (BSF)
+0080   1788           00217 BSF     pul4
+Warning[203]: Found opcode in column 1. (CALL)
+0081   2???           00218 CALL    RETARDO1
+Warning[203]: Found opcode in column 1. (BCF)
+0082   1388           00219 BCF     pul4
+Warning[203]: Found opcode in column 1. (CALL)
+0083   2???           00220 CALL    RETARDO1        
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+0084   0BB7           00221 DECFSZ  CNT4
+Warning[203]: Found opcode in column 1. (GOTO)
+0085   2???           00222 GOTO    GRAD4
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+0086   0BBB           00223 DECFSZ  CNT7
+Warning[203]: Found opcode in column 1. (GOTO)
+0087   2???           00224 GOTO    REP4
+                      00225 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0088   3005           00226 MOVLW   .5
+Warning[203]: Found opcode in column 1. (MOVWF)
+0089   00BB           00227 MOVWF   CNT7
+008A                  00228 REP6
+Warning[203]: Found opcode in column 1. (MOVLW)
+008A   30FF           00229 MOVLW   .255
+Warning[203]: Found opcode in column 1. (MOVWF)
+008B   00B8           00230 MOVWF   CNT5
+Warning[203]: Found opcode in column 1. (BSF)
+008C   1487           00231 BSF     s1   ;DIR agarra pieza grado6************************
+008D                  00232 GRAD6   
+Warning[203]: Found opcode in column 1. (BSF)
+008D   1507           00233 BSF     s2
+Warning[203]: Found opcode in column 1. (CALL)
+008E   2???           00234 CALL    RETARDO1
+Warning[203]: Found opcode in column 1. (BCF)
+008F   1107           00235 BCF     s2
+Warning[203]: Found opcode in column 1. (CALL)
+0090   2???           00236 CALL    RETARDO1        
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+0091   0BB8           00237 DECFSZ  CNT5
+Warning[203]: Found opcode in column 1. (GOTO)
+0092   2???           00238 GOTO    GRAD6
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+0093   0BBB           00239 DECFSZ  CNT7
+Warning[203]: Found opcode in column 1. (GOTO)
+0094   2???           00240 GOTO    REP6
+                      00241 
+                      00242 ;----------------- SUBIR BRAZO Y TRASLADAR LA PIEZA -------------------------
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE  9
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00243 
+                      00244 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0095   3009           00245 MOVLW   .9
+Warning[203]: Found opcode in column 1. (MOVWF)
+0096   00BB           00246 MOVWF   CNT7
+0097                  00247 REP41
+Warning[203]: Found opcode in column 1. (MOVLW)
+0097   30FF           00248 MOVLW   .255
+Warning[203]: Found opcode in column 1. (MOVWF)
+0098   00B7           00249 MOVWF   CNT4
+Warning[203]: Found opcode in column 1. (BCF)
+0099   1308           00250 BCF     dir4     ;DIR arriba grado 4
+009A                  00251 GRAD41  
+Warning[203]: Found opcode in column 1. (BSF)
+009A   1788           00252 BSF     pul4
+Warning[203]: Found opcode in column 1. (CALL)
+009B   2???           00253 CALL    RETARDO1
+Warning[203]: Found opcode in column 1. (BCF)
+009C   1388           00254 BCF     pul4
+Warning[203]: Found opcode in column 1. (CALL)
+009D   2???           00255 CALL    RETARDO1        
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+009E   0BB7           00256 DECFSZ  CNT4
+Warning[203]: Found opcode in column 1. (GOTO)
+009F   2???           00257 GOTO    GRAD41
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+00A0   0BBB           00258 DECFSZ  CNT7
+Warning[203]: Found opcode in column 1. (GOTO)
+00A1   2???           00259 GOTO    REP41
+                      00260 
+Warning[203]: Found opcode in column 1. (MOVLW)
+00A2   300A           00261 MOVLW   .10
+Warning[203]: Found opcode in column 1. (MOVWF)
+00A3   00BB           00262 MOVWF   CNT7
+00A4                  00263 REP31
+Warning[203]: Found opcode in column 1. (MOVLW)
+00A4   30FF           00264 MOVLW   .255
+Warning[203]: Found opcode in column 1. (MOVWF)
+00A5   00B6           00265 MOVWF   CNT3
+Warning[203]: Found opcode in column 1. (BCF)
+00A6   1208           00266 BCF     dir3     ;DIR arriba grado 3
+00A7                  00267 GRAD31
+Warning[203]: Found opcode in column 1. (BSF)
+00A7   1688           00268 BSF     pul3
+Warning[203]: Found opcode in column 1. (CALL)
+00A8   2???           00269 CALL    RETARDO1
+Warning[203]: Found opcode in column 1. (BCF)
+00A9   1288           00270 BCF     pul3
+Warning[203]: Found opcode in column 1. (CALL)
+00AA   2???           00271 CALL    RETARDO1        
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE 10
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+00AB   0BB6           00272 DECFSZ  CNT3
+Warning[203]: Found opcode in column 1. (GOTO)
+00AC   2???           00273 GOTO    GRAD31
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+00AD   0BBB           00274 DECFSZ  CNT7
+Warning[203]: Found opcode in column 1. (GOTO)
+00AE   2???           00275 GOTO    REP31
+                      00276 
+Warning[203]: Found opcode in column 1. (MOVLW)
+00AF   3006           00277 MOVLW   .6
+Warning[203]: Found opcode in column 1. (MOVWF)
+00B0   00BB           00278 MOVWF   CNT7
+00B1                  00279 REP21
+Warning[203]: Found opcode in column 1. (MOVLW)
+00B1   30FF           00280 MOVLW   .255
+Warning[203]: Found opcode in column 1. (MOVWF)
+00B2   00B5           00281 MOVWF   CNT2
+Warning[203]: Found opcode in column 1. (BSF)
+00B3   1508           00282 BSF     dir2     ;BSF arriba el Grado 2 
+00B4                  00283 GRAD21
+Warning[203]: Found opcode in column 1. (BSF)
+00B4   1588           00284 BSF     pul2
+Warning[203]: Found opcode in column 1. (CALL)
+00B5   2???           00285 CALL    RETARDO1
+Warning[203]: Found opcode in column 1. (BCF)
+00B6   1188           00286 BCF     pul2
+Warning[203]: Found opcode in column 1. (CALL)
+00B7   2???           00287 CALL    RETARDO1        
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+00B8   0BB5           00288 DECFSZ  CNT2
+Warning[203]: Found opcode in column 1. (GOTO)
+00B9   2???           00289 GOTO    GRAD21
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+00BA   0BBB           00290 DECFSZ  CNT7
+Warning[203]: Found opcode in column 1. (GOTO)
+00BB   2???           00291 GOTO    REP21
+                      00292 
+Warning[203]: Found opcode in column 1. (MOVLW)
+00BC   300A           00293 MOVLW   .10
+Warning[203]: Found opcode in column 1. (MOVWF)
+00BD   00BB           00294 MOVWF   CNT7
+00BE                  00295 REP11
+Warning[203]: Found opcode in column 1. (MOVLW)
+00BE   30FF           00296 MOVLW   .255
+Warning[203]: Found opcode in column 1. (MOVWF)
+00BF   00B4           00297 MOVWF   CNT1
+Warning[203]: Found opcode in column 1. (BSF)
+00C0   1408           00298 BSF     dir1      ;DIR giro 180(o), Grado 1
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE 11
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+00C1                  00299 GRAD11
+Warning[203]: Found opcode in column 1. (BSF)
+00C1   1488           00300 BSF     pul1
+Warning[203]: Found opcode in column 1. (CALL)
+00C2   2???           00301 CALL    RETARDO1
+Warning[203]: Found opcode in column 1. (BCF)
+00C3   1088           00302 BCF     pul1
+Warning[203]: Found opcode in column 1. (CALL)
+00C4   2???           00303 CALL    RETARDO1        
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+00C5   0BB4           00304 DECFSZ  CNT1
+Warning[203]: Found opcode in column 1. (GOTO)
+00C6   2???           00305 GOTO    GRAD11
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+00C7   0BBB           00306 DECFSZ  CNT7
+Warning[203]: Found opcode in column 1. (GOTO)
+00C8   2???           00307 GOTO    REP11
+                      00308 ;-----------------------------------------------------------------------
+                      00309 ;-----------------  BAJAR Y DEJAR LA PIEZA   ----------------------------
+Warning[203]: Found opcode in column 1. (MOVLW)
+00C9   3006           00310 MOVLW   .6
+Warning[203]: Found opcode in column 1. (MOVWF)
+00CA   00BB           00311 MOVWF   CNT7
+00CB                  00312 REP22
+Warning[203]: Found opcode in column 1. (MOVLW)
+00CB   30FF           00313 MOVLW   .255
+Warning[203]: Found opcode in column 1. (MOVWF)
+00CC   00B5           00314 MOVWF   CNT2
+Warning[203]: Found opcode in column 1. (BCF)
+00CD   1108           00315 BCF     dir2     ;BCF para bajar el Grado 2 
+00CE                  00316 GRAD22  
+Warning[203]: Found opcode in column 1. (BSF)
+00CE   1588           00317 BSF     pul2
+Warning[203]: Found opcode in column 1. (CALL)
+00CF   2???           00318 CALL    RETARDO1
+Warning[203]: Found opcode in column 1. (BCF)
+00D0   1188           00319 BCF     pul2
+Warning[203]: Found opcode in column 1. (CALL)
+00D1   2???           00320 CALL    RETARDO1        
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+00D2   0BB5           00321 DECFSZ  CNT2
+Warning[203]: Found opcode in column 1. (GOTO)
+00D3   2???           00322 GOTO    GRAD22
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+00D4   0BBB           00323 DECFSZ  CNT7
+Warning[203]: Found opcode in column 1. (GOTO)
+00D5   2???           00324 GOTO    REP22
+                      00325 
+Warning[203]: Found opcode in column 1. (MOVLW)
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE 12
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+00D6   300A           00326 MOVLW   .10
+Warning[203]: Found opcode in column 1. (MOVWF)
+00D7   00BB           00327 MOVWF   CNT7
+00D8                  00328 REP32
+Warning[203]: Found opcode in column 1. (MOVLW)
+00D8   30FF           00329 MOVLW   .255
+Warning[203]: Found opcode in column 1. (MOVWF)
+00D9   00B6           00330 MOVWF   CNT3
+Warning[203]: Found opcode in column 1. (BSF)
+00DA   1608           00331 BSF     dir3     ;DIR bajar grado 3
+00DB                  00332 GRAD32  
+Warning[203]: Found opcode in column 1. (BSF)
+00DB   1688           00333 BSF     pul3
+Warning[203]: Found opcode in column 1. (CALL)
+00DC   2???           00334 CALL    RETARDO1
+Warning[203]: Found opcode in column 1. (BCF)
+00DD   1288           00335 BCF     pul3
+Warning[203]: Found opcode in column 1. (CALL)
+00DE   2???           00336 CALL    RETARDO1        
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+00DF   0BB6           00337 DECFSZ  CNT3
+Warning[203]: Found opcode in column 1. (GOTO)
+00E0   2???           00338 GOTO    GRAD32
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+00E1   0BBB           00339 DECFSZ  CNT7
+Warning[203]: Found opcode in column 1. (GOTO)
+00E2   2???           00340 GOTO    REP32
+                      00341         
+Warning[203]: Found opcode in column 1. (MOVLW)
+00E3   3009           00342 MOVLW   .9
+Warning[203]: Found opcode in column 1. (MOVWF)
+00E4   00BB           00343 MOVWF   CNT7
+00E5                  00344 REP42
+Warning[203]: Found opcode in column 1. (MOVLW)
+00E5   30FF           00345 MOVLW   .255
+Warning[203]: Found opcode in column 1. (MOVWF)
+00E6   00B7           00346 MOVWF   CNT4
+Warning[203]: Found opcode in column 1. (BSF)
+00E7   1708           00347 BSF     dir4     ;DIR bajar grado 4
+00E8                  00348 GRAD42  
+Warning[203]: Found opcode in column 1. (BSF)
+00E8   1788           00349 BSF     pul4
+Warning[203]: Found opcode in column 1. (CALL)
+00E9   2???           00350 CALL    RETARDO1
+Warning[203]: Found opcode in column 1. (BCF)
+00EA   1388           00351 BCF     pul4
+Warning[203]: Found opcode in column 1. (CALL)
+00EB   2???           00352 CALL    RETARDO1        
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+00EC   0BB7           00353 DECFSZ  CNT4
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE 13
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[203]: Found opcode in column 1. (GOTO)
+00ED   2???           00354 GOTO    GRAD42
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+00EE   0BBB           00355 DECFSZ  CNT7
+Warning[203]: Found opcode in column 1. (GOTO)
+00EF   2???           00356 GOTO    REP42
+                      00357         
+                      00358 
+Warning[203]: Found opcode in column 1. (MOVLW)
+00F0   3006           00359 MOVLW   .6
+Warning[203]: Found opcode in column 1. (MOVWF)
+00F1   00BB           00360 MOVWF   CNT7
+00F2                  00361 REP62
+Warning[203]: Found opcode in column 1. (MOVLW)
+00F2   30FF           00362 MOVLW   .255
+Warning[203]: Found opcode in column 1. (MOVWF)
+00F3   00B9           00363 MOVWF   CNT6
+Warning[203]: Found opcode in column 1. (BSF)
+00F4   1487           00364 BSF     s1    ;DIR SUELTA pieza grado6
+00F5                  00365 GRAD62  
+Warning[203]: Found opcode in column 1. (BSF)
+00F5   1507           00366 BSF     s2
+Warning[203]: Found opcode in column 1. (CALL)
+00F6   2???           00367 CALL    RETARDO1
+Warning[203]: Found opcode in column 1. (BCF)
+00F7   1107           00368 BCF     s2
+Warning[203]: Found opcode in column 1. (CALL)
+00F8   2???           00369 CALL    RETARDO1        
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+00F9   0BB9           00370 DECFSZ  CNT6
+Warning[203]: Found opcode in column 1. (GOTO)
+00FA   2???           00371 GOTO    GRAD62
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+00FB   0BBB           00372 DECFSZ  CNT7
+Warning[203]: Found opcode in column 1. (GOTO)
+00FC   2???           00373 GOTO    REP62
+                      00374 ;--------------------------------------------------------------------------
+                      00375 ;------------  SUBIR BRAZO Y RETORNAR A LA POSICION INICIAL  --------------
+Warning[203]: Found opcode in column 1. (MOVLW)
+00FD   3009           00376 MOVLW   .9
+Warning[203]: Found opcode in column 1. (MOVWF)
+00FE   00BB           00377 MOVWF   CNT7
+00FF                  00378 REP43
+Warning[203]: Found opcode in column 1. (MOVLW)
+00FF   30FF           00379 MOVLW   .255
+Warning[203]: Found opcode in column 1. (MOVWF)
+0100   00B7           00380 MOVWF   CNT4
+Warning[203]: Found opcode in column 1. (BCF)
+0101   1308           00381 BCF     dir4     ;DIR arriba grado 4
+0102                  00382 GRAD43
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE 14
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[203]: Found opcode in column 1. (BSF)
+0102   1788           00383 BSF     pul4
+Warning[203]: Found opcode in column 1. (CALL)
+0103   2???           00384 CALL    RETARDO1
+Warning[203]: Found opcode in column 1. (BCF)
+0104   1388           00385 BCF     pul4
+Warning[203]: Found opcode in column 1. (CALL)
+0105   2???           00386 CALL    RETARDO1        
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+0106   0BB7           00387 DECFSZ  CNT4
+Warning[203]: Found opcode in column 1. (GOTO)
+0107   2???           00388 GOTO    GRAD43
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+0108   0BBB           00389 DECFSZ  CNT7
+Warning[203]: Found opcode in column 1. (GOTO)
+0109   2???           00390 GOTO    REP43
+                      00391 
+Warning[203]: Found opcode in column 1. (MOVLW)
+010A   300A           00392 MOVLW   .10
+Warning[203]: Found opcode in column 1. (MOVWF)
+010B   00BB           00393 MOVWF   CNT7
+010C                  00394 REP33
+Warning[203]: Found opcode in column 1. (MOVLW)
+010C   30FF           00395 MOVLW   .255
+Warning[203]: Found opcode in column 1. (MOVWF)
+010D   00B6           00396 MOVWF   CNT3
+Warning[203]: Found opcode in column 1. (BCF)
+010E   1208           00397 BCF     dir3     ;DIR arriba grado 3
+010F                  00398 GRAD33
+Warning[203]: Found opcode in column 1. (BSF)
+010F   1688           00399 BSF     pul3
+Warning[203]: Found opcode in column 1. (CALL)
+0110   2???           00400 CALL    RETARDO1
+Warning[203]: Found opcode in column 1. (BCF)
+0111   1288           00401 BCF     pul3
+Warning[203]: Found opcode in column 1. (CALL)
+0112   2???           00402 CALL    RETARDO1        
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+0113   0BB6           00403 DECFSZ  CNT3
+Warning[203]: Found opcode in column 1. (GOTO)
+0114   2???           00404 GOTO    GRAD33
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+0115   0BBB           00405 DECFSZ  CNT7
+Warning[203]: Found opcode in column 1. (GOTO)
+0116   2???           00406 GOTO    REP33
+                      00407 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0117   3006           00408 MOVLW   .6
+Warning[203]: Found opcode in column 1. (MOVWF)
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE 15
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0118   00BB           00409 MOVWF   CNT7
+0119                  00410 REP23
+Warning[203]: Found opcode in column 1. (MOVLW)
+0119   30FF           00411 MOVLW   .255
+Warning[203]: Found opcode in column 1. (MOVWF)
+011A   00B5           00412 MOVWF   CNT2
+Warning[203]: Found opcode in column 1. (BSF)
+011B   1508           00413 BSF     dir2     ;BSF arriba el Grado 2 
+011C                  00414 GRAD23
+Warning[203]: Found opcode in column 1. (BSF)
+011C   1588           00415 BSF     pul2
+Warning[203]: Found opcode in column 1. (CALL)
+011D   2???           00416 CALL    RETARDO1
+Warning[203]: Found opcode in column 1. (BCF)
+011E   1188           00417 BCF     pul2
+Warning[203]: Found opcode in column 1. (CALL)
+011F   2???           00418 CALL    RETARDO1        
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+0120   0BB5           00419 DECFSZ  CNT2
+Warning[203]: Found opcode in column 1. (GOTO)
+0121   2???           00420 GOTO    GRAD23
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+0122   0BBB           00421 DECFSZ  CNT7
+Warning[203]: Found opcode in column 1. (GOTO)
+0123   2???           00422 GOTO    REP23
+                      00423 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0124   300A           00424 MOVLW   .10
+Warning[203]: Found opcode in column 1. (MOVWF)
+0125   00BB           00425 MOVWF   CNT7
+0126                  00426 REP13
+Warning[203]: Found opcode in column 1. (MOVLW)
+0126   30FF           00427 MOVLW   .255
+Warning[203]: Found opcode in column 1. (MOVWF)
+0127   00B4           00428 MOVWF   CNT1
+Warning[203]: Found opcode in column 1. (BCF)
+0128   1008           00429 BCF     dir1      ;DIR giro 180(o), Grado 1
+0129                  00430 GRAD13
+Warning[203]: Found opcode in column 1. (BSF)
+0129   1488           00431 BSF     pul1
+Warning[203]: Found opcode in column 1. (CALL)
+012A   2???           00432 CALL    RETARDO1
+Warning[203]: Found opcode in column 1. (BCF)
+012B   1088           00433 BCF     pul1
+Warning[203]: Found opcode in column 1. (CALL)
+012C   2???           00434 CALL    RETARDO1        
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+012D   0BB4           00435 DECFSZ  CNT1
+Warning[203]: Found opcode in column 1. (GOTO)
+012E   2???           00436 GOTO    GRAD13
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE 16
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[203]: Found opcode in column 1. (DECFSZ)
+Message[305]: Using default destination of 1 (file).
+012F   0BBB           00437 DECFSZ  CNT7
+Warning[203]: Found opcode in column 1. (GOTO)
+0130   2???           00438 GOTO    REP13
+                      00439 
+0131                  00440 FIN
+Warning[203]: Found opcode in column 1. (RETURN)
+0131   0008           00441 RETURN
+                      00442 ;----------------------------------------------------------------------------
+Warning[207]: Found label after column 1. (RETARDO)
+0132                  00443  RETARDO
+0132   3005           00444        MOVLW   .5
+0133   00A2           00445        MOVWF   T3  
+Warning[207]: Found label after column 1. (X3)
+0134   2???           00446   X3   CALL    RETARDO1
+Message[305]: Using default destination of 1 (file).
+0135   0BA2           00447        DECFSZ  T3
+0136   2???           00448        GOTO    X3
+0137   0008           00449        RETURN
+                      00450        
+Warning[207]: Found label after column 1. (RETARDO1)
+0138                  00451   RETARDO1
+0138   3006           00452        MOVLW   .6
+0139   00A1           00453        MOVWF   T2  
+Warning[207]: Found label after column 1. (X2)
+013A   2???           00454   X2   CALL    RETARDO2
+Message[305]: Using default destination of 1 (file).
+013B   0BA1           00455        DECFSZ  T2
+013C   2???           00456        GOTO    X2
+013D   0008           00457        RETURN
+                      00458        
+Warning[207]: Found label after column 1. (RETARDO2)
+013E                  00459   RETARDO2
+013E   30F9           00460        MOVLW   .249
+013F   00A0           00461        MOVWF   T1 
+Warning[207]: Found label after column 1. (X1)
+0140   0000           00462   X1   NOP
+Message[305]: Using default destination of 1 (file).
+0141   0BA0           00463        DECFSZ  T1
+0142   2???           00464        GOTO    X1
+0143   0008           00465        RETURN
+3F32                  00466        END 
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE 17
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+ACKDT                             00000005
+ACKEN                             00000004
+ACKSTAT                           00000006
+ADCON0                            0000001F
+ADCON1                            0000009F
+ADCS0                             00000006
+ADCS1                             00000007
+ADCS2                             00000006
+ADDEN                             00000003
+ADFM                              00000007
+ADIE                              00000006
+ADIF                              00000006
+ADON                              00000000
+ADRESH                            0000001E
+ADRESL                            0000009E
+BCLIE                             00000003
+BCLIF                             00000003
+BF                                00000000
+BRGH                              00000002
+C                                 00000000
+C1INV                             00000004
+C1OUT                             00000006
+C2INV                             00000005
+C2OUT                             00000007
+CCP1CON                           00000017
+CCP1IE                            00000002
+CCP1IF                            00000002
+CCP1M0                            00000000
+CCP1M1                            00000001
+CCP1M2                            00000002
+CCP1M3                            00000003
+CCP1X                             00000005
+CCP1Y                             00000004
+CCP2CON                           0000001D
+CCP2IE                            00000000
+CCP2IF                            00000000
+CCP2M0                            00000000
+CCP2M1                            00000001
+CCP2M2                            00000002
+CCP2M3                            00000003
+CCP2X                             00000005
+CCP2Y                             00000004
+CCPR1                             00000015
+CCPR1H                            00000016
+CCPR1L                            00000015
+CCPR2                             0000001B
+CCPR2H                            0000001C
+CCPR2L                            0000001B
+CHS0                              00000003
+CHS1                              00000004
+CHS2                              00000005
+CIS                               00000003
+CKE                               00000006
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE 18
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+CKP                               00000004
+CM0                               00000000
+CM1                               00000001
+CM2                               00000002
+CMCON                             0000009C
+CMIE                              00000006
+CMIF                              00000006
+CNT                               0000003A
+CNT1                              00000034
+CNT2                              00000035
+CNT3                              00000036
+CNT4                              00000037
+CNT5                              00000038
+CNT6                              00000039
+CNT7                              0000003B
+CREN                              00000004
+CSRC                              00000007
+CVR0                              00000000
+CVR1                              00000001
+CVR2                              00000002
+CVR3                              00000003
+CVRCON                            0000009D
+CVREN                             00000007
+CVROE                             00000006
+CVRR                              00000005
+D                                 00000005
+DATA_ADDRESS                      00000005
+DC                                00000001
+D_A                               00000005
+D_NOT_A                           00000005
+EEADR                             0000010D
+EEADRH                            0000010F
+EECON1                            0000018C
+EECON2                            0000018D
+EEDATA                            0000010C
+EEDATH                            0000010E
+EEIE                              00000004
+EEIF                              00000004
+EEPGD                             00000007
+F                                 00000001
+FERR                              00000002
+FIN                               00000131
+FSR                               00000004
+GCEN                              00000007
+GIE                               00000007
+GO                                00000002
+GO_DONE                           00000002
+GO_NOT_DONE                       00000002
+GRAD10                            00000021
+GRAD11                            000000C1
+GRAD13                            00000129
+GRAD2                             00000066
+GRAD20                            0000002E
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE 19
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+GRAD21                            000000B4
+GRAD22                            000000CE
+GRAD23                            0000011C
+GRAD3                             00000073
+GRAD30                            0000003B
+GRAD31                            000000A7
+GRAD32                            000000DB
+GRAD33                            0000010F
+GRAD4                             00000080
+GRAD40                            00000048
+GRAD41                            0000009A
+GRAD42                            000000E8
+GRAD43                            00000102
+GRAD6                             0000008D
+GRAD60                            00000055
+GRAD62                            000000F5
+I2C_DATA                          00000005
+I2C_READ                          00000002
+I2C_START                         00000003
+I2C_STOP                          00000004
+IBF                               00000007
+IBOV                              00000005
+INDF                              00000000
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+MAIN                              0000005D
+NOT_A                             00000005
+NOT_ADDRESS                       00000005
+NOT_BO                            00000000
+NOT_BOR                           00000000
+NOT_DONE                          00000002
+NOT_PD                            00000003
+NOT_POR                           00000001
+NOT_RBPU                          00000007
+NOT_RC8                           00000006
+NOT_T1SYNC                        00000002
+NOT_TO                            00000004
+NOT_TX8                           00000006
+NOT_W                             00000002
+NOT_WRITE                         00000002
+OBF                               00000006
+OERR                              00000001
+OPTION_REG                        00000081
+P                                 00000004
+PCFG0                             00000000
+PCFG1                             00000001
+PCFG2                             00000002
+PCFG3                             00000003
+PCL                               00000002
+PCLATH                            0000000A
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE 20
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+PCON                              0000008E
+PEIE                              00000006
+PEN                               00000002
+PIE1                              0000008C
+PIE2                              0000008D
+PIR1                              0000000C
+PIR2                              0000000D
+PORTA                             00000005
+PORTB                             00000006
+PORTC                             00000007
+PORTD                             00000008
+PORTE                             00000009
+PR2                               00000092
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+PSPIE                             00000007
+PSPIF                             00000007
+PSPMODE                           00000004
+R                                 00000002
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+RA3                               00000003
+RA4                               00000004
+RA5                               00000005
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+RB7                               00000007
+RBIE                              00000003
+RBIF                              00000000
+RC0                               00000000
+RC1                               00000001
+RC2                               00000002
+RC3                               00000003
+RC4                               00000004
+RC5                               00000005
+RC6                               00000006
+RC7                               00000007
+RC8_9                             00000006
+RC9                               00000006
+RCD8                              00000000
+RCEN                              00000003
+RCIE                              00000005
+RCIF                              00000005
+RCREG                             0000001A
+RCSTA                             00000018
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE 21
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+RD                                00000000
+RD0                               00000000
+RD1                               00000001
+RD2                               00000002
+RD3                               00000003
+RD4                               00000004
+RD5                               00000005
+RD6                               00000006
+RD7                               00000007
+RE0                               00000000
+RE1                               00000001
+RE2                               00000002
+READ_WRITE                        00000002
+REP10                             0000001E
+REP11                             000000BE
+REP13                             00000126
+REP2                              00000063
+REP20                             0000002B
+REP21                             000000B1
+REP22                             000000CB
+REP23                             00000119
+REP3                              00000070
+REP30                             00000038
+REP31                             000000A4
+REP32                             000000D8
+REP33                             0000010C
+REP4                              0000007D
+REP40                             00000045
+REP41                             00000097
+REP42                             000000E5
+REP43                             000000FF
+REP6                              0000008A
+REP60                             00000052
+REP62                             000000F2
+RETARDO                           00000132
+RETARDO1                          00000138
+RETARDO2                          0000013E
+RP0                               00000005
+RP1                               00000006
+RSEN                              00000001
+RX9                               00000006
+RX9D                              00000000
+R_NOT_W                           00000002
+R_W                               00000002
+S                                 00000003
+SECUENCIA                         0000005F
+SEN                               00000000
+SMP                               00000007
+SPBRG                             00000099
+SPEN                              00000007
+SREN                              00000005
+SSPADD                            00000093
+SSPBUF                            00000013
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE 22
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+SSPCON                            00000014
+SSPCON2                           00000091
+SSPEN                             00000005
+SSPIE                             00000003
+SSPIF                             00000003
+SSPM0                             00000000
+SSPM1                             00000001
+SSPM2                             00000002
+SSPM3                             00000003
+SSPOV                             00000006
+SSPSTAT                           00000094
+STATUS                            00000003
+SYNC                              00000004
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+T1                                00000020
+T1CKPS0                           00000004
+T1CKPS1                           00000005
+T1CON                             00000010
+T1INSYNC                          00000002
+T1OSCEN                           00000003
+T1SYNC                            00000002
+T2                                00000021
+T2CKPS0                           00000000
+T2CKPS1                           00000001
+T2CON                             00000012
+T3                                00000022
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TMR1                              0000000E
+TMR1CS                            00000001
+TMR1H                             0000000F
+TMR1IE                            00000000
+TMR1IF                            00000000
+TMR1L                             0000000E
+TMR1ON                            00000000
+TMR2                              00000011
+TMR2IE                            00000001
+TMR2IF                            00000001
+TMR2ON                            00000002
+TOUTPS0                           00000003
+TOUTPS1                           00000004
+TOUTPS2                           00000005
+TOUTPS3                           00000006
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE 23
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+TRISA5                            00000005
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+TRISC                             00000087
+TRISC0                            00000000
+TRISC1                            00000001
+TRISC2                            00000002
+TRISC3                            00000003
+TRISC4                            00000004
+TRISC5                            00000005
+TRISC6                            00000006
+TRISC7                            00000007
+TRISD                             00000088
+TRISD0                            00000000
+TRISD1                            00000001
+TRISD2                            00000002
+TRISD3                            00000003
+TRISD4                            00000004
+TRISD5                            00000005
+TRISD6                            00000006
+TRISD7                            00000007
+TRISE                             00000089
+TRISE0                            00000000
+TRISE1                            00000001
+TRISE2                            00000002
+TRMT                              00000001
+TX8_9                             00000006
+TX9                               00000006
+TX9D                              00000000
+TXD8                              00000000
+TXEN                              00000005
+TXIE                              00000004
+TXIF                              00000004
+TXREG                             00000019
+TXSTA                             00000098
+UA                                00000001
+W                                 00000000
+WCOL                              00000007
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+X1                                00000140
+X2                                0000013A
+X3                                00000134
+Z                                 00000002
+_BODEN_OFF                        00003FBF
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE 24
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+_BODEN_ON                         00003FFF
+_BOREN_OFF                        00003FBF
+_BOREN_ON                         00003FFF
+_CONFIG                           00002007
+_CPD_OFF                          00003FFF
+_CPD_ON                           00003EFF
+_CP_ALL                           00001FFF
+_CP_OFF                           00003FFF
+_CP_ON                            00001FFF
+_DEBUG_OFF                        00003FFF
+_DEBUG_ON                         000037FF
+_DEVID1                           00002006
+_FOSC_EXTRC                       00003FFF
+_FOSC_HS                          00003FFE
+_FOSC_LP                          00003FFC
+_FOSC_XT                          00003FFD
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_LVP_OFF                          00003F7F
+_LVP_ON                           00003FFF
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDTE_OFF                         00003FFB
+_WDTE_ON                          00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_WRT_1FOURTH                      00003BFF
+_WRT_256                          00003DFF
+_WRT_HALF                         000039FF
+_WRT_OFF                          00003FFF
+_XT_OSC                           00003FFD
+__16F877A                         00000001
+aba1                              0000002B
+aba2                              0000002D
+aba3                              0000002F
+arr1                              0000002A
+arr2                              0000002C
+arr3                              0000002E
+bd1                               PORTA,RA0
+bd2                               PORTA,RA2
+bd3                               PORTA,RA4
+bd4                               PORTB,RB0
+bd5                               PORTB,RB2
+bd6                               PORTB,RB4
+bi1                               PORTA,RA1
+bi2                               PORTA,RA3
+bi3                               PORTA,RA5
+bi4                               PORTB,RB1
+MPASM 5.87             NEWPIC_8B_GENERAL.ASM   12-14-2022  15:20:43         PAGE 25
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+bi5                               PORTB,RB3
+bi6                               PORTB,RB5
+der                               00000029
+dir1                              PORTD,RD0
+dir2                              PORTD,RD2
+dir3                              PORTD,RD4
+dir4                              PORTD,RD6
+dir5                              PORTE,RE0
+fcclose                           PORTC,RC7
+fcopen                            PORTC,RC6
+gird                              00000031
+giri                              00000030
+izq                               00000028
+pul1                              PORTD,RD1
+pul2                              PORTD,RD3
+pul3                              PORTD,RD5
+pul4                              PORTD,RD7
+pul5                              PORTE,RE1
+s1                                PORTC,RC1
+s2                                PORTC,RC2
+s3                                PORTC,RC3
+s4                                PORTC,RC4
+s5                                PORTC,RC5
+secu                              PORTB,RB6
+stop                              PORTB,RB7
+suel                              00000033
+suje                              00000032
+zero1                             00000023
+zero2                             00000024
+zero3                             00000025
+zero4                             00000026
+zero5                             00000027
+
+Errors   :     0
+Warnings :   310 reported,     0 suppressed
+Messages :    51 reported,     0 suppressed
+
+
