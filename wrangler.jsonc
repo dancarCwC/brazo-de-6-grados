@@ -1,0 +1,10 @@
+{
+  // Configuración de Cloudflare para publicar la página del repositorio.
+  // Este archivo va en la RAÍZ del repositorio (al lado de la carpeta sitio/).
+  "name": "brazo-de-6-grados",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./sitio",
+    "not_found_handling": "single-page-application"
+  }
+}
